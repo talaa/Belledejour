@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69993B141A1A5CC900A78ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B131A1A5CC900A78ED6 /* main.m */; };
+		69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B161A1A5CC900A78ED6 /* AppDelegate.m */; };
+		69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B191A1A5CC900A78ED6 /* ViewController.m */; };
+		69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69993B1B1A1A5CC900A78ED6 /* Main.storyboard */; };
+		69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69993B1E1A1A5CC900A78ED6 /* Images.xcassets */; };
+		69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */; };
+		69993B2E1A1A5CC900A78ED6 /* Belle_De_JourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B2D1A1A5CC900A78ED6 /* Belle_De_JourTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69993B281A1A5CC900A78ED6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69993B061A1A5CC900A78ED6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69993B0D1A1A5CC900A78ED6;
+			remoteInfo = "Belle De Jour";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belle De Jour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69993B121A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69993B131A1A5CC900A78ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69993B151A1A5CC900A78ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		69993B161A1A5CC900A78ED6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69993B181A1A5CC900A78ED6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		69993B191A1A5CC900A78ED6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69993B1C1A1A5CC900A78ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69993B1E1A1A5CC900A78ED6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		69993B211A1A5CC900A78ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		69993B271A1A5CC900A78ED6 /* Belle De JourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Belle De JourTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69993B2C1A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69993B2D1A1A5CC900A78ED6 /* Belle_De_JourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Belle_De_JourTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69993B0B1A1A5CC900A78ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69993B241A1A5CC900A78ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69993B051A1A5CC900A78ED6 = {
+			isa = PBXGroup;
+			children = (
+				69993B101A1A5CC900A78ED6 /* Belle De Jour */,
+				69993B2A1A1A5CC900A78ED6 /* Belle De JourTests */,
+				69993B0F1A1A5CC900A78ED6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69993B0F1A1A5CC900A78ED6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */,
+				69993B271A1A5CC900A78ED6 /* Belle De JourTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69993B101A1A5CC900A78ED6 /* Belle De Jour */ = {
+			isa = PBXGroup;
+			children = (
+				69993B151A1A5CC900A78ED6 /* AppDelegate.h */,
+				69993B161A1A5CC900A78ED6 /* AppDelegate.m */,
+				69993B181A1A5CC900A78ED6 /* ViewController.h */,
+				69993B191A1A5CC900A78ED6 /* ViewController.m */,
+				69993B1B1A1A5CC900A78ED6 /* Main.storyboard */,
+				69993B1E1A1A5CC900A78ED6 /* Images.xcassets */,
+				69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */,
+				69993B111A1A5CC900A78ED6 /* Supporting Files */,
+			);
+			path = "Belle De Jour";
+			sourceTree = "<group>";
+		};
+		69993B111A1A5CC900A78ED6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69993B121A1A5CC900A78ED6 /* Info.plist */,
+				69993B131A1A5CC900A78ED6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69993B2A1A1A5CC900A78ED6 /* Belle De JourTests */ = {
+			isa = PBXGroup;
+			children = (
+				69993B2D1A1A5CC900A78ED6 /* Belle_De_JourTests.m */,
+				69993B2B1A1A5CC900A78ED6 /* Supporting Files */,
+			);
+			path = "Belle De JourTests";
+			sourceTree = "<group>";
+		};
+		69993B2B1A1A5CC900A78ED6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69993B2C1A1A5CC900A78ED6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69993B0D1A1A5CC900A78ED6 /* Belle De Jour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69993B311A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De Jour" */;
+			buildPhases = (
+				69993B0A1A1A5CC900A78ED6 /* Sources */,
+				69993B0B1A1A5CC900A78ED6 /* Frameworks */,
+				69993B0C1A1A5CC900A78ED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Belle De Jour";
+			productName = "Belle De Jour";
+			productReference = 69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69993B261A1A5CC900A78ED6 /* Belle De JourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69993B341A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De JourTests" */;
+			buildPhases = (
+				69993B231A1A5CC900A78ED6 /* Sources */,
+				69993B241A1A5CC900A78ED6 /* Frameworks */,
+				69993B251A1A5CC900A78ED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69993B291A1A5CC900A78ED6 /* PBXTargetDependency */,
+			);
+			name = "Belle De JourTests";
+			productName = "Belle De JourTests";
+			productReference = 69993B271A1A5CC900A78ED6 /* Belle De JourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69993B061A1A5CC900A78ED6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = SpringMoon;
+				TargetAttributes = {
+					69993B0D1A1A5CC900A78ED6 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					69993B261A1A5CC900A78ED6 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 69993B0D1A1A5CC900A78ED6;
+					};
+				};
+			};
+			buildConfigurationList = 69993B091A1A5CC900A78ED6 /* Build configuration list for PBXProject "Belle De Jour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69993B051A1A5CC900A78ED6;
+			productRefGroup = 69993B0F1A1A5CC900A78ED6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69993B0D1A1A5CC900A78ED6 /* Belle De Jour */,
+				69993B261A1A5CC900A78ED6 /* Belle De JourTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69993B0C1A1A5CC900A78ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
+				69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */,
+				69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69993B251A1A5CC900A78ED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69993B0A1A1A5CC900A78ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
+				69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */,
+				69993B141A1A5CC900A78ED6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69993B231A1A5CC900A78ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69993B2E1A1A5CC900A78ED6 /* Belle_De_JourTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69993B291A1A5CC900A78ED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69993B0D1A1A5CC900A78ED6 /* Belle De Jour */;
+			targetProxy = 69993B281A1A5CC900A78ED6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69993B1B1A1A5CC900A78ED6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69993B1C1A1A5CC900A78ED6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69993B211A1A5CC900A78ED6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69993B2F1A1A5CC900A78ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69993B301A1A5CC900A78ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69993B321A1A5CC900A78ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Belle De Jour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		69993B331A1A5CC900A78ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Belle De Jour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		69993B351A1A5CC900A78ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Belle De JourTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belle De Jour.app/Belle De Jour";
+			};
+			name = Debug;
+		};
+		69993B361A1A5CC900A78ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Belle De JourTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belle De Jour.app/Belle De Jour";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69993B091A1A5CC900A78ED6 /* Build configuration list for PBXProject "Belle De Jour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69993B2F1A1A5CC900A78ED6 /* Debug */,
+				69993B301A1A5CC900A78ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69993B311A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De Jour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69993B321A1A5CC900A78ED6 /* Debug */,
+				69993B331A1A5CC900A78ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69993B341A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De JourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69993B351A1A5CC900A78ED6 /* Debug */,
+				69993B361A1A5CC900A78ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69993B061A1A5CC900A78ED6 /* Project object */;
+}
