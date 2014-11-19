@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LeftViewController.h
 //  Belle De Jour
 //
 //  Created by Tamer Alaa on 11/17/14.
@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface ViewController : RESideMenu <RESideMenuDelegate>
-
+@interface LeftViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate>
 
 @end
-

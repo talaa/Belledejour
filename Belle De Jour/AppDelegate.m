@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestFlight.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
+    
+    
+    
+       [TestFlight takeOff:@"a00986c3-fffa-4d60-94a3-09d8ce957115"];
     return YES;
 }
 

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
+		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
+		698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413F61A1BD36D0084F0B2 /* libTestFlight.a */; };
+		698413FD1A1BD36D0084F0B2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 698413F71A1BD36D0084F0B2 /* README.md */; };
+		698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */ = {isa = PBXBuildFile; fileRef = 698413F81A1BD36D0084F0B2 /* release_notes.md */; };
+		698414001A1BD5020084F0B2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413FF1A1BD5020084F0B2 /* libz.dylib */; };
+		698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698414051A1BDB870084F0B2 /* SettingsViewController.m */; };
+		698414091A1BDF460084F0B2 /* StuffTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698414081A1BDF460084F0B2 /* StuffTableViewController.m */; };
 		69993B141A1A5CC900A78ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B131A1A5CC900A78ED6 /* main.m */; };
 		69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B161A1A5CC900A78ED6 /* AppDelegate.m */; };
 		69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B191A1A5CC900A78ED6 /* ViewController.m */; };
@@ -14,6 +22,16 @@
 		69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69993B1E1A1A5CC900A78ED6 /* Images.xcassets */; };
 		69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */; };
 		69993B2E1A1A5CC900A78ED6 /* Belle_De_JourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B2D1A1A5CC900A78ED6 /* Belle_De_JourTests.m */; };
+		69993B3E1A1A5D7C00A78ED6 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B391A1A5D7C00A78ED6 /* RECommonFunctions.m */; };
+		69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B3B1A1A5D7C00A78ED6 /* RESideMenu.m */; };
+		69993B401A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B3D1A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m */; };
+		69993B431A1A602A00A78ED6 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B421A1A602A00A78ED6 /* LeftViewController.m */; };
+		69993B451A1A63D500A78ED6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69993B441A1A63D500A78ED6 /* CoreGraphics.framework */; };
+		69993B491A1A64D900A78ED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69993B481A1A64D900A78ED6 /* Foundation.framework */; };
+		69993B4B1A1A64E400A78ED6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69993B4A1A1A64E400A78ED6 /* UIKit.framework */; };
+		69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */; };
+		69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B501A1A683D00A78ED6 /* OffersTableViewController.m */; };
+		69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		698413F01A1A8DE30084F0B2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		698413F21A1A930E0084F0B2 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		698413F31A1A930E0084F0B2 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		698413F61A1BD36D0084F0B2 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		698413F71A1BD36D0084F0B2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		698413F81A1BD36D0084F0B2 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = release_notes.md; sourceTree = "<group>"; };
+		698413F91A1BD36D0084F0B2 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		698413FA1A1BD36D0084F0B2 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		698413FB1A1BD36D0084F0B2 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		698413FF1A1BD5020084F0B2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		698414041A1BDB870084F0B2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		698414051A1BDB870084F0B2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		698414071A1BDF460084F0B2 /* StuffTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffTableViewController.h; sourceTree = "<group>"; };
+		698414081A1BDF460084F0B2 /* StuffTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffTableViewController.m; sourceTree = "<group>"; };
 		69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belle De Jour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69993B121A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69993B131A1A5CC900A78ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +73,24 @@
 		69993B271A1A5CC900A78ED6 /* Belle De JourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Belle De JourTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69993B2C1A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69993B2D1A1A5CC900A78ED6 /* Belle_De_JourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Belle_De_JourTests.m; sourceTree = "<group>"; };
+		69993B381A1A5D7C00A78ED6 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		69993B391A1A5D7C00A78ED6 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		69993B3A1A1A5D7C00A78ED6 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		69993B3B1A1A5D7C00A78ED6 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		69993B3C1A1A5D7C00A78ED6 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		69993B3D1A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		69993B411A1A602A00A78ED6 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		69993B421A1A602A00A78ED6 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		69993B441A1A63D500A78ED6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		69993B461A1A642B00A78ED6 /* Belledejour.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Belledejour.pch; sourceTree = "<group>"; };
+		69993B481A1A64D900A78ED6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69993B4A1A1A64E400A78ED6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69993B4C1A1A681D00A78ED6 /* ServicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesTableViewController.h; sourceTree = "<group>"; };
+		69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesTableViewController.m; sourceTree = "<group>"; };
+		69993B4F1A1A683D00A78ED6 /* OffersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersTableViewController.h; sourceTree = "<group>"; };
+		69993B501A1A683D00A78ED6 /* OffersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersTableViewController.m; sourceTree = "<group>"; };
+		69993B521A1A689D00A78ED6 /* FaceBookFeedsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookFeedsTableViewController.h; sourceTree = "<group>"; };
+		69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookFeedsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698414001A1BD5020084F0B2 /* libz.dylib in Frameworks */,
+				69993B4B1A1A64E400A78ED6 /* UIKit.framework in Frameworks */,
+				69993B491A1A64D900A78ED6 /* Foundation.framework in Frameworks */,
+				69993B451A1A63D500A78ED6 /* CoreGraphics.framework in Frameworks */,
+				698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +116,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		698413F51A1BD36D0084F0B2 /* TestFlightSDK3-2 */ = {
+			isa = PBXGroup;
+			children = (
+				698413F61A1BD36D0084F0B2 /* libTestFlight.a */,
+				698413F71A1BD36D0084F0B2 /* README.md */,
+				698413F81A1BD36D0084F0B2 /* release_notes.md */,
+				698413F91A1BD36D0084F0B2 /* TestFlight+AsyncLogging.h */,
+				698413FA1A1BD36D0084F0B2 /* TestFlight+ManualSessions.h */,
+				698413FB1A1BD36D0084F0B2 /* TestFlight.h */,
+			);
+			path = "TestFlightSDK3-2";
+			sourceTree = "<group>";
+		};
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				698413F51A1BD36D0084F0B2 /* TestFlightSDK3-2 */,
+				69993B371A1A5D7C00A78ED6 /* RESideMenu */,
 				69993B101A1A5CC900A78ED6 /* Belle De Jour */,
 				69993B2A1A1A5CC900A78ED6 /* Belle De JourTests */,
 				69993B0F1A1A5CC900A78ED6 /* Products */,
@@ -81,10 +152,27 @@
 		69993B101A1A5CC900A78ED6 /* Belle De Jour */ = {
 			isa = PBXGroup;
 			children = (
+				69993B471A1A64C700A78ED6 /* FrameWorks */,
 				69993B151A1A5CC900A78ED6 /* AppDelegate.h */,
 				69993B161A1A5CC900A78ED6 /* AppDelegate.m */,
 				69993B181A1A5CC900A78ED6 /* ViewController.h */,
 				69993B191A1A5CC900A78ED6 /* ViewController.m */,
+				69993B411A1A602A00A78ED6 /* LeftViewController.h */,
+				69993B421A1A602A00A78ED6 /* LeftViewController.m */,
+				698413EF1A1A8DE20084F0B2 /* HomeViewController.h */,
+				698413F01A1A8DE30084F0B2 /* HomeViewController.m */,
+				698413F21A1A930E0084F0B2 /* PageContentViewController.h */,
+				698413F31A1A930E0084F0B2 /* PageContentViewController.m */,
+				69993B4C1A1A681D00A78ED6 /* ServicesTableViewController.h */,
+				69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */,
+				69993B4F1A1A683D00A78ED6 /* OffersTableViewController.h */,
+				69993B501A1A683D00A78ED6 /* OffersTableViewController.m */,
+				69993B521A1A689D00A78ED6 /* FaceBookFeedsTableViewController.h */,
+				69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */,
+				698414071A1BDF460084F0B2 /* StuffTableViewController.h */,
+				698414081A1BDF460084F0B2 /* StuffTableViewController.m */,
+				698414041A1BDB870084F0B2 /* SettingsViewController.h */,
+				698414051A1BDB870084F0B2 /* SettingsViewController.m */,
 				69993B1B1A1A5CC900A78ED6 /* Main.storyboard */,
 				69993B1E1A1A5CC900A78ED6 /* Images.xcassets */,
 				69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */,
@@ -98,6 +186,7 @@
 			children = (
 				69993B121A1A5CC900A78ED6 /* Info.plist */,
 				69993B131A1A5CC900A78ED6 /* main.m */,
+				69993B461A1A642B00A78ED6 /* Belledejour.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +206,31 @@
 				69993B2C1A1A5CC900A78ED6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69993B371A1A5D7C00A78ED6 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				69993B381A1A5D7C00A78ED6 /* RECommonFunctions.h */,
+				69993B391A1A5D7C00A78ED6 /* RECommonFunctions.m */,
+				69993B3A1A1A5D7C00A78ED6 /* RESideMenu.h */,
+				69993B3B1A1A5D7C00A78ED6 /* RESideMenu.m */,
+				69993B3C1A1A5D7C00A78ED6 /* UIViewController+RESideMenu.h */,
+				69993B3D1A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		69993B471A1A64C700A78ED6 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				698413FF1A1BD5020084F0B2 /* libz.dylib */,
+				69993B481A1A64D900A78ED6 /* Foundation.framework */,
+				69993B4A1A1A64E400A78ED6 /* UIKit.framework */,
+				69993B441A1A63D500A78ED6 /* CoreGraphics.framework */,
+			);
+			name = FrameWorks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +282,7 @@
 				TargetAttributes = {
 					69993B0D1A1A5CC900A78ED6 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 6VJ733SKX8;
 					};
 					69993B261A1A5CC900A78ED6 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -220,8 +335,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
+				69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */,
 				69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */,
+				698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */,
+				698414091A1BDF460084F0B2 /* StuffTableViewController.m in Sources */,
 				69993B141A1A5CC900A78ED6 /* main.m in Sources */,
+				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
+				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
+				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
+				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
+				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,
+				698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */,
+				69993B431A1A602A00A78ED6 /* LeftViewController.m in Sources */,
+				69993B3E1A1A5D7C00A78ED6 /* RECommonFunctions.m in Sources */,
+				69993B401A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m in Sources */,
+				69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +472,15 @@
 		69993B321A1A5CC900A78ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "Belle De Jour/Belledejour.pch";
 				INFOPLIST_FILE = "Belle De Jour/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFlightSDK3-2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,9 +488,15 @@
 		69993B331A1A5CC900A78ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "Belle De Jour/Belledejour.pch";
 				INFOPLIST_FILE = "Belle De Jour/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFlightSDK3-2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -414,6 +554,7 @@
 				69993B331A1A5CC900A78ED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69993B341A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De JourTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +563,7 @@
 				69993B361A1A5CC900A78ED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
