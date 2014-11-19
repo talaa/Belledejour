@@ -336,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="1545.5999999999999" y="291.57333333333332"/>
         </scene>
-        <!--View Controller-->
+        <!--Booking View Controller-->
         <scene sceneID="t2b-hj-KrU">
             <objects>
-                <viewController id="nvS-Bz-zbI" sceneMemberID="viewController">
+                <viewController id="nvS-Bz-zbI" customClass="BookingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rGO-o6-zgB"/>
                         <viewControllerLayoutGuide type="bottom" id="TMW-bI-9zv"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
 		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
 		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
 		698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413F61A1BD36D0084F0B2 /* libTestFlight.a */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
+		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
 		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		698413F01A1A8DE30084F0B2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		698413F21A1A930E0084F0B2 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				698414081A1BDF460084F0B2 /* StuffTableViewController.m */,
 				698414041A1BDB870084F0B2 /* SettingsViewController.h */,
 				698414051A1BDB870084F0B2 /* SettingsViewController.m */,
+				69566C411A1CF8BA0074F1A4 /* BookingViewController.h */,
+				69566C421A1CF8BA0074F1A4 /* BookingViewController.m */,
 				69993B1B1A1A5CC900A78ED6 /* Main.storyboard */,
 				69993B1E1A1A5CC900A78ED6 /* Images.xcassets */,
 				69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */,
@@ -335,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
+				69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */,
 				69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */,
 				69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */,
 				698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */,
