@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestFlight.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -23,9 +24,11 @@
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
     
+    [Parse setApplicationId:@"2Fqeb69D9uPkqmEfbW99r3LWjUefv0pIyQL4QdgR"
+                  clientKey:@"Qpafs6h3B4jEkPVk2DNTHo4GUICHkfUgTByH8lng"];
     
     
-       [TestFlight takeOff:@"a00986c3-fffa-4d60-94a3-09d8ce957115"];
+    [TestFlight takeOff:@"a00986c3-fffa-4d60-94a3-09d8ce957115"];
     return YES;
 }
 
