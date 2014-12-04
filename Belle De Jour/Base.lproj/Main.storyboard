@@ -37,6 +37,7 @@
                         <segue destination="cPv-nc-h05" kind="push" id="3b0-dG-1Cm"/>
                         <segue destination="P0T-bV-fkk" kind="push" id="crC-Qj-8Ga"/>
                         <segue destination="Jaf-h4-Ggm" kind="push" id="otE-3M-mlq"/>
+                        <segue destination="Me7-Ge-IWk" kind="push" id="oeg-S4-Gq5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRg-jv-von" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,7 +146,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-zI-4Hg">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-zI-4Hg">
                                             <rect key="frame" x="0.0" y="269" width="320" height="200"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Is a minimally invasive cosmetic enhancement technique that lifts sagging skin on the face and neck using surgical suture threads. It uses multiple,hair-thin needles that have fine threads dipped in bio stem cell liquid. These needles are inserted into a layer of the skin one-by-one and then pulled out together smoothly, leaving the fine thread inside the layers of the skin. This induces fibroblast and promotes collagen.</string>
@@ -393,6 +394,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srf-f1-Gco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1467" y="918"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="CGF-8n-QBu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" title="Login View Controller" id="Me7-Ge-IWk" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WhA-V3-Wfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ghb-Cu-gpA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czU-wc-87j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-OF-K4h">
+                                <rect key="frame" x="28" y="202" width="269" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Me7-Ge-IWk" id="IQZ-Dt-q4g"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-Of-g7Z">
+                                <rect key="frame" x="28" y="315" width="269" height="53"/>
+                                <color key="backgroundColor" red="0.82577633751189816" green="0.93156725168228149" blue="0.8436813881783507" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="tM4-Do-mX5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-I7-73I">
+                                <rect key="frame" x="28" y="253" width="269" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Me7-Ge-IWk" id="4I6-iu-Jni"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUj-CE-zru">
+                                <rect key="frame" x="28" y="412" width="269" height="53"/>
+                                <color key="backgroundColor" red="0.32316015888057448" green="0.39751506489163324" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <state key="normal" title="Sign in with facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.00088385441934541158" blue="0.25094958563535907" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInWithFB:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="bfK-Jx-lXW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-ZA-VqU">
+                                <rect key="frame" x="169" y="480" width="135" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="New here? Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="4xV-yY-dhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rq-ND-Mw2">
+                                <rect key="frame" x="28" y="480" width="126" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Forgot password ?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPassword:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="7Bn-27-5dH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G4Q-zR-qNa">
+                        <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="7Zu-wf-fCN">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="x6M-G9-qnc" id="azU-Xf-wEz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="0Mh-OF-K4h" id="eA0-q5-ah3"/>
+                        <outlet property="passwordTxt" destination="UKz-I7-73I" id="OMF-1V-nbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6M-G9-qnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="984"/>
         </scene>
         <!--Staff Members-->
         <scene sceneID="DMy-N4-7A9">

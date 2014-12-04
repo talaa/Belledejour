@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     self.tableView = ({
-        titles = @[@"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log Out"];
+        titles = @[@"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log In"];
         images = @[@"IconHome", @"IconCalendar",@"IconEmpty",@"facebook", @"IconProfile", @"IconSettings", @"IconEmpty"];
 
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * [titles count]) / 2.0f, self.view.frame.size.width, 54 * [titles count]) style:UITableViewStylePlain];
@@ -82,6 +82,11 @@
             break;
         case 5:
             [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
+                                                         animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 6:
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"]]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;

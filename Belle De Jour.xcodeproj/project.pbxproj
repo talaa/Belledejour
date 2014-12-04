@@ -24,6 +24,7 @@
 		6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6913EB721A30F5D4009D65CD /* SVProgressHUD.bundle */; };
 		6913EB771A30F5D4009D65CD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB741A30F5D4009D65CD /* SVProgressHUD.m */; };
 		6913EB791A30F63C009D65CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB781A30F63C009D65CD /* Bolts.framework */; };
+		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
 		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
 		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
@@ -83,6 +84,8 @@
 		6913EB731A30F5D4009D65CD /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		6913EB741A30F5D4009D65CD /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		6913EB781A30F63C009D65CD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6913EB7F1A310E4E009D65CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6913EB801A310E4E009D65CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
 		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				698414051A1BDB870084F0B2 /* SettingsViewController.m */,
 				69566C411A1CF8BA0074F1A4 /* BookingViewController.h */,
 				69566C421A1CF8BA0074F1A4 /* BookingViewController.m */,
+				6913EB7F1A310E4E009D65CD /* LoginViewController.h */,
+				6913EB801A310E4E009D65CD /* LoginViewController.m */,
 				69993B1B1A1A5CC900A78ED6 /* Main.storyboard */,
 				69993B1E1A1A5CC900A78ED6 /* Images.xcassets */,
 				69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */,
@@ -429,6 +434,7 @@
 				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
 				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
+				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
 				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
 				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,
 				698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */,
