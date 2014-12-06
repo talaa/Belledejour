@@ -26,6 +26,7 @@
 		6913EB791A30F63C009D65CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB781A30F63C009D65CD /* Bolts.framework */; };
 		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
+		6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6981C2751A3307DC00699924 /* belledejouricon-1.png */; };
 		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
 		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
 		698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413F61A1BD36D0084F0B2 /* libTestFlight.a */; };
@@ -88,6 +89,7 @@
 		6913EB801A310E4E009D65CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
+		6981C2751A3307DC00699924 /* belledejouricon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "belledejouricon-1.png"; path = "Images.xcassets/AppIcon-2.appiconset/belledejouricon-1.png"; sourceTree = "<group>"; };
 		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		698413F01A1A8DE30084F0B2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		698413F21A1A930E0084F0B2 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		69993B111A1A5CC900A78ED6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6981C2751A3307DC00699924 /* belledejouricon-1.png */,
 				69993B121A1A5CC900A78ED6 /* Info.plist */,
 				69993B131A1A5CC900A78ED6 /* main.m */,
 				69993B461A1A642B00A78ED6 /* Belledejour.pch */,
@@ -403,6 +406,7 @@
 			files = (
 				6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */,
 				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
+				6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */,
 				6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */,
 				69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */,
 				69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */,

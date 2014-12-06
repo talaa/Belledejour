@@ -23,7 +23,9 @@
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
-    
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:0.8366928522 green:0.097945066159999997 blue:0.46180832659999999 alpha:1] ];
+
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.8366928522 green:0.097945066159999997 blue:0.46180832659999999 alpha:1] ];
     [Parse setApplicationId:@"2Fqeb69D9uPkqmEfbW99r3LWjUefv0pIyQL4QdgR"
                   clientKey:@"Qpafs6h3B4jEkPVk2DNTHo4GUICHkfUgTByH8lng"];
     

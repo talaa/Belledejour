@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login Screen"]];
+ //   self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login Screen"]];
 }
 
 - (void)didReceiveMemoryWarning {
