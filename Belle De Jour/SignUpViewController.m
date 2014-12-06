@@ -75,6 +75,8 @@
 {
     if(_emailTxt.text.length>0&&_nameTxt.text.length>0&&_userNameTxt.text.length>0&&_passwordTxt.text.length>0&&_mobileNumberTxt.text.length>0)
     {
+        if([self validEmail:_emailTxt.text ])
+        {
         user.name=_nameTxt.text;
         user.userName=_userNameTxt.text;
         user.password=_passwordTxt.text;
@@ -122,12 +124,36 @@
         //            }
         //
         //        }];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@" Please enter valid E-mail address . "delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
         
     }
     else
     {
         [self presentViewController:alertController animated:YES completion:nil];
         
+    }
+}
+- (BOOL) validEmail:(NSString*) emailString {
+    
+    if([emailString length]==0){
+        return NO;
+    }
+    
+    NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString options:0 range:NSMakeRange(0, [emailString length])];
+    
+    NSLog(@"%lu", (unsigned long)regExMatches);
+    if (regExMatches == 0) {
+        return NO;
+    } else {
+        return YES;
     }
 }
 - (IBAction)createAccount:(id)sender {

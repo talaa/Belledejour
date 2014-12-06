@@ -7,8 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
+#import "SVProgressHUD.h"
 
 @interface LoginViewController ()
+{
+    UIAlertController * alertController;
+    UIAlertAction * okAction;
+}
 
 @end
 
@@ -16,7 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- //   self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login Screen"]];
+     okAction = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleCancel
+                                handler:^(UIAlertAction *action)
+                                {
+                                    NSLog(@"OK action");
+                                }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,8 +56,47 @@
     [self.view endEditing:YES];
 }
 - (IBAction)signIn:(id)sender {
-}
+    [self setScreenState:NO];
+    if(_usernameTxt.text.length>0 && _passwordTxt.text.length>0)
+    {
+    [PFUser logInWithUsernameInBackground:_usernameTxt.text password:_passwordTxt.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            alertController = [UIAlertController
+                                                               alertControllerWithTitle:@"Alert"
+                                                               message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
+                                                               preferredStyle:UIAlertControllerStyleAlert];
+                                            [alertController addAction:okAction];
+                                            [self presentViewController:alertController animated:YES completion:nil];
 
+                                        } else {
+                                            alertController = [UIAlertController
+                                                               alertControllerWithTitle:@"Alert"
+                                                               message:[NSString stringWithFormat:@"%@ ",error.description]
+                                                               preferredStyle:UIAlertControllerStyleAlert];
+                                            [alertController addAction:okAction];
+                                            [self presentViewController:alertController animated:YES completion:nil];                                        }
+                                    }];
+    }
+    else
+    {
+        alertController = [UIAlertController
+                           alertControllerWithTitle:@"Alert"
+                           message:@"Please enter fields!!"
+                           preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+   
+    }
+    [self setScreenState:YES];
+
+}
+- (void)setScreenState:(BOOL)state{
+    (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
+    [self.view setUserInteractionEnabled:state];
+    UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
+    leftbutton.enabled = state;
+}
 - (IBAction)signInWithFB:(id)sender {
 }
 

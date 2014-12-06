@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *emailTxt;
+@property (weak, nonatomic) IBOutlet UITextField * usernameTxt;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTxt;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signInWithFB:(id)sender;

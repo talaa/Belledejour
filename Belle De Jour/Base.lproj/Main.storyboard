@@ -404,7 +404,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="E-mail Address" minimumFontSize="17" id="0Mh-OF-K4h">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" id="0Mh-OF-K4h">
                                 <rect key="frame" x="28" y="186" width="269" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
@@ -430,7 +430,7 @@
                                 <rect key="frame" x="28" y="240" width="269" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="Me7-Ge-IWk" id="4I6-iu-Jni"/>
                                 </connections>
@@ -497,8 +497,8 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="emailTxt" destination="0Mh-OF-K4h" id="eA0-q5-ah3"/>
                         <outlet property="passwordTxt" destination="UKz-I7-73I" id="OMF-1V-nbM"/>
+                        <outlet property="usernameTxt" destination="0Mh-OF-K4h" id="ask-Mc-nJv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6M-G9-qnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
