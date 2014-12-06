@@ -27,6 +27,8 @@
 		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
 		6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6981C2751A3307DC00699924 /* belledejouricon-1.png */; };
+		6981C2791A33301C00699924 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C2781A33301C00699924 /* SignUpViewController.m */; };
+		6981C27C1A3332CF00699924 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C27B1A3332CF00699924 /* User.m */; };
 		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
 		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
 		698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413F61A1BD36D0084F0B2 /* libTestFlight.a */; };
@@ -90,6 +92,10 @@
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
 		6981C2751A3307DC00699924 /* belledejouricon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "belledejouricon-1.png"; path = "Images.xcassets/AppIcon-2.appiconset/belledejouricon-1.png"; sourceTree = "<group>"; };
+		6981C2771A33301C00699924 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6981C2781A33301C00699924 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		6981C27A1A3332CF00699924 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6981C27B1A3332CF00699924 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		698413F01A1A8DE30084F0B2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		698413F21A1A930E0084F0B2 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -254,6 +260,10 @@
 				69993B1E1A1A5CC900A78ED6 /* Images.xcassets */,
 				69993B201A1A5CC900A78ED6 /* LaunchScreen.xib */,
 				69993B111A1A5CC900A78ED6 /* Supporting Files */,
+				6981C2771A33301C00699924 /* SignUpViewController.h */,
+				6981C2781A33301C00699924 /* SignUpViewController.m */,
+				6981C27A1A3332CF00699924 /* User.h */,
+				6981C27B1A3332CF00699924 /* User.m */,
 			);
 			path = "Belle De Jour";
 			sourceTree = "<group>";
@@ -439,6 +449,7 @@
 				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
+				6981C27C1A3332CF00699924 /* User.m in Sources */,
 				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
 				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,
 				698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */,
@@ -447,6 +458,7 @@
 				69993B401A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m in Sources */,
 				6913EB771A30F5D4009D65CD /* SVProgressHUD.m in Sources */,
 				69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */,
+				6981C2791A33301C00699924 /* SignUpViewController.m in Sources */,
 				6913EB561A30F3DA009D65CD /* Service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
