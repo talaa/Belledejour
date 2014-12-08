@@ -26,7 +26,8 @@
 #import "RESideMenu.h"
 #import "UIViewController+RESideMenu.h"
 #import "RECommonFunctions.h"
-
+#import "AppDelegate.h"
+#import "LeftViewController.h"
 @interface RESideMenu ()
 
 @property (strong, readwrite, nonatomic) UIImageView *backgroundImageView;
@@ -271,9 +272,12 @@
 
 - (void)showLeftMenuViewController
 {
+
     if (!self.leftMenuViewController) {
         return;
     }
+    AppDelegate * appdelegate=[[AppDelegate alloc]init];
+    [((LeftViewController *)(appdelegate.viewController.leftMenuViewController)).tableView reloadData];
     self.leftMenuViewController.view.hidden = NO;
     self.rightMenuViewController.view.hidden = YES;
     [self.view.window endEditing:YES];

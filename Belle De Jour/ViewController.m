@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
+#import "LeftViewController.h"
 @interface ViewController ()
 
 @end
@@ -35,6 +36,7 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
+   
     NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 

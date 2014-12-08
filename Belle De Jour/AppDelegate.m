@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "TestFlight.h"
 #import <Parse/Parse.h>
+#import "RESideMenu.h"
+#import "LeftViewController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
+    _sideBar=[[LeftViewController alloc]init];
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
@@ -26,6 +31,8 @@
     [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:0.8366928522 green:0.097945066159999997 blue:0.46180832659999999 alpha:1] ];
 
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.8366928522 green:0.097945066159999997 blue:0.46180832659999999 alpha:1] ];
+    self.viewController = [[RESideMenu alloc]initWithContentViewController:_navigationController leftMenuViewController:_sideBar rightMenuViewController:nil];
+
     [Parse setApplicationId:@"2Fqeb69D9uPkqmEfbW99r3LWjUefv0pIyQL4QdgR"
                   clientKey:@"Qpafs6h3B4jEkPVk2DNTHo4GUICHkfUgTByH8lng"];
     

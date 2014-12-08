@@ -17,7 +17,6 @@
 
 
 @interface LeftViewController ()
-@property (strong, readwrite, nonatomic) UITableView *tableView;
 @property (nonatomic)NSArray *titles;
 @property (nonatomic)NSArray *images;
 @end
@@ -95,6 +94,7 @@
             break;
     }
 }
+
 
 #pragma mark -
 #pragma mark UITableView Datasource

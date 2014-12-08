@@ -15,5 +15,6 @@
 - (IBAction)signInWithFB:(id)sender;
 - (IBAction)forgotPassword:(id)sender;
 - (IBAction)signUp:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

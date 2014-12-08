@@ -54,6 +54,8 @@
 		69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */; };
 		69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B501A1A683D00A78ED6 /* OffersTableViewController.m */; };
 		69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */; };
+		699D3F6D1A35219D00658646 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F691A35219C00658646 /* Reachability.m */; };
+		699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,7 @@
 		698414051A1BDB870084F0B2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		698414071A1BDF460084F0B2 /* StuffTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffTableViewController.h; sourceTree = "<group>"; };
 		698414081A1BDF460084F0B2 /* StuffTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffTableViewController.m; sourceTree = "<group>"; };
+		699110C01A352ED7002DC75A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
 		69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belle De Jour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69993B121A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69993B131A1A5CC900A78ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +145,10 @@
 		69993B501A1A683D00A78ED6 /* OffersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersTableViewController.m; sourceTree = "<group>"; };
 		69993B521A1A689D00A78ED6 /* FaceBookFeedsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookFeedsTableViewController.h; sourceTree = "<group>"; };
 		69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookFeedsTableViewController.m; sourceTree = "<group>"; };
+		699D3F681A35219C00658646 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		699D3F691A35219C00658646 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		699D3F6A1A35219C00658646 /* SMBInternetConnectionIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBInternetConnectionIndicator.h; sourceTree = "<group>"; };
+		699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +233,8 @@
 		69993B101A1A5CC900A78ED6 /* Belle De Jour */ = {
 			isa = PBXGroup;
 			children = (
+				699110C01A352ED7002DC75A /* Constants.h */,
+				699D3F651A35219C00658646 /* Networking */,
 				6913EB701A30F5D4009D65CD /* SVProgressHUD */,
 				69993B471A1A64C700A78ED6 /* FrameWorks */,
 				6913EB541A30F3DA009D65CD /* Service.h */,
@@ -331,6 +340,17 @@
 			);
 			name = FrameWorks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		699D3F651A35219C00658646 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				699D3F681A35219C00658646 /* Reachability.h */,
+				699D3F691A35219C00658646 /* Reachability.m */,
+				699D3F6A1A35219C00658646 /* SMBInternetConnectionIndicator.h */,
+				699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +460,7 @@
 				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
 				69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */,
 				69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */,
+				699D3F6D1A35219D00658646 /* Reachability.m in Sources */,
 				69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */,
 				6913EB591A30F400009D65CD /* ServiceTableViewCell.m in Sources */,
 				698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */,
@@ -451,6 +472,7 @@
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
 				6981C27C1A3332CF00699924 /* User.m in Sources */,
 				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
+				699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */,
 				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,
 				698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */,
 				69993B431A1A602A00A78ED6 /* LeftViewController.m in Sources */,

@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RESideMenu.h"
+#import "LeftViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) RESideMenu *viewController;
+@property(strong,nonatomic)LeftViewController * sideBar;
+@property(strong,nonatomic) UINavigationController *navigationController;
+
 
 
 @end

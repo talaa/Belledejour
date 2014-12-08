@@ -10,6 +10,7 @@
 #import "User.h"
 #import <Parse/Parse.h>
 #import "SVProgressHUD.h"
+#import "Constants.h"
 
 @interface SignUpViewController ()
 {
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ShowInternetIndicator;
     user = [[User alloc]init];
     parseUser = [PFUser user];
     alertController = [UIAlertController

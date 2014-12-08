@@ -10,7 +10,9 @@
 #import <Parse/Parse.h>
 #import "Service.h"
 #import "ServiceTableViewCell.h"
+#import "SMBInternetConnectionIndicator.h"
 #import "SVProgressHUD.h"
+#import "Constants.h"
 
 @interface ServicesTableViewController ()
 {
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ShowInternetIndicator;
     [self performSelector:@selector(getServices)];
 }
 -(void)getServices

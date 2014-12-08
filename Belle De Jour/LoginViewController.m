@@ -9,6 +9,11 @@
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
 #import "SVProgressHUD.h"
+#import "LeftViewController.h"
+#import "AppDelegate.h"
+#import "UIViewController+RESideMenu.h"
+#import "Constants.h"
+#import "SMBInternetConnectionIndicator.h"
 
 @interface LoginViewController ()
 {
@@ -22,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ShowInternetIndicator;
      okAction = [UIAlertAction
                                 actionWithTitle:@"OK"
                                 style:UIAlertActionStyleCancel
@@ -45,8 +51,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma UITextField delegate
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+#pragma mark - UITextField delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.scrollView.contentSize=CGSizeMake(self.view.frame.size.width, self.view.frame.size.height+100);
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.scrollView.contentSize=CGSizeMake(self.view.frame.size.width, self.view.frame.size.height-100);
+    
+}-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.view endEditing:YES];
     return YES;
@@ -56,15 +70,17 @@
     [self.view endEditing:YES];
 }
 - (IBAction)signIn:(id)sender {
+  
     [self setScreenState:NO];
     if(_usernameTxt.text.length>0 && _passwordTxt.text.length>0)
     {
     [PFUser logInWithUsernameInBackground:_usernameTxt.text password:_passwordTxt.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
+                                        
                                             alertController = [UIAlertController
                                                                alertControllerWithTitle:@"Alert"
-                                                               message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
+                                                            message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
                                                                preferredStyle:UIAlertControllerStyleAlert];
                                             [alertController addAction:okAction];
                                             [self presentViewController:alertController animated:YES completion:nil];
@@ -72,7 +88,7 @@
                                         } else {
                                             alertController = [UIAlertController
                                                                alertControllerWithTitle:@"Alert"
-                                                               message:[NSString stringWithFormat:@"%@ ",error.description]
+                                                               message:[NSString stringWithFormat:@"%@ ",@"Please enter valid Credentials,"]
                                                                preferredStyle:UIAlertControllerStyleAlert];
                                             [alertController addAction:okAction];
                                             [self presentViewController:alertController animated:YES completion:nil];                                        }
@@ -98,6 +114,7 @@
     leftbutton.enabled = state;
 }
 - (IBAction)signInWithFB:(id)sender {
+ 
 }
 
 - (IBAction)forgotPassword:(id)sender {
