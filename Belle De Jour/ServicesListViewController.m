@@ -10,11 +10,24 @@
 #import "Service.h"
 #import <Parse/Parse.h>
 #import "ServiceListCustomCell.h"
+#import "ServiceDetails.h"
 
 @implementation ServicesListViewController
+
 -(void)viewDidLoad
 {
     
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"serviceDetails"]) {
+        ServiceDetails * servicedetail=(ServiceDetails*)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.servicesTableView indexPathForSelectedRow];
+        servicedetail.service=(Service*)[_services objectAtIndex:indexPath.row];
+        
+        
+    }
 }
 #pragma mark - Table view data source
 
@@ -34,24 +47,21 @@
     static NSString *CellIdentifier = @"ServicesCellList";
     
     ServiceListCustomCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:CellIdentifier];
+                                   dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[ServiceListCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
     if(_services.count>0)
     {
         cell.serviceNameLbl.text=[[_services objectAtIndex:indexPath.row]serviceType];
-        //  cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
-        // cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
-        //cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
-               __block UIImage *MyPicture = [[UIImage alloc]init];
-                PFFile *imageFile = [[_services objectAtIndex:indexPath.row]serviceImage];
-               [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
-                    if (!error) {
-                       MyPicture = [UIImage imageWithData:data];
-                     cell.serviceImage.image=MyPicture;
-                   }
-               }];;
+        __block UIImage *MyPicture = [[UIImage alloc]init];
+        PFFile *imageFile = [[_services objectAtIndex:indexPath.row]serviceImage];
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+            if (!error) {
+                MyPicture = [UIImage imageWithData:data];
+                cell.serviceImage.image=MyPicture;
+            }
+        }];;
     }
     
     return cell;

@@ -41,6 +41,7 @@
 		699110C41A353C73002DC75A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699110C31A353C73002DC75A /* ParseFacebookUtils.framework */; };
 		699110C71A387E56002DC75A /* ServicesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699110C61A387E56002DC75A /* ServicesListViewController.m */; };
 		699110CA1A38EA9F002DC75A /* ServiceListCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */; };
+		699110D01A38FDBF002DC75A /* ServiceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 699110CF1A38FDBF002DC75A /* ServiceDetails.m */; };
 		69993B141A1A5CC900A78ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B131A1A5CC900A78ED6 /* main.m */; };
 		69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B161A1A5CC900A78ED6 /* AppDelegate.m */; };
 		69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B191A1A5CC900A78ED6 /* ViewController.m */; };
@@ -124,6 +125,8 @@
 		699110C61A387E56002DC75A /* ServicesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesListViewController.m; sourceTree = "<group>"; };
 		699110C81A38EA9F002DC75A /* ServiceListCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceListCustomCell.h; sourceTree = "<group>"; };
 		699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceListCustomCell.m; sourceTree = "<group>"; };
+		699110CE1A38FDBF002DC75A /* ServiceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceDetails.h; sourceTree = "<group>"; };
+		699110CF1A38FDBF002DC75A /* ServiceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceDetails.m; sourceTree = "<group>"; };
 		69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belle De Jour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69993B121A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69993B131A1A5CC900A78ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				699110C61A387E56002DC75A /* ServicesListViewController.m */,
 				699110C81A38EA9F002DC75A /* ServiceListCustomCell.h */,
 				699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */,
+				699110CE1A38FDBF002DC75A /* ServiceDetails.h */,
+				699110CF1A38FDBF002DC75A /* ServiceDetails.m */,
 			);
 			path = "Belle De Jour";
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 			files = (
 				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
 				69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */,
+				699110D01A38FDBF002DC75A /* ServiceDetails.m in Sources */,
 				699110CA1A38EA9F002DC75A /* ServiceListCustomCell.m in Sources */,
 				69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */,
 				699D3F6D1A35219D00658646 /* Reachability.m in Sources */,

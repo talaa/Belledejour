@@ -30,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    temparray=[[NSMutableArray alloc]init];
     ShowInternetIndicator;
     [self performSelector:@selector(getServices)];
 }
@@ -113,7 +112,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    temparray=[[NSMutableArray alloc]init];
     if ([segue.identifier isEqualToString:@"Service"]) {
         ServicesListViewController * servicedetail=(ServicesListViewController*)segue.destinationViewController;
         NSIndexPath *indexPath = [self.servicesTableView indexPathForSelectedRow];
