@@ -37,6 +37,10 @@
 		698414001A1BD5020084F0B2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413FF1A1BD5020084F0B2 /* libz.dylib */; };
 		698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698414051A1BDB870084F0B2 /* SettingsViewController.m */; };
 		698414091A1BDF460084F0B2 /* StuffTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698414081A1BDF460084F0B2 /* StuffTableViewController.m */; };
+		699110C21A353B03002DC75A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699110C11A353B03002DC75A /* FacebookSDK.framework */; };
+		699110C41A353C73002DC75A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699110C31A353C73002DC75A /* ParseFacebookUtils.framework */; };
+		699110C71A387E56002DC75A /* ServicesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699110C61A387E56002DC75A /* ServicesListViewController.m */; };
+		699110CA1A38EA9F002DC75A /* ServiceListCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */; };
 		69993B141A1A5CC900A78ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B131A1A5CC900A78ED6 /* main.m */; };
 		69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B161A1A5CC900A78ED6 /* AppDelegate.m */; };
 		69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B191A1A5CC900A78ED6 /* ViewController.m */; };
@@ -114,6 +118,12 @@
 		698414071A1BDF460084F0B2 /* StuffTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffTableViewController.h; sourceTree = "<group>"; };
 		698414081A1BDF460084F0B2 /* StuffTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffTableViewController.m; sourceTree = "<group>"; };
 		699110C01A352ED7002DC75A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		699110C11A353B03002DC75A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		699110C31A353C73002DC75A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		699110C51A387E56002DC75A /* ServicesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesListViewController.h; sourceTree = "<group>"; };
+		699110C61A387E56002DC75A /* ServicesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesListViewController.m; sourceTree = "<group>"; };
+		699110C81A38EA9F002DC75A /* ServiceListCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceListCustomCell.h; sourceTree = "<group>"; };
+		699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceListCustomCell.m; sourceTree = "<group>"; };
 		69993B0E1A1A5CC900A78ED6 /* Belle De Jour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belle De Jour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69993B121A1A5CC900A78ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69993B131A1A5CC900A78ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,6 +171,8 @@
 				6913EB691A30F537009D65CD /* Security.framework in Frameworks */,
 				6913EB6B1A30F541009D65CD /* QuartzCore.framework in Frameworks */,
 				6913EB671A30F52F009D65CD /* CoreLocation.framework in Frameworks */,
+				699110C41A353C73002DC75A /* ParseFacebookUtils.framework in Frameworks */,
+				699110C21A353B03002DC75A /* FacebookSDK.framework in Frameworks */,
 				6913EB651A30F527009D65CD /* AudioToolbox.framework in Frameworks */,
 				6913EB631A30F521009D65CD /* SystemConfiguration.framework in Frameworks */,
 				6913EB611A30F517009D65CD /* Social.framework in Frameworks */,
@@ -273,6 +285,10 @@
 				6981C2781A33301C00699924 /* SignUpViewController.m */,
 				6981C27A1A3332CF00699924 /* User.h */,
 				6981C27B1A3332CF00699924 /* User.m */,
+				699110C51A387E56002DC75A /* ServicesListViewController.h */,
+				699110C61A387E56002DC75A /* ServicesListViewController.m */,
+				699110C81A38EA9F002DC75A /* ServiceListCustomCell.h */,
+				699110C91A38EA9F002DC75A /* ServiceListCustomCell.m */,
 			);
 			path = "Belle De Jour";
 			sourceTree = "<group>";
@@ -321,6 +337,8 @@
 		69993B471A1A64C700A78ED6 /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				699110C31A353C73002DC75A /* ParseFacebookUtils.framework */,
+				699110C11A353B03002DC75A /* FacebookSDK.framework */,
 				6913EB781A30F63C009D65CD /* Bolts.framework */,
 				6913EB6E1A30F569009D65CD /* libz.1.1.3.dylib */,
 				6913EB6C1A30F560009D65CD /* MobileCoreServices.framework */,
@@ -459,6 +477,7 @@
 			files = (
 				69993B1A1A1A5CC900A78ED6 /* ViewController.m in Sources */,
 				69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */,
+				699110CA1A38EA9F002DC75A /* ServiceListCustomCell.m in Sources */,
 				69993B511A1A683D00A78ED6 /* OffersTableViewController.m in Sources */,
 				699D3F6D1A35219D00658646 /* Reachability.m in Sources */,
 				69993B171A1A5CC900A78ED6 /* AppDelegate.m in Sources */,
@@ -471,6 +490,7 @@
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
 				6981C27C1A3332CF00699924 /* User.m in Sources */,
+				699110C71A387E56002DC75A /* ServicesListViewController.m in Sources */,
 				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
 				699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */,
 				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,

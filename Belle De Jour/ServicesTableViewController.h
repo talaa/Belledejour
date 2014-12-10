@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServicesTableViewController : UITableViewController
+@interface ServicesTableViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *servicesTableView;
 
 @end

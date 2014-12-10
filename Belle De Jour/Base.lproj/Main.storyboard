@@ -31,12 +31,12 @@
                     </navigationBar>
                     <connections>
                         <segue destination="icD-YN-VvO" kind="relationship" relationship="rootViewController" id="DHW-ZO-akj"/>
-                        <segue destination="YwP-ok-a7u" kind="push" id="JSS-cC-GzC"/>
                         <segue destination="Phd-1Q-TuY" kind="push" id="7im-hX-yVV"/>
                         <segue destination="cPv-nc-h05" kind="push" id="3b0-dG-1Cm"/>
                         <segue destination="P0T-bV-fkk" kind="push" id="crC-Qj-8Ga"/>
                         <segue destination="Jaf-h4-Ggm" kind="push" id="otE-3M-mlq"/>
                         <segue destination="Me7-Ge-IWk" kind="push" id="oeg-S4-Gq5"/>
+                        <segue destination="iBo-dI-vag" kind="push" id="i5E-Mf-hTX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRg-jv-von" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,40 +61,33 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P0T-bV-fkk" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uJi-9W-1eF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rUn-uo-tlK">
-                                <rect key="frame" x="16" y="99" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="85" y="114.5" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi User" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AXL-4k-4bm">
-                                <rect key="frame" x="197" y="99" width="91" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 0 Loyalty Points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E5Z-9b-x44">
-                                <rect key="frame" x="16" y="449" width="288" height="21"/>
+                                <rect key="frame" x="16" y="411" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GnS-LC-jJ7">
-                                <rect key="frame" x="0.0" y="272" width="320" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter your Phone Number" minimumFontSize="17" id="ltN-C2-hnm">
-                                <rect key="frame" x="43" y="376" width="234" height="30"/>
+                                <rect key="frame" x="43" y="338" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AXL-4k-4bm">
+                                <rect key="frame" x="16" y="291" width="288" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -105,6 +98,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userNameLbl" destination="AXL-4k-4bm" id="QAx-m6-4Z1"/>
+                        <outlet property="userProfileImage" destination="rUn-uo-tlK" id="X2d-EJ-5Kp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLQ-cy-O6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,9 +110,9 @@
         <!--Services-->
         <scene sceneID="fsM-s2-S2G">
             <objects>
-                <tableViewController storyboardIdentifier="Servicescontroller" title="Services" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YwP-ok-a7u" customClass="ServicesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Services" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YwP-ok-a7u" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="530" sectionHeaderHeight="22" sectionFooterHeight="1" id="9Cz-ER-OWe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -135,7 +132,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="nvS-Bz-zbI" kind="push" id="vIq-p5-4X0"/>
+                                                <segue destination="nvS-Bz-zbI" kind="push" id="hbu-mt-vEz"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B4M-dj-K6Y">
@@ -184,13 +181,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="servicesTableView" destination="9Cz-ER-OWe" id="8pZ-ko-M1H"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I56-qB-A8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="824"/>
+            <point key="canvasLocation" x="875" y="918"/>
         </scene>
         <!--News-->
         <scene sceneID="8o8-Tw-oFj">
@@ -350,7 +344,7 @@
             <objects>
                 <viewController id="nvS-Bz-zbI" customClass="BookingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2w-0f-KC3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Booking Date &amp; Time" minimumFontSize="17" id="4Rz-we-AeV">
@@ -686,13 +680,130 @@
             </objects>
             <point key="canvasLocation" x="1534" y="-418"/>
         </scene>
+        <!--Service Categories-->
+        <scene sceneID="ibQ-dz-hDZ">
+            <objects>
+                <viewController storyboardIdentifier="Servicescontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iBo-dI-vag" customClass="ServicesTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WaY-43-2HK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="SMf-eg-o8e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServiceCell" textLabel="ecP-1U-Ud6" rowHeight="64" style="IBUITableViewCellStyleDefault" id="Dua-P1-3fn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dua-P1-3fn" id="C6p-bx-whg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecP-1U-Ud6">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FRl-ux-cDE" kind="push" identifier="Service" id="aVx-I6-NLy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iBo-dI-vag" id="jFJ-3T-cFO"/>
+                                    <outlet property="delegate" destination="iBo-dI-vag" id="mdw-Vt-7Oy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Service Categories" id="cjo-rv-Qm9">
+                        <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="ZQg-5n-qLC">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="iBo-dI-vag" id="VZ1-3I-tMz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="servicesTableView" destination="SMf-eg-o8e" id="KjM-dH-QcU"/>
+                        <outlet property="view" destination="SMf-eg-o8e" id="JQu-2z-ex9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HA5-LM-1C6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247" y="-523"/>
+        </scene>
+        <!--Services-->
+        <scene sceneID="Giq-tr-po9">
+            <objects>
+                <viewController id="FRl-ux-cDE" customClass="ServicesListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJr-GC-ukj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="sv1-KC-V7S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServicesCellList" rowHeight="67" id="UtE-4n-zrS" customClass="ServiceListCustomCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UtE-4n-zrS" id="Ki2-Tn-qFI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Jl-SW-Mxs">
+                                                    <rect key="frame" x="8" y="8" width="165" height="50.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2MN-By-eRJ">
+                                                    <rect key="frame" x="233" y="8" width="79" height="50.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="serviceImage" destination="2MN-By-eRJ" id="1W4-GI-OUf"/>
+                                            <outlet property="serviceNameLbl" destination="9Jl-SW-Mxs" id="0pz-2F-Ynv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FRl-ux-cDE" id="w9e-b6-hJ1"/>
+                                    <outlet property="delegate" destination="FRl-ux-cDE" id="jv8-4f-EpJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Services" id="LQi-N9-fGW">
+                        <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="AKd-q5-HGp">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="FRl-ux-cDE" id="JIt-I7-ymJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="servicesTableView" destination="sv1-KC-V7S" id="jeB-Wk-HAU"/>
+                        <outlet property="view" destination="sv1-KC-V7S" id="Ems-nU-m0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pG-Ki-Nre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2727" y="-523"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Stars" width="320" height="568"/>
         <image name="belledejouricon-1.png" width="120" height="120"/>
         <image name="facebook" width="40" height="40"/>
         <image name="icon_text_align_justify" width="30" height="30"/>
-        <image name="login" width="320" height="71"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -700,6 +811,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="crC-Qj-8Ga"/>
+        <segue reference="haO-33-Z1l"/>
     </inferredMetricsTieBreakers>
 </document>

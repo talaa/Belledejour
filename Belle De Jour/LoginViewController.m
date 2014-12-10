@@ -14,6 +14,9 @@
 #import "UIViewController+RESideMenu.h"
 #import "Constants.h"
 #import "SMBInternetConnectionIndicator.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "AppDelegate.h"
+#import "SettingsViewController.h"
 
 @interface LoginViewController ()
 {
@@ -28,13 +31,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     ShowInternetIndicator;
-     okAction = [UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleCancel
-                                handler:^(UIAlertAction *action)
-                                {
-                                    NSLog(@"OK action");
-                                }];
+    okAction = [UIAlertAction
+                actionWithTitle:@"OK"
+                style:UIAlertActionStyleCancel
+                handler:^(UIAlertAction *action)
+                {
+                    NSLog(@"OK action");
+                }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,14 +46,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 #pragma mark - UITextField delegate
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -70,29 +73,29 @@
     [self.view endEditing:YES];
 }
 - (IBAction)signIn:(id)sender {
-  
+    
     [self setScreenState:NO];
     if(_usernameTxt.text.length>0 && _passwordTxt.text.length>0)
     {
-    [PFUser logInWithUsernameInBackground:_usernameTxt.text password:_passwordTxt.text
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-                                        
-                                            alertController = [UIAlertController
-                                                               alertControllerWithTitle:@"Alert"
-                                                            message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
-                                                               preferredStyle:UIAlertControllerStyleAlert];
-                                            [alertController addAction:okAction];
-                                            [self presentViewController:alertController animated:YES completion:nil];
-
-                                        } else {
-                                            alertController = [UIAlertController
-                                                               alertControllerWithTitle:@"Alert"
-                                                               message:[NSString stringWithFormat:@"%@ ",@"Please enter valid Credentials,"]
-                                                               preferredStyle:UIAlertControllerStyleAlert];
-                                            [alertController addAction:okAction];
-                                            [self presentViewController:alertController animated:YES completion:nil];                                        }
-                                    }];
+        [PFUser logInWithUsernameInBackground:_usernameTxt.text password:_passwordTxt.text
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                
+                                                alertController = [UIAlertController
+                                                                   alertControllerWithTitle:@"Alert"
+                                                                   message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
+                                                                   preferredStyle:UIAlertControllerStyleAlert];
+                                                [alertController addAction:okAction];
+                                                [self presentViewController:alertController animated:YES completion:nil];
+                                                
+                                            } else {
+                                                alertController = [UIAlertController
+                                                                   alertControllerWithTitle:@"Alert"
+                                                                   message:[NSString stringWithFormat:@"%@ ",@"Please enter valid Credentials,"]
+                                                                   preferredStyle:UIAlertControllerStyleAlert];
+                                                [alertController addAction:okAction];
+                                                [self presentViewController:alertController animated:YES completion:nil];                                        }
+                                        }];
     }
     else
     {
@@ -102,10 +105,10 @@
                            preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:okAction];
         [self presentViewController:alertController animated:YES completion:nil];
-   
+        
     }
     [self setScreenState:YES];
-
+    
 }
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
@@ -114,7 +117,47 @@
     leftbutton.enabled = state;
 }
 - (IBAction)signInWithFB:(id)sender {
- 
+    // Set permissions required from the facebook user account
+    [self setScreenState:NO];
+    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    
+    // Login PFUser using Facebook
+    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        
+        if (!user) {
+            NSString *errorMessage = nil;
+            if (!error) {
+                NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                errorMessage = @"Uh oh. The user cancelled the Facebook login.";
+            } else {
+                NSLog(@"Uh oh. An error occurred: %@", error);
+                errorMessage = [error localizedDescription];
+            }
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
+                                                            message:errorMessage
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"Dismiss", nil];
+            [alert show];
+        } else {
+            if (user.isNew) {
+                NSLog(@"User with facebook signed up and logged in!");
+            } else {
+                NSLog(@"User with facebook logged in!");
+                [self presentSettingsViewController];
+                
+            }
+        }
+    }];
+    
+    
+}
+-(void)presentSettingsViewController
+{
+    [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
+                                                 animated:YES];
+    [self setScreenState:YES];
+
 }
 
 - (IBAction)forgotPassword:(id)sender {

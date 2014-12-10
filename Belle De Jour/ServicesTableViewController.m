@@ -13,12 +13,15 @@
 #import "SMBInternetConnectionIndicator.h"
 #import "SVProgressHUD.h"
 #import "Constants.h"
+#import "ServicesListViewController.h"
 
 @interface ServicesTableViewController ()
 {
     NSArray * servicesList;
     Service * service;
     NSMutableArray * servicesArray;
+    NSMutableArray * temparray;
+    NSString * selectedCategory;
 }
 
 @end
@@ -27,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    temparray=[[NSMutableArray alloc]init];
     ShowInternetIndicator;
     [self performSelector:@selector(getServices)];
 }
@@ -51,6 +55,8 @@
             [servicesArray addObject:service ];
         }
         [_servicesTableView reloadData];
+        [self setScreenState:YES];
+        
         
     }];
     
@@ -79,30 +85,52 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"serviceTableCell";
+    static NSString *CellIdentifier = @"ServiceCell";
     
-    ServiceTableViewCell *cell = [tableView
-                                  dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[ServiceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
     if(servicesArray.count>0)
     {
-        [self setScreenState:YES];
-        cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
-        cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
-        cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
-        __block UIImage *MyPicture = [[UIImage alloc]init];
-        PFFile *imageFile = [[servicesArray objectAtIndex:indexPath.row]serviceImage];
-        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
-            if (!error) {
-                MyPicture = [UIImage imageWithData:data];
-                cell.serviceImg.image = MyPicture;
-            }
-        }];;
+        cell.textLabel.text=[[servicesArray objectAtIndex:indexPath.row]serviceType];
+        //  cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
+        // cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
+        //cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
+        //        __block UIImage *MyPicture = [[UIImage alloc]init];
+        //        PFFile *imageFile = [[servicesArray objectAtIndex:indexPath.row]serviceImage];
+        //        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+        //            if (!error) {
+        //                MyPicture = [UIImage imageWithData:data];
+        //                cell.serviceImg.image = MyPicture;
+        //            }
+        //        }];;
+        //    }
     }
-    
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"Service"]) {
+        ServicesListViewController * servicedetail=(ServicesListViewController*)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.servicesTableView indexPathForSelectedRow];
+        selectedCategory=[[servicesArray objectAtIndex:indexPath.row]serviceType];
+        for(int i=0;i<servicesArray.count;i++)
+        {
+            if([selectedCategory isEqualToString:[[servicesArray objectAtIndex:i]serviceType]])
+            {
+                [temparray addObject:[servicesArray objectAtIndex:indexPath.row]];
+            }
+            
+        }
+        servicedetail.selectedCategory=selectedCategory;
+        servicedetail.services=temparray;
+        
+        
+    }
 }
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
@@ -110,6 +138,7 @@
     UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
     leftbutton.enabled = state;
 }
+
 
 
 @end
