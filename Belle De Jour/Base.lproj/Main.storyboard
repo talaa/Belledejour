@@ -196,6 +196,7 @@
                                     <outlet property="OfferNameLbl" destination="86n-uZ-cSa" id="GtI-vg-B3a"/>
                                     <outlet property="offerImage" destination="NlJ-Iz-KO5" id="iwZ-Mp-a5a"/>
                                     <outlet property="offerPriceLbl" destination="cay-FB-ACx" id="3on-Ii-boo"/>
+                                    <segue destination="zfb-js-NYo" kind="push" identifier="OfferSelection" id="ZQF-wt-stc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -806,6 +807,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="irY-zA-SoU"/>
+        <segue reference="ZQF-wt-stc"/>
         <segue reference="haO-33-Z1l"/>
     </inferredMetricsTieBreakers>
 </document>

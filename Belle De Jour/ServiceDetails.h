@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Service.h"
+#import "Offer.h"
 @interface ServiceDetails : UIViewController
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImage;
@@ -15,5 +16,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *serviceDescriptionTxt;
 @property (nonatomic,strong) NSString * navigationTitle;
 @property (nonatomic,strong) Service * service;
-
+@property (nonatomic,strong) Offer * offer;
 @end

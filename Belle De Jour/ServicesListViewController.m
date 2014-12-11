@@ -25,6 +25,7 @@
         ServiceDetails * servicedetail=(ServiceDetails*)segue.destinationViewController;
         NSIndexPath *indexPath = [self.servicesTableView indexPathForSelectedRow];
         servicedetail.service=(Service*)[_services objectAtIndex:indexPath.row];
+        servicedetail.navigationTitle=[[_services objectAtIndex:indexPath.row]serviceType];
         
         
     }

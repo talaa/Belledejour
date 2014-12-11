@@ -11,7 +11,9 @@
 @implementation ServiceDetails
 -(void)viewDidLoad
 {
-    [self.navigationItem setTitle: _service.serviceType];
+    if(_service!=nil)
+    {
+    [self.navigationItem setTitle:_navigationTitle];
     [self.servicePrice setText:[NSString stringWithFormat:@"%i Dirham", _service.servicePrice]];
     [self.serviceDescriptionTxt setText:_service.serviceDescription];
     __block UIImage *MyPicture = [[UIImage alloc]init];
@@ -22,6 +24,21 @@
             self.serviceImage.image = MyPicture;
         }
     }];;
+    }
+    else if(_offer != nil)
+    {
+        [self.navigationItem setTitle:_navigationTitle];
+        [self.servicePrice setText:[NSString stringWithFormat:@"%i Dirham", _offer.offerPrice]];
+        [self.serviceDescriptionTxt setText:_offer.offerDescription];
+        __block UIImage *MyPicture = [[UIImage alloc]init];
+        PFFile *imageFile = _offer.offerImage;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+            if (!error) {
+                MyPicture = [UIImage imageWithData:data];
+                self.serviceImage.image = MyPicture;
+            }
+        }];;
+    }
     
 }
 

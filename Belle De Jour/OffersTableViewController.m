@@ -12,6 +12,7 @@
 #import "Offer.h"
 #import "Constants.h"
 #import "OffersCustomCell.h"
+#import "ServiceDetails.h"
 @interface OffersTableViewController ()
 {
     NSMutableArray * offers;
@@ -69,7 +70,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"OfferSelection"]) {
+        ServiceDetails * servicedetail=(ServiceDetails*)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.offersTableView indexPathForSelectedRow];
+        servicedetail.offer=(Offer*)[offers objectAtIndex:indexPath.row];
+        servicedetail.navigationTitle=[[offers objectAtIndex:indexPath.row]offerName];
+        
+        
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
