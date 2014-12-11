@@ -118,12 +118,13 @@
 }
 - (IBAction)signInWithFB:(id)sender {
     // Set permissions required from the facebook user account
-    [self setScreenState:NO];
+   [self setScreenState:NO];
     NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
     
     // Login PFUser using Facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        
+        [self setScreenState:YES];
+
         if (!user) {
             NSString *errorMessage = nil;
             if (!error) {
