@@ -41,6 +41,10 @@
                                     NSLog(@"OK action");
                                 }];
     [alertController addAction:okAction];
+    if(IS_IPHONE_5)
+    {
+        self.createAccountBtn.frame=CGRectMake(_createAccountBtn.frame.origin.x,[[UIScreen mainScreen] bounds].size.height-_createAccountBtn.frame.size.height-63, _createAccountBtn.frame.size.width, _createAccountBtn.frame.size.height);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
