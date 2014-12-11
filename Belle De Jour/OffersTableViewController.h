@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface OffersTableViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITableView *offersTableView;
 
 @end

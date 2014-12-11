@@ -7,8 +7,17 @@
 //
 
 #import "OffersTableViewController.h"
-
+#import <Parse/Parse.h>
+#import "SVProgressHUD.h"
+#import "Offer.h"
+#import "Constants.h"
+#import "OffersCustomCell.h"
 @interface OffersTableViewController ()
+{
+    NSMutableArray * offers;
+    Offer * offer;
+
+}
 
 @end
 
@@ -17,13 +26,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    ShowInternetIndicator;
+    [self performSelector:@selector(getOffers)];
 }
-
+- (void)setScreenState:(BOOL)state{
+    (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
+    [self.view setUserInteractionEnabled:state];
+    UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
+    leftbutton.enabled = state;
+}
+-(void)getOffers
+{
+    [self setScreenState:NO];
+    offers=[[NSMutableArray alloc]init];
+    PFQuery * parseOffersList=[PFQuery queryWithClassName:@"Offers"];
+    
+    //          servicesList=  [parseServicesList findObjects];
+    [parseOffersList findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        for(int i=0;i<objects.count;i++)
+        {
+            offer=[[Offer alloc]init];
+            offer.offerName=[[objects objectAtIndex:i ] objectForKey:@"Offer_ID"];
+            offer.offerDescription=[[objects objectAtIndex:i ] objectForKey:@"Offer_Description"];
+            offer.offerPrice=[[[objects objectAtIndex:i ] objectForKey:@"Offer_Price"]intValue];
+            offer.loyaltyPoints=[[[objects objectAtIndex:i ] objectForKey:@"Offer_LoyaltyPoints"]intValue];
+            offer.offerImage=[[objects objectAtIndex:i ] objectForKey:@"Offer_Picture"];
+            [offers addObject:offer];
+        }
+        [_offersTableView reloadData];
+        [self setScreenState:YES];
+        
+        
+    }];
+    
+    
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,26 +73,41 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return offers.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"offerCell";
     
-    // Configure the cell...
-    
+   OffersCustomCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[OffersCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
+    if(offers.count>0)
+    {
+        cell.OfferNameLbl.text=[NSString stringWithFormat:@"%@",[[offers objectAtIndex:indexPath.row]offerName]];
+        cell.offerPriceLbl.text=[NSString stringWithFormat:@"%i Dirham",[[offers objectAtIndex:indexPath.row]offerPrice]];
+                __block UIImage *MyPicture = [[UIImage alloc]init];
+                PFFile *imageFile = [[offers objectAtIndex:indexPath.row]offerImage];
+                [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+                    if (!error) {
+                        MyPicture = [UIImage imageWithData:data];
+                        cell.offerImage.image = MyPicture;
+                    }
+                }];;
+
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
