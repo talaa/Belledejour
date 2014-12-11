@@ -16,6 +16,7 @@
     [self.navigationItem setTitle:_navigationTitle];
     [self.servicePrice setText:[NSString stringWithFormat:@"%i Dirham", _service.servicePrice]];
     [self.serviceDescriptionTxt setText:_service.serviceDescription];
+        [self.loyaltyPointsLbl setText:[NSString stringWithFormat:@"You have %f Points",_service.serviceLoyaltyPoints]];
     __block UIImage *MyPicture = [[UIImage alloc]init];
     PFFile *imageFile = _service.serviceImage;
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
@@ -30,6 +31,7 @@
         [self.navigationItem setTitle:_navigationTitle];
         [self.servicePrice setText:[NSString stringWithFormat:@"%i Dirham", _offer.offerPrice]];
         [self.serviceDescriptionTxt setText:_offer.offerDescription];
+        [self.loyaltyPointsLbl setText:[NSString stringWithFormat:@"You have %d Points",_offer.loyaltyPoints]];
         __block UIImage *MyPicture = [[UIImage alloc]init];
         PFFile *imageFile = _offer.offerImage;
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
