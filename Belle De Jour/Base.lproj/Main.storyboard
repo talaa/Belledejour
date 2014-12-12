@@ -317,21 +317,29 @@
                                 <rect key="frame" x="8" y="216" width="305" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lY4-Zr-Lvf">
-                                        <rect key="frame" x="0.0" y="0.0" width="312" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <items>
-                                            <barButtonItem title="Cancel" style="done" id="1TS-oa-TmT"/>
-                                            <barButtonItem title="Done" width="375" style="done" id="5Wa-ZK-oAp"/>
-                                        </items>
-                                    </toolbar>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="FhR-3B-GoH">
-                                        <rect key="frame" x="0.0" y="44" width="312" height="100"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="FhR-3B-GoH">
+                                        <rect key="frame" x="-7" y="44" width="317" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="440002581.49730599">
                                             <!--2014-12-11 14:56:21 +0000-->
                                         </date>
                                     </datePicker>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lY4-Zr-Lvf">
+                                        <rect key="frame" x="-7" y="0.0" width="317" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Cancel" style="done" id="1TS-oa-TmT">
+                                                <connections>
+                                                    <action selector="cancelToolBarPressed:" destination="nvS-Bz-zbI" id="OIv-eI-rzZ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Done" width="375" style="done" id="5Wa-ZK-oAp">
+                                                <connections>
+                                                    <action selector="doneToolBarPressed:" destination="nvS-Bz-zbI" id="XJQ-Es-FVb"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -358,6 +366,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="datePicker" destination="FhR-3B-GoH" id="yqL-1q-vMT"/>
                         <outlet property="datePickerView" destination="S0O-dp-Skz" id="gpl-eM-Zce"/>
                         <outlet property="serviceImgView" destination="mwH-aj-lac" id="mlQ-PC-C3s"/>
                         <outlet property="serviceNameLbl" destination="qQe-sw-zgh" id="xyE-ks-CmX"/>

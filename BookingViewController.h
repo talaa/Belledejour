@@ -10,7 +10,7 @@
 
 @interface BookingViewController : UIViewController
 @property(nonatomic,strong)NSString * serviceName;
-@property(nonatomic,strong)NSString * servicePrice;
+@property(nonatomic,assign)int servicePrice;
 @property(nonatomic,strong)UIImage * serviceImage;
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImgView;
 @property (weak, nonatomic) IBOutlet UILabel *serviceNameLbl;
@@ -20,5 +20,7 @@
 - (IBAction)reserveDate:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIView *datePickerView;
+- (IBAction)doneToolBarPressed:(id)sender;
+- (IBAction)cancelToolBarPressed:(id)sender;
 
 @end

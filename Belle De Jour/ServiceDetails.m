@@ -51,13 +51,13 @@
         if(_service !=nil)
         {
             bookingView.serviceName = _service.serviceType;
-            bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham", _service.servicePrice];
+            bookingView.servicePrice= _service.servicePrice;
             bookingView.serviceImage=_serviceImage.image;
         }
         else if (_offer!=nil)
         {
             bookingView.serviceName=_offer.offerName;
-            bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham",_offer.offerPrice];
+            bookingView.servicePrice=_offer.offerPrice;
             bookingView.serviceImage=self.serviceImage.image;
         }
 

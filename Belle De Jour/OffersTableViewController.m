@@ -87,7 +87,7 @@
 
    else if ([segue.identifier isEqualToString:@"Booking"]) {
         bookingView.serviceName=[[offers objectAtIndex:indexPath.row]offerName];
-        bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham",[[offers objectAtIndex:indexPath.row]offerPrice]];
+        bookingView.servicePrice=[[offers objectAtIndex:indexPath.row]offerPrice];
         bookingView.serviceImage =serviceImg;
         
     }
