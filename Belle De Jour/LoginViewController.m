@@ -84,18 +84,18 @@
         [PFUser logInWithUsernameInBackground:_usernameTxt.text password:_passwordTxt.text
                                         block:^(PFUser *user, NSError *error) {
                                             if (user) {
-                                                
-                                                alertController = [UIAlertController
-                                                                   alertControllerWithTitle:@"Alert"
-                                                                   message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
-                                                                   preferredStyle:UIAlertControllerStyleAlert];
-                                                [alertController addAction:okAction];
+                                                [self dismissViewControllerAnimated:YES completion:nil];
+                                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat: @"Welcome %@",user[@"Name"]]
+                                                                                               delegate:nil
+                                                                                      cancelButtonTitle:nil
+                                                                                      otherButtonTitles:@"OK", nil];
+                                                [alert show];
                                                 spaUser.userName=_usernameTxt.text;
                                                 spaUser.emailAddress =user.email;
                                                 spaUser.name=user[@"Name"] ;
                                                 spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
                                                 [[SharedManager sharedManager]setUserProfile:spaUser];
-                                                [self presentViewController:alertController animated:YES completion:nil];
+                                                
                                                 
                                                 
                                             } else {
@@ -154,21 +154,10 @@
             if (user.isNew) {
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
-                spaUser.userName=user.username;
-                spaUser.emailAddress =user.email;
-                spaUser.name=user[@"Name"] ;
-              //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
-                [[SharedManager sharedManager]setUserProfile:spaUser];
                 NSLog(@"User with facebook logged in!");
                 if([[SharedManager sharedManager]isbooked])
                 {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successufly"
-                                                                    message:[NSString stringWithFormat:@"Welcome %@",user[@"Name"]]
-                                                                   delegate:nil
-                                                          cancelButtonTitle:nil
-                                                          otherButtonTitles:@"OK", nil];
-                    [alert show];
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    [self loadData];
                 }
                 else
                 {
@@ -186,6 +175,38 @@
     [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
                                                  animated:YES];
     [self setScreenState:YES];
+
+}
+- (void)loadData {
+    // ...
+    FBRequest *request = [FBRequest requestForMe];
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // result is a dictionary with the user's Facebook data
+            NSDictionary *userData = (NSDictionary *)result;
+            
+            NSString *facebookID = userData[@"id"];
+            NSString *name = userData[@"name"];
+            NSString *location = userData[@"location"][@"name"];
+            NSString *gender = userData[@"gender"];
+            NSString *birthday = userData[@"birthday"];
+            NSString *relationship = userData[@"relationship_status"];
+            // URL should point to https://graph.facebook.com/{facebookId}/picture?type=large&return_ssl_resources=1
+            spaUser.name=name;
+            spaUser.emailAddress =userData[@"email"];
+            spaUser.userName=_usernameTxt.text;
+            //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
+            [[SharedManager sharedManager]setUserProfile:spaUser];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successufly"
+                                                            message:[NSString stringWithFormat:@"Welcome %@",spaUser.name]
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"OK", nil];
+            [alert show];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }];
 
 }
 
