@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface BookingViewController : UIViewController
+@property(nonatomic,strong)NSString * serviceName;
+@property(nonatomic,strong)NSString * servicePrice;
+@property(nonatomic,strong)UIImage * serviceImage;
+@property (weak, nonatomic) IBOutlet UIImageView *serviceImgView;
+@property (weak, nonatomic) IBOutlet UILabel *serviceNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *servicePriceLbl;
+@property (weak, nonatomic) IBOutlet UITextField *reservationDateTxt;
+- (IBAction)confirmBooking:(id)sender;
+- (IBAction)reserveDate:(id)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIView *datePickerView;
 
 @end

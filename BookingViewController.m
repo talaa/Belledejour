@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.serviceNameLbl.text=self.serviceName;
+    self.servicePriceLbl.text=self.servicePrice;
+    [self.serviceImgView setImage: self.serviceImage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +37,10 @@
 }
 */
 
+- (IBAction)confirmBooking:(id)sender {
+}
+
+- (IBAction)reserveDate:(id)sender {
+    self.datePickerView.hidden=NO;
+}
 @end

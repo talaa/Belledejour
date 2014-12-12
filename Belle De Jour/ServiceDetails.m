@@ -7,6 +7,7 @@
 //
 
 #import "ServiceDetails.h"
+#import "BookingViewController.h"
 
 @implementation ServiceDetails
 -(void)viewDidLoad
@@ -42,6 +43,26 @@
         }];;
     }
     
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    BookingViewController * bookingView=(BookingViewController*)segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"Booking"]) {
+        if(_service !=nil)
+        {
+            bookingView.serviceName = _service.serviceType;
+            bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham", _service.servicePrice];
+            bookingView.serviceImage=_serviceImage.image;
+        }
+        else if (_offer!=nil)
+        {
+            bookingView.serviceName=_offer.offerName;
+            bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham",_offer.offerPrice];
+            bookingView.serviceImage=self.serviceImage.image;
+        }
+
+            
+        }
 }
 
 @end

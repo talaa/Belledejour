@@ -13,10 +13,12 @@
 #import "Constants.h"
 #import "OffersCustomCell.h"
 #import "ServiceDetails.h"
+#import "BookingViewController.h"
 @interface OffersTableViewController ()
 {
     NSMutableArray * offers;
     Offer * offer;
+    UIImage * serviceImg;
 
 }
 
@@ -26,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    serviceImg=[[UIImage alloc]init];
     ShowInternetIndicator;
     [self performSelector:@selector(getOffers)];
 }
@@ -66,19 +68,27 @@
     
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    BookingViewController * bookingView=(BookingViewController*)segue.destinationViewController;
+    NSIndexPath *indexPath = [self.offersTableView indexPathForSelectedRow];
     
     if ([segue.identifier isEqualToString:@"OfferSelection"]) {
         ServiceDetails * servicedetail=(ServiceDetails*)segue.destinationViewController;
         NSIndexPath *indexPath = [self.offersTableView indexPathForSelectedRow];
         servicedetail.offer=(Offer*)[offers objectAtIndex:indexPath.row];
         servicedetail.navigationTitle=[[offers objectAtIndex:indexPath.row]offerName];
-        
+            }
+
+   else if ([segue.identifier isEqualToString:@"Booking"]) {
+        bookingView.serviceName=[[offers objectAtIndex:indexPath.row]offerName];
+        bookingView.servicePrice=[NSString stringWithFormat:@"%i Dirham",[[offers objectAtIndex:indexPath.row]offerPrice]];
+        bookingView.serviceImage =serviceImg;
         
     }
 }
@@ -113,6 +123,7 @@
                     if (!error) {
                         MyPicture = [UIImage imageWithData:data];
                         cell.offerImage.image = MyPicture;
+                        serviceImg=MyPicture;
                     }
                 }];;
 
@@ -121,48 +132,7 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
