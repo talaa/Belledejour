@@ -17,11 +17,14 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AppDelegate.h"
 #import "SettingsViewController.h"
+#import "User.h"
+#import "SharedManager.h"
 
 @interface LoginViewController ()
 {
     UIAlertController * alertController;
     UIAlertAction * okAction;
+    User * spaUser;
 }
 
 @end
@@ -31,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     ShowInternetIndicator;
+    spaUser=[[User alloc]init];
     okAction = [UIAlertAction
                 actionWithTitle:@"OK"
                 style:UIAlertActionStyleCancel
@@ -86,7 +90,13 @@
                                                                    message:[NSString stringWithFormat:@"%@ %@ ",@"Welcome",_usernameTxt.text]
                                                                    preferredStyle:UIAlertControllerStyleAlert];
                                                 [alertController addAction:okAction];
+                                                spaUser.userName=_usernameTxt.text;
+                                                spaUser.emailAddress =user.email;
+                                                spaUser.name=user[@"Name"] ;
+                                                spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
+                                                [[SharedManager sharedManager]setUserProfile:spaUser];
                                                 [self presentViewController:alertController animated:YES completion:nil];
+                                                
                                                 
                                             } else {
                                                 alertController = [UIAlertController
@@ -144,8 +154,26 @@
             if (user.isNew) {
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
+                spaUser.userName=user.username;
+                spaUser.emailAddress =user.email;
+                spaUser.name=user[@"Name"] ;
+              //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
+                [[SharedManager sharedManager]setUserProfile:spaUser];
                 NSLog(@"User with facebook logged in!");
+                if([[SharedManager sharedManager]isbooked])
+                {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successufly"
+                                                                    message:[NSString stringWithFormat:@"Welcome %@",user[@"Name"]]
+                                                                   delegate:nil
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"OK", nil];
+                    [alert show];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+                else
+                {
                 [self presentSettingsViewController];
+                }
                 
             }
         }

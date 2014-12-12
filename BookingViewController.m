@@ -7,6 +7,9 @@
 //
 
 #import "BookingViewController.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "SharedManager.h"
 
 @interface BookingViewController ()
 
@@ -38,6 +41,17 @@
 */
 
 - (IBAction)confirmBooking:(id)sender {
+    if([[SharedManager sharedManager]userProfile].userName==nil)
+    {
+    [[SharedManager sharedManager]isBooking:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self presentViewController:ivc animated:YES completion:nil];
+    }
+    else
+    {
+        //set booking data to DB
+    }
 }
 
 - (IBAction)reserveDate:(id)sender {
