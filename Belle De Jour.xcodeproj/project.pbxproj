@@ -64,6 +64,8 @@
 		699D3F6D1A35219D00658646 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F691A35219C00658646 /* Reachability.m */; };
 		699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */; };
 		69D6D39C1A3B227C0021FF34 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D39B1A3B227B0021FF34 /* SharedManager.m */; };
+		69D6D39F1A3C428E0021FF34 /* StuffCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D39E1A3C428E0021FF34 /* StuffCustomCell.m */; };
+		69D6D3A21A3C482C0021FF34 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D3A11A3C482C0021FF34 /* Stuff.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,10 @@
 		699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicator.m; sourceTree = "<group>"; };
 		69D6D39A1A3B227B0021FF34 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		69D6D39B1A3B227B0021FF34 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
+		69D6D39D1A3C428E0021FF34 /* StuffCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffCustomCell.h; sourceTree = "<group>"; };
+		69D6D39E1A3C428E0021FF34 /* StuffCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffCustomCell.m; sourceTree = "<group>"; };
+		69D6D3A01A3C482C0021FF34 /* Stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stuff.h; sourceTree = "<group>"; };
+		69D6D3A11A3C482C0021FF34 /* Stuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stuff.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +315,10 @@
 				698ADB7C1A39220300F48A85 /* Offer.m */,
 				69D6D39A1A3B227B0021FF34 /* SharedManager.h */,
 				69D6D39B1A3B227B0021FF34 /* SharedManager.m */,
+				69D6D39D1A3C428E0021FF34 /* StuffCustomCell.h */,
+				69D6D39E1A3C428E0021FF34 /* StuffCustomCell.m */,
+				69D6D3A01A3C482C0021FF34 /* Stuff.h */,
+				69D6D3A11A3C482C0021FF34 /* Stuff.m */,
 			);
 			path = "Belle De Jour";
 			sourceTree = "<group>";
@@ -510,11 +520,13 @@
 				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
 				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
 				698ADB7A1A39212000F48A85 /* OffersCustomCell.m in Sources */,
+				69D6D39F1A3C428E0021FF34 /* StuffCustomCell.m in Sources */,
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
 				6981C27C1A3332CF00699924 /* User.m in Sources */,
 				699110C71A387E56002DC75A /* ServicesListViewController.m in Sources */,
 				698ADB7D1A39220300F48A85 /* Offer.m in Sources */,
+				69D6D3A21A3C482C0021FF34 /* Stuff.m in Sources */,
 				698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */,
 				699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */,
 				69993B3F1A1A5D7C00A78ED6 /* RESideMenu.m in Sources */,

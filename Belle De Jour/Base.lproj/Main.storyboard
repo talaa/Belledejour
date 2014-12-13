@@ -621,28 +621,40 @@
             <objects>
                 <tableViewController storyboardIdentifier="StuffViewController" title="Staff Members" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jaf-h4-Ggm" customClass="StuffTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hfh-1K-NKd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="246" id="4o7-k9-aeE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StuffCell" rowHeight="150" id="4o7-k9-aeE" customClass="StuffCustomCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4o7-k9-aeE" id="oZR-tS-Zuf">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LUL-AY-GNd">
-                                            <rect key="frame" x="223" y="23" width="84" height="184"/>
+                                            <rect key="frame" x="164" y="17" width="148" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W3Z-r4-EcQ">
-                                            <rect key="frame" x="8" y="16" width="200" height="200"/>
+                                            <rect key="frame" x="8" y="17" width="142" height="113"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lx6-n3-ACS">
+                                            <rect key="frame" x="164" y="91" width="148" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stuffNameLbl" destination="LUL-AY-GNd" id="elP-WM-fkS"/>
+                                    <outlet property="stuffProfileImg" destination="W3Z-r4-EcQ" id="a9H-Dq-iFI"/>
+                                    <outlet property="stuffTiltleLbl" destination="lx6-n3-ACS" id="3f9-0r-pN3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -650,13 +662,17 @@
                             <outlet property="delegate" destination="Jaf-h4-Ggm" id="PVm-7v-0CS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Staff" id="YIK-Ga-J2d">
+                    <navigationItem key="navigationItem" title="Stuff" id="YIK-Ga-J2d">
                         <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="x7y-cI-tec">
                             <connections>
                                 <action selector="presentLeftMenuViewController:" destination="Jaf-h4-Ggm" id="uID-Ir-Us4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="stuffTableView" destination="Hfh-1K-NKd" id="ii1-rM-PXF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUH-Sc-dW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

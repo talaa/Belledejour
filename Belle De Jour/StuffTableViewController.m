@@ -7,8 +7,18 @@
 //
 
 #import "StuffTableViewController.h"
-
+#import <Parse/Parse.h>
+#import "SMBInternetConnectionIndicator.h"
+#import "Constants.h"
+#import "SVProgressHUD.h"
+#import "Stuff.h"
+#import "StuffCustomCell.h"
 @interface StuffTableViewController ()
+{
+    NSMutableArray * stuffList;
+    Stuff * stuff;
+}
+
 
 @end
 
@@ -16,12 +26,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    ShowInternetIndicator;
+    [self performSelector:@selector(getStuffData)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+-(void)getStuffData
+{
+    [self setScreenState:NO];
+    stuffList=[[NSMutableArray alloc]init];
+    PFQuery * parseServicesList=[PFQuery queryWithClassName:@"Stuff"];
+    
+    //          servicesList=  [parseServicesList findObjects];
+    [parseServicesList findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        for(int i=0;i<objects.count;i++)
+        {
+            stuff=[[Stuff alloc]init];
+            stuff.name=[[objects objectAtIndex:i ] objectForKey:@"Name"];
+            stuff.title=[[objects objectAtIndex:i ] objectForKey:@"Title"];
+            stuff._image=[[objects objectAtIndex:i ] objectForKey:@"Picture"];
+            [stuffList addObject:stuff ];
+        }
+        [_stuffTableView reloadData];
+        [self setScreenState:YES];
+        
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,15 +67,48 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return stuffList.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"StuffCell";
+    
+    StuffCustomCell *cell = [tableView
+                              dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[StuffCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
+    if(stuffList.count>0)
+    {
+        cell.stuffNameLbl.text=[NSString stringWithFormat:@"%@",[[stuffList objectAtIndex:indexPath.row]name]];
+        cell.stuffTiltleLbl.text=[NSString stringWithFormat:@"%@",[[stuffList objectAtIndex:indexPath.row]title]];
+
+        __block UIImage *MyPicture = [[UIImage alloc]init];
+        PFFile *imageFile = [[stuffList objectAtIndex:indexPath.row]_image];
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+            if (!error) {
+                MyPicture = [UIImage imageWithData:data];
+                cell.stuffProfileImg.image = MyPicture;
+            }
+        }];;
+        
+    }
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150.0;
+}
+- (void)setScreenState:(BOOL)state{
+    (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
+    [self.view setUserInteractionEnabled:state];
+    UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
+    leftbutton.enabled = state;
 }
 
 /*
