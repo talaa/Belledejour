@@ -467,6 +467,7 @@
                                         </state>
                                         <connections>
                                             <action selector="forgotPassword:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="lA3-72-Q2y"/>
+                                            <segue destination="Xos-8a-vql" kind="modal" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="o4X-Zv-RWz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -614,6 +615,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5T-Jo-K9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2483" y="917"/>
+        </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="CwN-qa-bMt">
+            <objects>
+                <viewController id="Xos-8a-vql" customClass="ForgetPasswordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AwQ-xG-Jfh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter Your Email Address" minimumFontSize="17" id="ljP-Sb-HyC">
+                                <rect key="frame" x="16" y="43" width="288" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xos-8a-vql" id="pmY-4Y-WRp"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JOb-vL-zMC">
+                                <rect key="frame" x="16" y="122" width="288" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
+                                <state key="normal" title="Send ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPressed:" destination="Xos-8a-vql" eventType="touchUpInside" id="dCJ-D1-mYP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="emailAddresTxt" destination="ljP-Sb-HyC" id="nEA-Po-spv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avV-SZ-gNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2180" y="1556"/>
         </scene>
         <!--Staff Members-->
         <scene sceneID="DMy-N4-7A9">

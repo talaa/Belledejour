@@ -7,7 +7,7 @@
 //
 
 #import "FaceBookFeedsTableViewController.h"
-
+#import "Constants.h"
 @interface FaceBookFeedsTableViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ShowInternetIndicator;
     NSString *fileName= @"http://www.facebook.com/443490909081311";
     NSURL *facebookURL = [NSURL URLWithString:fileName];
     if ([[UIApplication sharedApplication] canOpenURL:facebookURL]) {

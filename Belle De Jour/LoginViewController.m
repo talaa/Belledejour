@@ -67,7 +67,8 @@
 {
     self.scrollView.contentSize=CGSizeMake(self.view.frame.size.width, self.view.frame.size.height-100);
     
-}-(BOOL)textFieldShouldReturn:(UITextField *)textField
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.view endEditing:YES];
     return YES;
