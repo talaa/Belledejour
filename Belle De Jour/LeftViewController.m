@@ -11,7 +11,7 @@
 #import "HomeViewController.h"
 #import "ServicesTableViewController.h"
 #import "OffersTableViewController.h"
-
+#import "SharedManager.h"
 #import "FaceBookFeedsTableViewController.h"
 
 
@@ -26,10 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if([[SharedManager sharedManager]userProfile].name==nil)
+    {
     self.tableView = ({
         titles = @[@"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log In"];
         images = @[@"IconHome", @"IconCalendar",@"IconEmpty",@"facebook", @"IconProfile", @"IconSettings", @"IconEmpty"];
-
+    
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * [titles count]) / 2.0f, self.view.frame.size.width, 54 * [titles count]) style:UITableViewStylePlain];
          //UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 8) / 2.0f, self.view.frame.size.width, 54 * 8) style:UITableViewStylePlain];
         
@@ -44,6 +46,29 @@
         tableView.scrollsToTop = NO;
         tableView;
     });
+    }
+    else
+    {
+        self.tableView = ({
+            titles = @[[[SharedManager sharedManager]userProfile].name, @"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log out"];
+            images = @[@"IconHome",@"IconHome", @"IconCalendar",@"IconEmpty",@"facebook", @"IconProfile", @"IconSettings", @"IconEmpty"];
+            
+            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * [titles count]) / 2.0f, self.view.frame.size.width, 54 * [titles count]) style:UITableViewStylePlain];
+            //UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 8) / 2.0f, self.view.frame.size.width, 54 * 8) style:UITableViewStylePlain];
+            
+            tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+            tableView.delegate = self;
+            tableView.dataSource = self;
+            tableView.opaque = NO;
+            tableView.backgroundColor = [UIColor clearColor];
+            tableView.backgroundView = nil;
+            tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+            tableView.bounces = NO;
+            tableView.scrollsToTop = NO;
+            tableView;
+        });
+        
+    }
     [self.view addSubview:self.tableView];
 }
 

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+#import "RESideMenu.h"
+@interface LoginViewController : UIViewController<UITextFieldDelegate,RESideMenuDelegate>
 @property (weak, nonatomic) IBOutlet UITextField * usernameTxt;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTxt;
 - (IBAction)signIn:(id)sender;

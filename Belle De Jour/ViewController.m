@@ -36,7 +36,7 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
-   
+   self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
     NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 

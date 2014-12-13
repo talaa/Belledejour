@@ -19,6 +19,7 @@
 #import "SettingsViewController.h"
 #import "User.h"
 #import "SharedManager.h"
+#import "RESideMenu.h"
 
 @interface LoginViewController ()
 {
@@ -42,6 +43,8 @@
                 {
                     NSLog(@"OK action");
                 }];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +61,13 @@
  // Pass the selected object to the new view controller.
  }
  */
+-(void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
+{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+
+    [((LeftViewController *)(delegate.viewController.leftMenuViewController)).tableView reloadData];
+
+}
 #pragma mark - UITextField delegate
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {

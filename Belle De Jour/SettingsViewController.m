@@ -8,9 +8,13 @@
 
 #import "SettingsViewController.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-
+#import "User.h"
+#import "SharedManager.h"
+#import "SVProgressHUD.h"
 @interface SettingsViewController ()
-
+{
+    User * spaUser;
+}
 @end
 
 @implementation SettingsViewController
@@ -19,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self loadData];
+    spaUser=[[User alloc]init];
 
 }
 
@@ -27,7 +32,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)loadData {
-    // ...
+    [self setScreenState:NO];
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
@@ -42,6 +47,11 @@
             NSString *relationship = userData[@"relationship_status"];
             // URL should point to https://graph.facebook.com/{facebookId}/picture?type=large&return_ssl_resources=1
             self.userNameLbl.text=name;
+            spaUser.name=name;
+            spaUser.emailAddress =userData[@"email"];
+            [[SharedManager sharedManager]setUserProfile:spaUser];
+            //spaUser.userName=_usernameTxt.text;
+            //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerV
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
             
             NSURLRequest *urlRequest = [NSURLRequest requestWithURL:pictureURL];
@@ -56,8 +66,17 @@
                      self.userProfileImage.image = [UIImage imageWithData:data];
                  }
              }];
+            [self setScreenState:YES];
+
         }
     }];
+    
+}
+- (void)setScreenState:(BOOL)state{
+    (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
+    [self.view setUserInteractionEnabled:state];
+    UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
+    leftbutton.enabled = state;
 }
 /*
 #pragma mark - Navigation
