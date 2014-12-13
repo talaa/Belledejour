@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FaceBookFeedsTableViewController : UITableViewController
+@interface FaceBookFeedsTableViewController : UIViewController
 
 @end
