@@ -58,7 +58,8 @@
         {
             bookingView.serviceName=_offer.offerName;
             bookingView.servicePrice=_offer.offerPrice;
-            bookingView.serviceImage=self.serviceImage.image;
+            bookingView.serviceImage=_serviceImage.image;
+
         }
 
             

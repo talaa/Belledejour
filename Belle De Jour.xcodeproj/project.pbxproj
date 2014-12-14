@@ -26,6 +26,7 @@
 		6913EB791A30F63C009D65CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB781A30F63C009D65CD /* Bolts.framework */; };
 		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		693A26E91A3C75F300BC09B3 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */; };
+		693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
 		6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6981C2751A3307DC00699924 /* belledejouricon-1.png */; };
 		6981C2791A33301C00699924 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C2781A33301C00699924 /* SignUpViewController.m */; };
@@ -104,6 +105,7 @@
 		6913EB801A310E4E009D65CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		693A26E71A3C75F200BC09B3 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
 		6981C2751A3307DC00699924 /* belledejouricon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "belledejouricon-1.png"; path = "Images.xcassets/AppIcon-2.appiconset/belledejouricon-1.png"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */,
 				6913EB6F1A30F569009D65CD /* libz.1.1.3.dylib in Frameworks */,
 				6913EB6D1A30F560009D65CD /* MobileCoreServices.framework in Frameworks */,
 				6913EB691A30F537009D65CD /* Security.framework in Frameworks */,
@@ -246,6 +249,7 @@
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */,
 				698413F51A1BD36D0084F0B2 /* TestFlightSDK3-2 */,
 				69993B371A1A5D7C00A78ED6 /* RESideMenu */,
 				69993B101A1A5CC900A78ED6 /* Belle De Jour */,

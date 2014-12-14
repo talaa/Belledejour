@@ -78,6 +78,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if([[SharedManager sharedManager]userProfile].name==nil)
+    {
     switch (indexPath.row) {
         case 0:
             [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
@@ -117,6 +119,50 @@
 
         default:
             break;
+    }
+    }
+    else
+    {
+        switch (indexPath.row) {
+            case 1:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 2:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Servicescontroller"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 3:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 4:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FacebookFeeds"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 5:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"StuffViewController"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 6:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 7:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+                
+            default:
+                break;
+        }
     }
 }
 

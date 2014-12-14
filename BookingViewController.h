@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BookingViewController : UIViewController
+#import <MessageUI/MessageUI.h>
+#import <Parse/Parse.h>
+@interface BookingViewController : UIViewController<MFMailComposeViewControllerDelegate>
 @property(nonatomic,strong)NSString * serviceName;
 @property(nonatomic,assign)int servicePrice;
 @property(nonatomic,strong)UIImage * serviceImage;
