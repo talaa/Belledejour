@@ -20,7 +20,7 @@
 #import "User.h"
 #import "SharedManager.h"
 #import "RESideMenu.h"
-
+#import "SharedManager.h"
 @interface LoginViewController ()
 {
     UIAlertController * alertController;
@@ -43,8 +43,15 @@
                 {
                     NSLog(@"OK action");
                 }];
-    
+    if([[SharedManager sharedManager]isbooked])
+    {
+        self.dismissBtn.hidden=NO;
 
+    }
+    else
+    {
+        self.dismissBtn.hidden=YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -225,5 +232,8 @@
 }
 
 - (IBAction)signUp:(id)sender {
+}
+- (IBAction)dismissPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

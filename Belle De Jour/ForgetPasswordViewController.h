@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailAddresTxt;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordBtn;
 - (IBAction)sendPressed:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UIButton *dismissBtn;
+- (IBAction)dismissPressed:(id)sender;
 @end

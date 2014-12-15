@@ -463,6 +463,16 @@
                                             <segue destination="Xos-8a-vql" kind="modal" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="o4X-Zv-RWz"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6BB-bX-f6a">
+                                        <rect key="frame" x="270" y="82" width="42" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="close_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissPressed:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="ZNL-j1-fBS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="Me7-Ge-IWk" id="9UL-bQ-D8C"/>
@@ -481,6 +491,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="dismissBtn" destination="6BB-bX-f6a" id="lIs-sS-r7p"/>
                         <outlet property="passwordTxt" destination="a82-FD-l7N" id="8WJ-F1-2jg"/>
                         <outlet property="scrollView" destination="F6y-QS-g1d" id="gS4-4j-pA2"/>
                         <outlet property="usernameTxt" destination="7XR-f6-3vc" id="rne-nT-LvL"/>
@@ -618,7 +629,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter Your Email Address" minimumFontSize="17" id="ljP-Sb-HyC">
-                                <rect key="frame" x="16" y="43" width="288" height="40"/>
+                                <rect key="frame" x="16" y="53" width="288" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
@@ -628,7 +639,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JOb-vL-zMC">
-                                <rect key="frame" x="16" y="122" width="288" height="45"/>
+                                <rect key="frame" x="16" y="132" width="288" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
@@ -640,11 +651,22 @@
                                     <action selector="sendPressed:" destination="Xos-8a-vql" eventType="touchUpInside" id="dCJ-D1-mYP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Rr-Vm-yA6">
+                                <rect key="frame" x="269" y="20" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="close_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="Xos-8a-vql" eventType="touchUpInside" id="4Ji-ZL-2L1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="dismissBtn" destination="1Rr-Vm-yA6" id="CRL-2o-pjo"/>
                         <outlet property="emailAddresTxt" destination="ljP-Sb-HyC" id="nEA-Po-spv"/>
                         <outlet property="forgetPasswordBtn" destination="JOb-vL-zMC" id="UBQ-ji-uld"/>
                     </connections>
@@ -926,6 +948,7 @@
     </scenes>
     <resources>
         <image name="belledejouricon-1.png" width="120" height="120"/>
+        <image name="close_button.png" width="48" height="43"/>
         <image name="facebook" width="40" height="40"/>
         <image name="icon_text_align_justify" width="30" height="30"/>
         <image name="shoppingCart" width="256" height="256"/>

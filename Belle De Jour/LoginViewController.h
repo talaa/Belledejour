@@ -16,5 +16,7 @@
 - (IBAction)forgotPassword:(id)sender;
 - (IBAction)signUp:(id)sender;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *dismissBtn;
+- (IBAction)dismissPressed:(id)sender;
 
 @end

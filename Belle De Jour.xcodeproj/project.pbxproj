@@ -31,6 +31,8 @@
 		6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6981C2751A3307DC00699924 /* belledejouricon-1.png */; };
 		6981C2791A33301C00699924 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C2781A33301C00699924 /* SignUpViewController.m */; };
 		6981C27C1A3332CF00699924 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C27B1A3332CF00699924 /* User.m */; };
+		69833EF41A3F2018003063A7 /* closing_symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 69833EF31A3F2018003063A7 /* closing_symbol.png */; };
+		69833EF61A3F20D8003063A7 /* close_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 69833EF51A3F20D8003063A7 /* close_button.png */; };
 		698413F11A1A8DE30084F0B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F01A1A8DE30084F0B2 /* HomeViewController.m */; };
 		698413F41A1A930E0084F0B2 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698413F31A1A930E0084F0B2 /* PageContentViewController.m */; };
 		698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698413F61A1BD36D0084F0B2 /* libTestFlight.a */; };
@@ -114,6 +116,8 @@
 		6981C2781A33301C00699924 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		6981C27A1A3332CF00699924 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6981C27B1A3332CF00699924 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		69833EF31A3F2018003063A7 /* closing_symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closing_symbol.png; sourceTree = "<group>"; };
+		69833EF51A3F20D8003063A7 /* close_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_button.png; sourceTree = "<group>"; };
 		698413EF1A1A8DE20084F0B2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		698413F01A1A8DE30084F0B2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		698413F21A1A930E0084F0B2 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				698413F21A1A930E0084F0B2 /* PageContentViewController.h */,
 				698413F31A1A930E0084F0B2 /* PageContentViewController.m */,
 				69993B4C1A1A681D00A78ED6 /* ServicesTableViewController.h */,
+				69833EF51A3F20D8003063A7 /* close_button.png */,
 				69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */,
 				69993B4F1A1A683D00A78ED6 /* OffersTableViewController.h */,
 				69993B501A1A683D00A78ED6 /* OffersTableViewController.m */,
@@ -340,6 +345,7 @@
 		69993B111A1A5CC900A78ED6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				69833EF31A3F2018003063A7 /* closing_symbol.png */,
 				6981C2751A3307DC00699924 /* belledejouricon-1.png */,
 				69993B121A1A5CC900A78ED6 /* Info.plist */,
 				69993B131A1A5CC900A78ED6 /* main.m */,
@@ -500,8 +506,10 @@
 				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
 				6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */,
 				6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */,
+				69833EF61A3F20D8003063A7 /* close_button.png in Resources */,
 				69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */,
 				69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */,
+				69833EF41A3F2018003063A7 /* closing_symbol.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
