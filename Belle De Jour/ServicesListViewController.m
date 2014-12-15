@@ -11,50 +11,55 @@
 #import <Parse/Parse.h>
 #import "ServiceListCustomCell.h"
 #import "ServiceDetails.h"
+#import "ServiceCollectionViewCell.h"
 
 @implementation ServicesListViewController
-
+{
+    NSIndexPath * cellIndex;
+}
 -(void)viewDidLoad
 {
-    
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
     if ([segue.identifier isEqualToString:@"serviceDetails"]) {
         ServiceDetails * servicedetail=(ServiceDetails*)segue.destinationViewController;
-        NSIndexPath *indexPath = [self.servicesTableView indexPathForSelectedRow];
-        servicedetail.service=(Service*)[_services objectAtIndex:indexPath.row];
-        servicedetail.navigationTitle=[[_services objectAtIndex:indexPath.row]serviceType];
-        
+       // NSIndexPath *indexPath = [self.servicesCollectionView indexPathForCell:(ServiceCollectionViewCell*)sender];
+     //   NSArray *indexPaths = [self.servicesCollectionView indexPathsForSelectedItems];
+       // NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+
+        servicedetail.service=(Service*)[_services objectAtIndex:cellIndex.row];
+        servicedetail.navigationTitle=[[_services objectAtIndex:cellIndex.row]serviceName];
+        [self.servicesCollectionView deselectItemAtIndexPath:cellIndex animated:NO];
+
         
     }
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    cellIndex=indexPath;
+    [self performSegueWithIdentifier:@"serviceDetails" sender:self];
+}
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     return _services.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ServicesCellList";
-    
-    ServiceListCustomCell *cell = [tableView
-                                   dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[ServiceListCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
-    }
+    ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ServiceCollectionCell" forIndexPath:indexPath];
     if(_services.count>0)
     {
-        cell.serviceNameLbl.text=[[_services objectAtIndex:indexPath.row]serviceType];
+        cell.serviceName.text=[[_services objectAtIndex:indexPath.row]serviceName];
         __block UIImage *MyPicture = [[UIImage alloc]init];
         PFFile *imageFile = [[_services objectAtIndex:indexPath.row]serviceImage];
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){

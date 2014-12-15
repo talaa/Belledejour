@@ -15,6 +15,7 @@
 @property(nonatomic,assign)int servicePrice;
 @property(nonatomic,assign)double serviceLoyaltyPoints;
 @property(nonatomic,strong)PFFile  * serviceImage;
+@property(nonatomic,strong)NSString * serviceName;
 
 
 @end

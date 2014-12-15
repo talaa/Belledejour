@@ -15,4 +15,5 @@
 @synthesize serviceLoyaltyPoints;
 @synthesize servicePrice;
 @synthesize serviceType;
+@synthesize serviceName;
 @end

@@ -65,6 +65,7 @@
 		69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69993B531A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m */; };
 		699D3F6D1A35219D00658646 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F691A35219C00658646 /* Reachability.m */; };
 		699D3F6E1A35219D00658646 /* SMBInternetConnectionIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */; };
+		69D5ABCF1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D5ABCE1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m */; };
 		69D6D39C1A3B227C0021FF34 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D39B1A3B227B0021FF34 /* SharedManager.m */; };
 		69D6D39F1A3C428E0021FF34 /* StuffCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D39E1A3C428E0021FF34 /* StuffCustomCell.m */; };
 		69D6D3A21A3C482C0021FF34 /* Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D6D3A11A3C482C0021FF34 /* Stuff.m */; };
@@ -176,6 +177,8 @@
 		699D3F691A35219C00658646 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		699D3F6A1A35219C00658646 /* SMBInternetConnectionIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBInternetConnectionIndicator.h; sourceTree = "<group>"; };
 		699D3F6B1A35219C00658646 /* SMBInternetConnectionIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicator.m; sourceTree = "<group>"; };
+		69D5ABCD1A3E252A00FFDBB9 /* ServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCollectionViewCell.h; sourceTree = "<group>"; };
+		69D5ABCE1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		69D6D39A1A3B227B0021FF34 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		69D6D39B1A3B227B0021FF34 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
 		69D6D39D1A3C428E0021FF34 /* StuffCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffCustomCell.h; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				69D6D3A11A3C482C0021FF34 /* Stuff.m */,
 				693A26E71A3C75F200BC09B3 /* ForgetPasswordViewController.h */,
 				693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */,
+				69D5ABCD1A3E252A00FFDBB9 /* ServiceCollectionViewCell.h */,
+				69D5ABCE1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m */,
 			);
 			path = "Belle De Jour";
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
 				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
 				698ADB7A1A39212000F48A85 /* OffersCustomCell.m in Sources */,
+				69D5ABCF1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m in Sources */,
 				69D6D39F1A3C428E0021FF34 /* StuffCustomCell.m in Sources */,
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
