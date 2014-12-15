@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIView *datePickerView;
 - (IBAction)doneToolBarPressed:(id)sender;
 - (IBAction)cancelToolBarPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *reserveDateBtn;
 
 @end

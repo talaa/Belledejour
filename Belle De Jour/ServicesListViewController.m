@@ -59,9 +59,10 @@
     ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ServiceCollectionCell" forIndexPath:indexPath];
     if(_services.count>0)
     {
-        cell.serviceName.text=[[_services objectAtIndex:indexPath.row]serviceName];
+        cell.serviceName.text=[(Service *)[_services objectAtIndex:indexPath.row]serviceName];
+        cell.serviceCollectionPrice.text=[NSString stringWithFormat:@"%i Dirham",[(Service *)[_services objectAtIndex:indexPath.row]servicePrice]];
         __block UIImage *MyPicture = [[UIImage alloc]init];
-        PFFile *imageFile = [[_services objectAtIndex:indexPath.row]serviceImage];
+        PFFile *imageFile = [(Service *)[_services objectAtIndex:indexPath.row]serviceImage];
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
             if (!error) {
                 MyPicture = [UIImage imageWithData:data];

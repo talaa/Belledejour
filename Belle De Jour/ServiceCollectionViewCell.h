@@ -11,5 +11,6 @@
 @interface ServiceCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImage;
 @property (weak, nonatomic) IBOutlet UILabel *serviceName;
+@property (weak, nonatomic) IBOutlet UILabel *serviceCollectionPrice;
 
 @end

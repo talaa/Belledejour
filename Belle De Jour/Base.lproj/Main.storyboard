@@ -313,19 +313,12 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="S0O-dp-Skz">
-                                <rect key="frame" x="8" y="216" width="305" height="143.00000524520874"/>
+                                <rect key="frame" x="8" y="216" width="305" height="143"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="FhR-3B-GoH">
-                                        <rect key="frame" x="-7" y="44" width="317" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="440002581.49730599">
-                                            <!--2014-12-11 14:56:21 +0000-->
-                                        </date>
-                                    </datePicker>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lY4-Zr-Lvf">
                                         <rect key="frame" x="-7" y="0.0" width="317" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <items>
                                             <barButtonItem title="Cancel" style="done" id="1TS-oa-TmT">
                                                 <connections>
@@ -339,6 +332,13 @@
                                             </barButtonItem>
                                         </items>
                                     </toolbar>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="FhR-3B-GoH">
+                                        <rect key="frame" x="-7" y="44" width="317" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="440002581.49730599">
+                                            <!--2014-12-11 14:56:21 +0000-->
+                                        </date>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -367,6 +367,7 @@
                     <connections>
                         <outlet property="datePicker" destination="FhR-3B-GoH" id="yqL-1q-vMT"/>
                         <outlet property="datePickerView" destination="S0O-dp-Skz" id="gpl-eM-Zce"/>
+                        <outlet property="reserveDateBtn" destination="u4K-1i-FOO" id="w6j-JN-x3h"/>
                         <outlet property="serviceImgView" destination="mwH-aj-lac" id="mlQ-PC-C3s"/>
                         <outlet property="serviceNameLbl" destination="qQe-sw-zgh" id="xyE-ks-CmX"/>
                         <outlet property="servicePriceLbl" destination="CBp-s3-54X" id="Rzf-Uk-5S8"/>
@@ -799,7 +800,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vhn-bu-wd3">
-                                    <size key="itemSize" width="149" height="227"/>
+                                    <size key="itemSize" width="149" height="282"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -809,17 +810,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="149" height="227"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="149" height="282"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4Yt-6U-Ues">
                                                     <rect key="frame" x="0.0" y="0.0" width="149" height="157"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5HY-4R-k7f">
                                                     <rect key="frame" x="8" y="165" width="133" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                                    <color key="textColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hcv-p5-vB2">
+                                                    <rect key="frame" x="8" y="200" width="141" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
                                                     <color key="textColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -827,6 +835,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="serviceCollectionPrice" destination="hcv-p5-vB2" id="Jit-jr-gqR"/>
                                             <outlet property="serviceImage" destination="4Yt-6U-Ues" id="kn1-hR-zed"/>
                                             <outlet property="serviceName" destination="5HY-4R-k7f" id="S4R-zK-HHp"/>
                                         </connections>

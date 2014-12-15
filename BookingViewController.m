@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view.
     ShowInternetIndicator;
     self.serviceNameLbl.text=self.serviceName;
-    self.servicePriceLbl.text=[NSString stringWithFormat:@"%i",self.servicePrice];
+    self.servicePriceLbl.text=[NSString stringWithFormat:@"%i Dirham",self.servicePrice];
     [self.serviceImgView setImage: self.serviceImage];
     
 }
@@ -107,6 +107,7 @@
     NSDate *selectedDate = [self.datePicker date];
     reservationDate = [dateFormatter stringFromDate:selectedDate];
     self.datePickerView.hidden=YES;
+    [_reserveDateBtn setTitle:[NSString stringWithFormat:@"Reservation Date is %@", reservationDate ]forState:UIControlStateNormal];
 
 }
 
