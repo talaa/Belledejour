@@ -17,6 +17,18 @@
 {
     [super viewDidLoad];
     ShowInternetIndicator;
+    // Initialization code
+    [_forgetPasswordBtn.layer setCornerRadius:10.0f];
+    
+    // border
+    [_forgetPasswordBtn.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [_forgetPasswordBtn.layer setBorderWidth:1.5f];
+    
+    // drop shadow
+    [_forgetPasswordBtn.layer setShadowColor:[UIColor blackColor].CGColor];
+    [_forgetPasswordBtn.layer setShadowOpacity:0.8];
+    [_forgetPasswordBtn.layer setShadowRadius:3.0];
+    [_forgetPasswordBtn.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];

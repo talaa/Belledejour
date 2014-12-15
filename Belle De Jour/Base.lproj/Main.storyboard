@@ -185,7 +185,7 @@
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoppingCart" id="qmw-Nq-Fyp">
-                                            <rect key="frame" x="231" y="109" width="53" height="47"/>
+                                            <rect key="frame" x="234" y="109" width="53" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.93344907407407407" green="0.93344907407407407" blue="0.93344907407407407" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
@@ -193,6 +193,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="OfferNameLbl" destination="86n-uZ-cSa" id="GtI-vg-B3a"/>
+                                    <outlet property="bookBtn" destination="FtC-IW-n29" id="b0G-gG-chL"/>
                                     <outlet property="offerImage" destination="NlJ-Iz-KO5" id="iwZ-Mp-a5a"/>
                                     <outlet property="offerPriceLbl" destination="cay-FB-ACx" id="3on-Ii-boo"/>
                                     <segue destination="zfb-js-NYo" kind="push" identifier="OfferSelection" id="ZQF-wt-stc"/>
@@ -654,6 +655,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="emailAddresTxt" destination="ljP-Sb-HyC" id="nEA-Po-spv"/>
+                        <outlet property="forgetPasswordBtn" destination="JOb-vL-zMC" id="UBQ-ji-uld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avV-SZ-gNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -876,7 +878,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vBC-cZ-wet">
-                                <rect key="frame" x="0.0" y="34" width="320" height="137"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Pvd-7g-RGF">
@@ -918,6 +920,7 @@
                     <navigationItem key="navigationItem" id="vjO-mz-tMm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="bookBtn" destination="nOR-I5-3Xy" id="WaZ-Hy-d9u"/>
                         <outlet property="loyaltyPointsLbl" destination="qEJ-oL-IAd" id="dad-yL-ZxY"/>
                         <outlet property="navigationBar" destination="vjO-mz-tMm" id="dlB-Pf-Mky"/>
                         <outlet property="serviceDescriptionTxt" destination="Pvd-7g-RGF" id="Ikc-QK-86K"/>
@@ -942,7 +945,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bE5-hv-3a6"/>
+        <segue reference="ZQF-wt-stc"/>
         <segue reference="scU-Aw-tWN"/>
     </inferredMetricsTieBreakers>
 </document>

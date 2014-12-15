@@ -31,6 +31,7 @@
     self.servicePriceLbl.text=[NSString stringWithFormat:@"%i Dirham",self.servicePrice];
     [self.serviceImgView setImage: self.serviceImage];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {

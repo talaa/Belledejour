@@ -10,6 +10,7 @@
 
 @interface ForgetPasswordViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *emailAddresTxt;
+@property (weak, nonatomic) IBOutlet UIButton *forgetPasswordBtn;
 - (IBAction)sendPressed:(id)sender;
 
 @end

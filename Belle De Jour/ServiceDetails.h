@@ -10,6 +10,7 @@
 #import "Service.h"
 #import "Offer.h"
 @interface ServiceDetails : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *bookBtn;
 @property (weak, nonatomic) IBOutlet UILabel *loyaltyPointsLbl;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImage;

@@ -12,6 +12,9 @@
 @implementation ServiceDetails
 -(void)viewDidLoad
 {
+
+    [self setBorder:_bookBtn];
+    [self setBorder:_serviceImage];
     if(_service!=nil)
     {
     [self.navigationItem setTitle:_navigationTitle];
@@ -43,6 +46,21 @@
         }];;
     }
     
+}
+-(void)setBorder:(UIView*)view
+{
+    // border radius
+    [view.layer setCornerRadius:10.0f];
+    
+    // border
+    [view.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [view.layer setBorderWidth:1.5f];
+    
+    // drop shadow
+    [view.layer setShadowColor:[UIColor blackColor].CGColor];
+    [view.layer setShadowOpacity:0.8];
+    [view.layer setShadowRadius:3.0];
+    [view.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

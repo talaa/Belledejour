@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *offerImage;
 @property (weak, nonatomic) IBOutlet UILabel *OfferNameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *offerPriceLbl;
+@property (weak, nonatomic) IBOutlet UIButton *bookBtn;
 
 @end
