@@ -36,6 +36,7 @@
                         <segue destination="Jaf-h4-Ggm" kind="push" id="otE-3M-mlq"/>
                         <segue destination="Me7-Ge-IWk" kind="push" id="oeg-S4-Gq5"/>
                         <segue destination="iBo-dI-vag" kind="push" id="i5E-Mf-hTX"/>
+                        <segue destination="Ewk-3y-PFf" kind="push" id="myK-si-WXW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRg-jv-von" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,28 +112,18 @@
             <objects>
                 <viewController storyboardIdentifier="FacebookFeeds" id="Ewk-3y-PFf" customClass="FaceBookFeedsTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whK-Bl-F9H">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" id="5kE-1E-qGg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="News" id="tMu-SZ-Csg">
-                                        <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="jtI-Cy-han">
-                                            <connections>
-                                                <action selector="presentLeftMenuViewController:" destination="Ewk-3y-PFf" id="E9h-Ce-l0q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="H6X-gj-Tlr"/>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Iak-0M-XFO">
+                        <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="a1h-Y8-fAG">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="Ewk-3y-PFf" id="713-vY-9eC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUN-H7-j16" userLabel="First Responder" sceneMemberID="firstResponder"/>
