@@ -23,6 +23,7 @@
     NSMutableArray * temparray;
     NSString * selectedCategory;
     NSMutableArray * otherServicesArray;
+    NSMutableArray *uniqueArray;
 }
 
 @end
@@ -33,12 +34,12 @@
     [super viewDidLoad];
     ShowInternetIndicator;
     [self performSelector:@selector(getServices)];
-    otherServicesArray=[[NSMutableArray alloc]init];
     servicesList=[[NSArray alloc]init];
 }
 -(void)getServices
 {
     [self setScreenState:NO];
+    otherServicesArray=[[NSMutableArray alloc]init];
     servicesArray=[[NSMutableArray alloc]init];
     PFQuery * parseServicesList=[PFQuery queryWithClassName:@"Services"];
     
@@ -56,34 +57,44 @@
             service.serviceImage=[[objects objectAtIndex:i ] objectForKey:@"Service_Picture"];
             service.serviceName=[[objects objectAtIndex:i ] objectForKey:@"Service_Name"];
             [servicesArray addObject:service ];
-           [otherServicesArray insertObject:service atIndex:i];
+            [otherServicesArray addObject:service];
 
         }
         
-        int count=otherServicesArray.count;
-        for(int j=0;j<count;j++)
-        {
-            for(int k=0;k<count;k++)
-            {
-                if([[[otherServicesArray objectAtIndex:j]serviceType]isEqualToString:[[otherServicesArray objectAtIndex:k]serviceType]])
-                {
-                    if(j!=k)
-                    {
-                        [otherServicesArray removeObjectAtIndex:k];
-                        count --;
-                        
-                    }
-                }
+
+      //  int count=otherServicesArray.count;
+        uniqueArray = [NSMutableArray array];
+        NSMutableSet *names = [NSMutableSet set];
+        for (id obj in otherServicesArray) {
+            NSString *destinationName = [obj serviceType];
+            if (![names containsObject:destinationName]) {
+                [uniqueArray addObject:obj];
+                [names addObject:destinationName];
             }
-            
         }
+//        for(int j=0;j<count;j++)
+//        {
+//            for(int k=0;k<count;k++)
+//            {
+//                if([[[otherServicesArray objectAtIndex:j]serviceType]isEqualToString:[[servicesArray objectAtIndex:k]serviceType]])
+//                {
+//                    if(j!=k)
+//                    {
+//                        [otherServicesArray removeObjectAtIndex:k];
+//                        count --;
+//                        k--;
+//                        
+//                    }
+//                }
+//            }
+//            
+//        }
         [_servicesTableView reloadData];
         [self setScreenState:YES];
         
-        
     }];
     
-    
+
     
     
     
@@ -102,7 +113,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return otherServicesArray.count;
+    return uniqueArray.count;
 }
 
 
@@ -115,9 +126,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
-    if(otherServicesArray.count>0)
+    if(uniqueArray.count>0)
     {
-        cell.textLabel.text=[[otherServicesArray objectAtIndex:indexPath.row]serviceType];
+        cell.textLabel.text=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
         //  cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
         // cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
         //cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
@@ -157,7 +168,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    selectedCategory=[[otherServicesArray objectAtIndex:indexPath.row]serviceType];
+    selectedCategory=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
    [self performSegueWithIdentifier:@"Service" sender:self];
 }
 - (void)setScreenState:(BOOL)state{

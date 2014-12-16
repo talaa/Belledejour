@@ -19,6 +19,7 @@
 }
 -(void)viewDidLoad
 {
+    self.navigationItemTitle.title=_selectedCategory;
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

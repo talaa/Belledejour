@@ -296,7 +296,6 @@
 				698413F21A1A930E0084F0B2 /* PageContentViewController.h */,
 				698413F31A1A930E0084F0B2 /* PageContentViewController.m */,
 				69993B4C1A1A681D00A78ED6 /* ServicesTableViewController.h */,
-				69833EF51A3F20D8003063A7 /* close_button.png */,
 				69993B4D1A1A681D00A78ED6 /* ServicesTableViewController.m */,
 				69993B4F1A1A683D00A78ED6 /* OffersTableViewController.h */,
 				69993B501A1A683D00A78ED6 /* OffersTableViewController.m */,
@@ -345,6 +344,7 @@
 		69993B111A1A5CC900A78ED6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				69833EF51A3F20D8003063A7 /* close_button.png */,
 				69833EF31A3F2018003063A7 /* closing_symbol.png */,
 				6981C2751A3307DC00699924 /* belledejouricon-1.png */,
 				69993B121A1A5CC900A78ED6 /* Info.plist */,

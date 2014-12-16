@@ -12,5 +12,6 @@
 @property (nonatomic,strong)NSArray * services;
 @property (strong, nonatomic) IBOutlet UITableView *servicesTableView;
 @property(nonatomic,strong)NSString * selectedCategory;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItemTitle;
 @property (weak, nonatomic) IBOutlet UICollectionView *servicesCollectionView;
 @end
