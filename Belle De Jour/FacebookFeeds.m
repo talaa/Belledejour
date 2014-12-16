@@ -11,7 +11,7 @@
 @implementation FacebookFeeds
 +(void)parseFacebookFeeds
 {
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://graph.facebook.com/443490909081311/feed?access_token=CAAE040bEm1ABAGoE779RwIqL0i3Vv2oUqnlEuUS60LN2ZCjGr0WJ8mI9tPMhQpwPuutQ81bmnEOaYKwNGhXB1QT5JHtcZAShaOiZByATMeLuWZCRU92FZAP6j0n7FkcAALkpqfnLfYuvTjcXG1oYDJzhPEweh7ZBAme6PRl4YbtiojfbspGgisQkV9KFaRYFERC2zvqxUF78ZALUi6BdZAqT"]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://graph.facebook.com/443490909081311/feed?access_token=CAAE040bEm1ABAEzywSR6j1QW9ZCZCtBdT7pVE4DlT9n6CpzS0NKCUr7wJRGrC1CLl3ZCvdxB2TLsuv11i1FZBm2PsEcJxgXaaWhqYSQj0qiyOYwBYZBkzxrOsm5rvdiC3cRzACvo8ZC63H5jV9YxOEvd9utAgEgU7jV7jXwzlnQvI50ETw0tMNtaVL4ij8edPesjmdo5sbcigfR2rQR0dC"]];
     request.HTTPMethod = @"GET";
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[[NSOperationQueue alloc] init]
