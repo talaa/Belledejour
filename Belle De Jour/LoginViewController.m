@@ -114,6 +114,8 @@
                                                 spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
                                                 [[SharedManager sharedManager]setUserProfile:spaUser];
                                                 
+                                                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                                                             animated:YES];
                                                 
                                                 
                                             } else {
