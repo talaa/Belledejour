@@ -24,6 +24,8 @@
     // Do any additional setup after loading the view.
     [self loadData];
     spaUser=[[User alloc]init];
+    self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
+    self.profileImg.clipsToBounds = YES;
 
 }
 
@@ -63,7 +65,7 @@
              ^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                  if (connectionError == nil && data != nil) {
                      // Set the image in the header imageView
-                     self.userProfileImage.image = [UIImage imageWithData:data];
+                   //  self.userProfileImage.image = [UIImage imageWithData:data];
                  }
              }];
             [self setScreenState:YES];

@@ -11,5 +11,6 @@
 @interface SettingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *userProfileImage;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImg;
 
 @end

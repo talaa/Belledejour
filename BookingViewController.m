@@ -62,7 +62,7 @@
     UIViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     [self presentViewController:ivc animated:YES completion:nil];
     }
-   else if(reservationDate!=nil&&[[SharedManager sharedManager]userProfile].name!=nil)
+   else if(reservationDate!=nil&&[[SharedManager sharedManager]userProfile].name!=nil &&[[SharedManager sharedManager]userProfile].mobileNumber!=0)
     {
         [self setScreenState:NO];
             PFObject *bookingData = [PFObject objectWithClassName:@"Booking"];
@@ -93,6 +93,31 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"Please enter reservation date to complete booking process !!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
 
+    }
+    else if ([[SharedManager sharedManager]userProfile].mobileNumber==0)
+    {
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:@""
+                                              message:@"Please Enter your Mobile Number !!"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+         {
+             textField.placeholder = NSLocalizedString(@"MobileNumber", @"Enter your MobileNumber");
+         }];
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       UITextField *mobileNumberTextField = alertController.textFields.firstObject;
+                                       [[SharedManager sharedManager]userProfile].mobileNumber=mobileNumberTextField.text.integerValue;
+                                       NSLog(@"%i",mobileNumberTextField.text.integerValue);
+
+                                   }];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+        
     }
     
     [self setScreenState:YES];
