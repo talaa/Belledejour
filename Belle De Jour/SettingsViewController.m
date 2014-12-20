@@ -26,12 +26,25 @@
     // Do any additional setup after loading the view.
     //[self loadData];
     spaUser=[[User alloc]init];
+    
     self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
     self.profileImg.clipsToBounds = YES;
+    if([[SharedManager sharedManager]userProfile].name !=nil)
+    {
     self.mobileNumberTxt.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].mobileNumber];
     self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
     self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
     self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In First"
+                                                        message:@"Please Login First !!"
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"Dismiss", nil];
+        [alert show];
+    }
 
 }
 
