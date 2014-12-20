@@ -14,4 +14,5 @@
 @property(nonatomic,strong)NSString * emailAddress;
 @property(nonatomic,assign)NSInteger  mobileNumber;
 @property(nonatomic,strong)NSString * password;
+@property(nonatomic,assign)NSInteger loyaltyPoints;
 @end

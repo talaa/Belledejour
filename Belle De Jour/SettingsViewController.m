@@ -11,9 +11,11 @@
 #import "User.h"
 #import "SharedManager.h"
 #import "SVProgressHUD.h"
+
 @interface SettingsViewController ()
 {
     User * spaUser;
+    BOOL flag;
 }
 @end
 
@@ -22,10 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadData];
+    //[self loadData];
     spaUser=[[User alloc]init];
     self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
     self.profileImg.clipsToBounds = YES;
+    self.mobileNumberTxt.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].mobileNumber];
+    self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
+    self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
+    self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
 
 }
 
@@ -38,6 +44,8 @@
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
+            [self setScreenState:YES];
+
             // result is a dictionary with the user's Facebook data
             NSDictionary *userData = (NSDictionary *)result;
             
@@ -71,9 +79,19 @@
             [self setScreenState:YES];
 
         }
+        else
+        {
+            [self setScreenState:YES];
+
+        }
     }];
     
 }
+- (IBAction)editPressed:(id)sender {
+    
+}
+
+
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
     [self.view setUserInteractionEnabled:state];
@@ -89,5 +107,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)profileImg:(id)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]
+                                                 init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+
+}
+- (IBAction)changeBackgroundImage:(id)sender {
+    flag=YES;
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]
+                                                 init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+#pragma mark UIImagePickerControllerDelegate
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo
+{
+    if(flag)
+    {
+        [self.userProfileImage setImage:image];
+    }
+    else
+    {
+    [self.profileImg setBackgroundImage:image forState:UIControlStateNormal];;
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end

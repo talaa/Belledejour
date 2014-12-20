@@ -95,6 +95,7 @@
 		69F69B661A4616D30041A3B6 /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B651A4616D30041A3B6 /* profile-bg.png */; };
 		69F69B681A46188F0041A3B6 /* profile-rabbit-toy.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B671A46188F0041A3B6 /* profile-rabbit-toy.png */; };
 		69F69B6A1A461B390041A3B6 /* line_seperate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B691A461B390041A3B6 /* line_seperate@2x.png */; };
+		69F69B6C1A461CC40041A3B6 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B6B1A461CC40041A3B6 /* camera.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +258,7 @@
 		69F69B651A4616D30041A3B6 /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
 		69F69B671A46188F0041A3B6 /* profile-rabbit-toy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-rabbit-toy.png"; sourceTree = "<group>"; };
 		69F69B691A461B390041A3B6 /* line_seperate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_seperate@2x.png"; sourceTree = "<group>"; };
+		69F69B6B1A461CC40041A3B6 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				69F69B6B1A461CC40041A3B6 /* camera.jpg */,
 				69DAE4F11A4068900077213A /* SDWebImage */,
 				69DAE4ED1A4065C70077213A /* ImageIO.framework */,
 				693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */,
@@ -633,6 +636,7 @@
 				69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */,
 				69F69B641A46147F0041A3B6 /* user1.png in Resources */,
 				69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */,
+				69F69B6C1A461CC40041A3B6 /* camera.jpg in Resources */,
 				69F69B6A1A461B390041A3B6 /* line_seperate@2x.png in Resources */,
 				69F69B681A46188F0041A3B6 /* profile-rabbit-toy.png in Resources */,
 				69833EF41A3F2018003063A7 /* closing_symbol.png in Resources */,

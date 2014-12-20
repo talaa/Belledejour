@@ -14,4 +14,5 @@
 @property(nonatomic,strong)NSString * offerDescription;
 @property(nonatomic,assign)int offerPrice;
 @property(nonatomic,assign)int loyaltyPoints;
+
 @end

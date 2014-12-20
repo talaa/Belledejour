@@ -14,4 +14,5 @@
 @synthesize userName;
 @synthesize emailAddress;
 @synthesize mobileNumber;
+@synthesize loyaltyPoints;
 @end

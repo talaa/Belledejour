@@ -68,15 +68,6 @@
                                 <rect key="frame" x="0.0" y="12" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nada Gamal " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0b1-EH-o0A">
-                                <rect key="frame" x="55" y="141" width="210" height="43"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-rabbit-toy.png" id="Pfg-nB-Exz">
-                                <rect key="frame" x="120" y="73" width="80" height="73"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_seperate.png" id="bKy-MM-Cid">
                                 <rect key="frame" x="0.0" y="291" width="320" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,20 +90,51 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+99698909844" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QSh-Je-rpu">
-                                <rect key="frame" x="162" y="232" width="150" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UJb-rd-11Q">
+                                <rect key="frame" x="0.0" y="162" width="46" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="camera.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeBackgroundImage:" destination="P0T-bV-fkk" eventType="touchUpInside" id="h4E-Hy-JX8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" id="IKe-Me-Cgn">
+                                <rect key="frame" x="54" y="174" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nadagamal_ng@yahoo.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Di2-uz-V5T">
-                                <rect key="frame" x="55" y="178" width="236" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" id="VGh-Dl-v7N">
+                                <rect key="frame" x="75" y="147" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" id="gSX-5V-HYZ">
+                                <rect key="frame" x="162" y="237" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P0T-bV-fkk" id="Fe2-0k-K9H"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w7L-N9-riA">
+                                <rect key="frame" x="130" y="75" width="80" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="profile-rabbit-toy.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileImg:" destination="P0T-bV-fkk" eventType="touchUpInside" id="zq3-Bn-Tii"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -122,10 +144,18 @@
                                 <action selector="presentLeftMenuViewController:" destination="P0T-bV-fkk" id="nC7-xW-Sei"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="g3O-pT-d8Y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="g3O-pT-d8Y">
+                            <connections>
+                                <action selector="editPressed:" destination="P0T-bV-fkk" id="a0A-cD-lE3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="profileImg" destination="Pfg-nB-Exz" id="lCe-mM-0OX"/>
+                        <outlet property="emailTxt" destination="IKe-Me-Cgn" id="xtU-WU-o0G"/>
+                        <outlet property="mobileNumberTxt" destination="gSX-5V-HYZ" id="kTY-72-uaA"/>
+                        <outlet property="nameTxt" destination="VGh-Dl-v7N" id="bjQ-DL-LIH"/>
+                        <outlet property="pointsLbl" destination="ncc-SE-EUW" id="vGn-uL-pen"/>
+                        <outlet property="profileImg" destination="w7L-N9-riA" id="KNd-ej-XQy"/>
                         <outlet property="userProfileImage" destination="rUn-uo-tlK" id="X2d-EJ-5Kp"/>
                     </connections>
                 </viewController>
@@ -1021,6 +1051,7 @@
     </scenes>
     <resources>
         <image name="belledejouricon-1.png" width="120" height="120"/>
+        <image name="camera.jpg" width="450" height="470"/>
         <image name="close_button.png" width="48" height="43"/>
         <image name="facebook" width="40" height="40"/>
         <image name="icon_text_align_justify" width="30" height="30"/>
