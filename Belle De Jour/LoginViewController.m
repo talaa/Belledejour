@@ -259,6 +259,7 @@
             }
             else
             {
+             //   [self dismissViewControllerAnimated:YES completion:nil];
                 SHOW_ALERT(@"Welcome",name);
                 spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
                 spaUser.mobileNumber= [currentUser[@"Mobile_Number"]integerValue];
