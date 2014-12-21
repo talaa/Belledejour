@@ -24,7 +24,7 @@
 @interface LoginViewController ()
 {
     UIAlertController * alertController;
-    UIAlertAction * okAction;
+    UIAlertAction * oKAction;
     User * spaUser;
 }
 
@@ -36,7 +36,7 @@
     [super viewDidLoad];
     ShowInternetIndicator;
     spaUser=[[User alloc]init];
-    okAction = [UIAlertAction
+    oKAction = [UIAlertAction
                 actionWithTitle:@"OK"
                 style:UIAlertActionStyleCancel
                 handler:^(UIAlertAction *action)
@@ -124,7 +124,7 @@
                                                                    alertControllerWithTitle:@"Alert"
                                                                    message:[NSString stringWithFormat:@"%@ ",@"Please enter valid Credentials,"]
                                                                    preferredStyle:UIAlertControllerStyleAlert];
-                                                [alertController addAction:okAction];
+                                                [alertController addAction:oKAction];
                                                 [self presentViewController:alertController animated:YES completion:nil];                                        }
                                         }];
     }
@@ -134,7 +134,7 @@
                            alertControllerWithTitle:@"Alert"
                            message:@"Please enter fields!!"
                            preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:okAction];
+        [alertController addAction:oKAction];
         [self presentViewController:alertController animated:YES completion:nil];
         
     }
@@ -176,14 +176,9 @@
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
                 NSLog(@"User with facebook logged in!");
-                if([[SharedManager sharedManager]isbooked])
-                {
-                    [self loadData];
-                }
-                else
-                {
-                [self presentSettingsViewController];
-                }
+                [self loadData];
+               
+
                 
             }
         }
@@ -217,15 +212,58 @@
             spaUser.emailAddress =userData[@"email"];
             spaUser.userName=_usernameTxt.text;
             //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
-            [[SharedManager sharedManager]setUserProfile:spaUser];
+            PFUser *currentUser = [PFUser currentUser];
+
+            if([currentUser[@"Mobile_Number"]integerValue]==0)
+            {
+            UIAlertController *alertControllerr = [UIAlertController
+                                                   alertControllerWithTitle:[NSString stringWithFormat:@"Hi %@",name]
+                                                  message:[NSString stringWithFormat:@"%@ , Please Enter your Mobile Number !!",name]
+                                                  preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successufly"
-                                                            message:[NSString stringWithFormat:@"Welcome %@",spaUser.name]
-                                                           delegate:nil
-                                                  cancelButtonTitle:nil
-                                                  otherButtonTitles:@"OK", nil];
-            [alert show];
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [alertControllerr addTextFieldWithConfigurationHandler:^(UITextField *textField)
+             {
+                 textField.placeholder = NSLocalizedString(@"MobileNumber", @"Enter your MobileNumber");
+             }];
+            UIAlertAction *okActionn = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           UITextField *mobileNumberTextField = alertControllerr.textFields.firstObject;
+                                           [[SharedManager sharedManager]userProfile].mobileNumber=mobileNumberTextField.text.integerValue;
+                                           spaUser.mobileNumber=mobileNumberTextField.text.integerValue;
+                                           NSLog(@"%i",mobileNumberTextField.text.integerValue);
+                                           // save mobile number in parse
+                                           spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
+                                           [[SharedManager sharedManager]setUserProfile:spaUser];
+                                           NSString *userID = currentUser.objectId;
+                                           NSLog(@"Parse User ObjectID: %@",userID);
+                                           currentUser[@"Mobile_Number"]=[NSNumber numberWithInt:[mobileNumberTextField.text integerValue] ];
+
+                                           [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                               if (!error) {
+                                                   
+                                                   SHOW_ALERT(@"Successfully", @"Profile Updated ");
+                                                   [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                                                                animated:YES];
+                                               } else {
+                                                   SHOW_ALERT(@"Error", @"Internal Error");
+                                               }
+                                           }];
+
+                                       }];
+            [alertControllerr addAction:okActionn];
+            [self presentViewController:alertControllerr animated:YES completion:nil];
+            }
+            else
+            {
+                spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
+                spaUser.mobileNumber= [currentUser[@"Mobile_Number"]integerValue];
+                [[SharedManager sharedManager]setUserProfile:spaUser];
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                             animated:YES];
+            }
         }
     }];
 
