@@ -11,11 +11,13 @@
 #import "User.h"
 #import "SharedManager.h"
 #import "SVProgressHUD.h"
+#import "Constants.h"
 
 @interface SettingsViewController ()
 {
     User * spaUser;
     BOOL flag;
+
 }
 @end
 
@@ -31,10 +33,10 @@
     self.profileImg.clipsToBounds = YES;
     if([[SharedManager sharedManager]userProfile].name !=nil)
     {
-    self.mobileNumberTxt.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].mobileNumber];
-    self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
-    self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
-    self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
+        self.mobileNumberTxt.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].mobileNumber];
+        self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
+        self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
+        self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
     }
     else
     {
@@ -45,7 +47,7 @@
                                               otherButtonTitles:@"Dismiss", nil];
         [alert show];
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +60,7 @@
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             [self setScreenState:YES];
-
+            
             // result is a dictionary with the user's Facebook data
             NSDictionary *userData = (NSDictionary *)result;
             
@@ -86,47 +88,116 @@
              ^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                  if (connectionError == nil && data != nil) {
                      // Set the image in the header imageView
-                   //  self.userProfileImage.image = [UIImage imageWithData:data];
+                     //  self.userProfileImage.image = [UIImage imageWithData:data];
                  }
              }];
             [self setScreenState:YES];
-
+            
         }
         else
         {
             [self setScreenState:YES];
-
+            
         }
     }];
     
 }
 - (IBAction)editPressed:(id)sender {
+    if([self.editBarBtn.title isEqualToString:@"Edit"])
+    {
+        [self.nameTxt setEnabled:YES];
+        [self.mobileNumberTxt setEnabled:YES];
+        [self.emailTxt setEnabled:YES];
+        [self.nameTxt becomeFirstResponder];
+        [self.editBarBtn setTitle:@"Done"];
+    }
+    else
+    {
+        //done
+        [self.nameTxt setEnabled:NO];
+        [self.mobileNumberTxt setEnabled:NO];
+        [self.emailTxt setEnabled:NO];
+        [self.view endEditing:YES];
+        [self.editBarBtn setTitle:@"Edit"];
+        // save data to parse
+        [self updateUserData];
+        
+    }
+    
+    
+    
     
 }
 
+-(void)updateUserData
+{
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userID = currentUser.objectId;
+    NSLog(@"Parse User ObjectID: %@",userID);
+    currentUser[@"Name"]=_nameTxt.text;
+    currentUser[@"Mobile_Number"]=[NSNumber numberWithInt:[_mobileNumberTxt.text integerValue] ];
+    currentUser.email=_emailTxt.text;
+    [currentUser saveInBackground ];
 
+  //  [currentUser setEmail:_emailTxt.text];
+    //[currentUser setObject:_nameTxt.text forKey:@"Name"];
+    //[currentUser setObject:_mobileNumberTxt.text forKey:@"Mobile_Number"];
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            spaUser.emailAddress=currentUser.email;
+            spaUser.mobileNumber=[_mobileNumberTxt.text integerValue];
+            spaUser.name=_nameTxt.text;
+            spaUser.loyaltyPoints=[[SharedManager sharedManager]userProfile].loyaltyPoints;
+            spaUser.userName=[[SharedManager sharedManager]userProfile].userName;
+
+            [[SharedManager sharedManager]setUserProfile:spaUser];
+            
+            SHOW_ALERT(@"Successfully", @"Profile Updated ");
+        } else {
+            SHOW_ALERT(@"Error", @"Internal Error");
+        }
+    }];
+    
+    
+}
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
     [self.view setUserInteractionEnabled:state];
     UIBarButtonItem *leftbutton = self.navigationItem.leftBarButtonItem;
     leftbutton.enabled = state;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+   	if (textField == self.nameTxt) {
+        [textField resignFirstResponder];
+        [_emailTxt becomeFirstResponder];
+    }
+    else if (textField ==_emailTxt ) {
+        [textField resignFirstResponder];
+        [_mobileNumberTxt becomeFirstResponder];
+    }
+    else if (textField == _mobileNumberTxt) {
+        [textField resignFirstResponder];
+    }
+    return YES;
 }
-*/
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)profileImg:(id)sender {
     UIImagePickerController *pickerController = [[UIImagePickerController alloc]
                                                  init];
     pickerController.delegate = self;
     [self presentViewController:pickerController animated:YES completion:nil];
-
+    
 }
 - (IBAction)changeBackgroundImage:(id)sender {
     flag=YES;
@@ -147,7 +218,7 @@
     }
     else
     {
-    [self.profileImg setBackgroundImage:image forState:UIControlStateNormal];;
+        [self.profileImg setBackgroundImage:image forState:UIControlStateNormal];;
     }
     [self dismissModalViewControllerAnimated:YES];
 }

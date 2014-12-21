@@ -101,7 +101,7 @@
                                     <action selector="changeBackgroundImage:" destination="P0T-bV-fkk" eventType="touchUpInside" id="h4E-Hy-JX8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" id="IKe-Me-Cgn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="IKe-Me-Cgn">
                                 <rect key="frame" x="54" y="174" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,7 +111,7 @@
                                     <outlet property="delegate" destination="P0T-bV-fkk" id="mK8-rr-FRT"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" id="VGh-Dl-v7N">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="VGh-Dl-v7N">
                                 <rect key="frame" x="75" y="147" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,7 +121,7 @@
                                     <outlet property="delegate" destination="P0T-bV-fkk" id="h97-un-1uF"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" id="gSX-5V-HYZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" clearButtonMode="whileEditing" id="gSX-5V-HYZ">
                                 <rect key="frame" x="162" y="237" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,13 +150,14 @@
                                 <action selector="presentLeftMenuViewController:" destination="P0T-bV-fkk" id="nC7-xW-Sei"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="g3O-pT-d8Y">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="g3O-pT-d8Y">
                             <connections>
                                 <action selector="editPressed:" destination="P0T-bV-fkk" id="a0A-cD-lE3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editBarBtn" destination="g3O-pT-d8Y" id="wl1-k2-jMW"/>
                         <outlet property="emailTxt" destination="IKe-Me-Cgn" id="xtU-WU-o0G"/>
                         <outlet property="mobileNumberTxt" destination="gSX-5V-HYZ" id="kTY-72-uaA"/>
                         <outlet property="nameTxt" destination="VGh-Dl-v7N" id="bjQ-DL-LIH"/>

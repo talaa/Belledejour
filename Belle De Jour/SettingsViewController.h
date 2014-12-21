@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface SettingsViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *userProfileImage;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLbl;
 - (IBAction)profileImg:(id)sender;
@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTxt;
 @property (weak, nonatomic) IBOutlet UILabel *pointsLbl;
 @property (weak, nonatomic) IBOutlet UITextField *mobileNumberTxt;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editBarBtn;
 
 @end
