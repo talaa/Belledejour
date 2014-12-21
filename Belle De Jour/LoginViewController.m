@@ -198,6 +198,7 @@
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
+            [[SharedManager sharedManager]isFacebookLogin:YES];
             // result is a dictionary with the user's Facebook data
             NSDictionary *userData = (NSDictionary *)result;
             
@@ -258,6 +259,7 @@
             }
             else
             {
+                SHOW_ALERT(@"Welcome",name);
                 spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
                 spaUser.mobileNumber= [currentUser[@"Mobile_Number"]integerValue];
                 [[SharedManager sharedManager]setUserProfile:spaUser];

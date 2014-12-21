@@ -14,5 +14,7 @@
 + (SharedManager*)sharedManager;
 -(void)isBooking:(BOOL)isbooked;
 -(BOOL)isbooked;
+-(void)isFacebookLogin:(BOOL)isFacebook;
+-(BOOL)isFacebook;
 
 @end

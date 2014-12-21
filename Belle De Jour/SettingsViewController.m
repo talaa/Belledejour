@@ -27,6 +27,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[self loadData];
+    if([[SharedManager sharedManager]isFacebook])
+    {
+        self.editBarBtn.enabled=false;
+        self.editBarBtn.title=@"";
+    }
     spaUser=[[User alloc]init];
     
     self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;

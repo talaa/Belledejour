@@ -11,6 +11,7 @@
 @implementation SharedManager
 static User* _userProfile = nil;
 static bool _isBooked;
+static bool _isFacebook;
 static  SharedManager*sharedMyManager = nil;
 
 #pragma mark shared singleton
@@ -34,6 +35,15 @@ static  SharedManager*sharedMyManager = nil;
 -(BOOL)isbooked
 {
     return _isBooked;
+}
+
+-(void)isFacebookLogin:(BOOL)isFacebook
+{
+    _isFacebook=isFacebook;
+}
+-(BOOL)isFacebook
+{
+    return _isFacebook;
 }
 + (SharedManager*)sharedManager{
     static dispatch_once_t onceToken;
