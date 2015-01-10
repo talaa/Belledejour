@@ -32,6 +32,8 @@
 		695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968741A618CD400C00C2C /* events-calendar-icon@2x.png */; };
 		695968771A618D6600C00C2C /* 32355@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968761A618D6600C00C2C /* 32355@2x.png */; };
 		695968791A618E1000C00C2C /* my_topic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968781A618E1000C00C2C /* my_topic@2x.png */; };
+		6959687D1A61BF7E00C00C2C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6959687C1A61BF7E00C00C2C /* AssetsLibrary.framework */; };
+		6959687F1A61E53300C00C2C /* Circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6959687E1A61E53300C00C2C /* Circle@2x.png */; };
 		696F6A131A61316100E6401C /* asterik@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 696F6A121A61316100E6401C /* asterik@2x.gif */; };
 		696F6A211A61459100E6401C /* ChameleonStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A181A61459100E6401C /* ChameleonStatusBar.m */; };
 		696F6A221A61459100E6401C /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A1A1A61459100E6401C /* NSArray+Chameleon.m */; };
@@ -160,6 +162,8 @@
 		695968741A618CD400C00C2C /* events-calendar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "events-calendar-icon@2x.png"; sourceTree = "<group>"; };
 		695968761A618D6600C00C2C /* 32355@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "32355@2x.png"; sourceTree = "<group>"; };
 		695968781A618E1000C00C2C /* my_topic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_topic@2x.png"; sourceTree = "<group>"; };
+		6959687C1A61BF7E00C00C2C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6959687E1A61E53300C00C2C /* Circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle@2x.png"; sourceTree = "<group>"; };
 		696F6A121A61316100E6401C /* asterik@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "asterik@2x.gif"; sourceTree = "<group>"; };
 		696F6A151A61459100E6401C /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
 		696F6A161A61459100E6401C /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6959687D1A61BF7E00C00C2C /* AssetsLibrary.framework in Frameworks */,
 				69DAE4EE1A4065C70077213A /* ImageIO.framework in Frameworks */,
 				693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */,
 				6913EB6F1A30F569009D65CD /* libz.1.1.3.dylib in Frameworks */,
@@ -395,6 +400,8 @@
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				6959687E1A61E53300C00C2C /* Circle@2x.png */,
+				6959687C1A61BF7E00C00C2C /* AssetsLibrary.framework */,
 				695968781A618E1000C00C2C /* my_topic@2x.png */,
 				695968761A618D6600C00C2C /* 32355@2x.png */,
 				695968741A618CD400C00C2C /* events-calendar-icon@2x.png */,
@@ -717,6 +724,7 @@
 				6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */,
 				69E230CC1A5D887900F4B9D2 /* instagram-100x100@2x.png in Resources */,
 				69E230CE1A5D8C0800F4B9D2 /* call-button-48x48.png in Resources */,
+				6959687F1A61E53300C00C2C /* Circle@2x.png in Resources */,
 				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
 				695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */,
 				6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */,

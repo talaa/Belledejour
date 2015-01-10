@@ -113,6 +113,8 @@
                                                 spaUser.name=user[@"Name"] ;
                                                 spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
                                                 spaUser.loyaltyPoints=[user[@"LoyaltyPoints"]integerValue];
+                                                PFFile *imageFile = user[@"ProfilePicture"];
+                                                spaUser.profileImage=imageFile;
                                                 [[SharedManager sharedManager]setUserProfile:spaUser];
                                                 
                                                 [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]

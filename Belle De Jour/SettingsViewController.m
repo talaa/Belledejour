@@ -13,6 +13,7 @@
 #import "SVProgressHUD.h"
 #import "Constants.h"
 #import "Chameleon.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface SettingsViewController ()
 {
@@ -44,6 +45,15 @@
         self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
         self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
         self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
+        __block UIImage *MyPicture = [[UIImage alloc]init];
+        PFFile *imageFile = [[SharedManager sharedManager]userProfile].profileImage;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+            if (!error) {
+                MyPicture = [UIImage imageWithData:data];
+                [self.profileImg setBackgroundImage:MyPicture forState:UIControlStateNormal] ;
+            }
+        }];;
+      
     }
     else
     {
@@ -109,6 +119,7 @@
     }];
     
 }
+
 - (IBAction)editPressed:(id)sender {
     if([self.editBarBtn.title isEqualToString:@"Edit"])
     {
@@ -229,5 +240,59 @@
     }
     [self dismissModalViewControllerAnimated:YES];
 }
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *selectedImg = info[UIImagePickerControllerOriginalImage];
+    [self.profileImg setBackgroundImage:selectedImg forState:UIControlStateNormal];
+    [self dismissViewControllerAnimated:YES completion:nil];
+   
+        NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+        ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+        {
+            ALAssetRepresentation *representation = [myasset defaultRepresentation];
+            NSString *fileName = [representation filename];
+            NSLog(@"fileName : %@",fileName);
+            
+            PFUser *currentUser = [PFUser currentUser];
+            NSData* data = UIImageJPEGRepresentation(_profileImg.currentBackgroundImage, 0.5f);
+            PFFile *imageFile = [PFFile fileWithName:fileName data:data];
+            //
+            // Save the image to Parse
+            
+            [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    // The image has now been uploaded to Parse. Associate it with a new object
+                   // PFObject* newPhotoObject = [PFObject objectWithClassName:@"PhotoObject"];
+                    [currentUser setObject:imageFile forKey:@"ProfilePicture"];
+                    
+                    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (!error) {
+                            NSLog(@"Saved");
+                            spaUser.profileImage=imageFile;
+                            spaUser.emailAddress=currentUser.email;
+                            spaUser.mobileNumber=[_mobileNumberTxt.text integerValue];
+                            spaUser.name=_nameTxt.text;
+                            spaUser.loyaltyPoints=[[SharedManager sharedManager]userProfile].loyaltyPoints;
+                            spaUser.userName=[[SharedManager sharedManager]userProfile].userName;
+
+                            [[SharedManager sharedManager]setUserProfile:spaUser];
+                      
+                        }
+                        else{
+                            // Error
+                            NSLog(@"Error: %@ %@", error, [error userInfo]);
+                        }
+                    }];
+                }
+            }];
+        };
+        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+        [assetslibrary assetForURL:imageURL
+                       resultBlock:resultblock
+                      failureBlock:nil];
+        
+}
+    
+
 
 @end

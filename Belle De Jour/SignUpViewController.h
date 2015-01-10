@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UIViewController<UITextFieldDelegate>
+@interface SignUpViewController : UIViewController<UITextFieldDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTxt;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTxt;
 @property (weak, nonatomic) IBOutlet UITextField *emailTxt;
@@ -17,5 +17,6 @@
 - (IBAction)createAccount:(id)sender;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *createAccountBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImg;
 
 @end

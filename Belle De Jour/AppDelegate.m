@@ -25,21 +25,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _navigationController=  (UINavigationController *)self.window.rootViewController;
-   _sideBar = [_navigationController.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
+    _sideBar = [_navigationController.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
     HomeViewController *home=[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeViewController1"]; //or the homeController
     _navigationController=[[UINavigationController alloc]initWithRootViewController:home];
     //self.window.rootViewController=_navigationController;
-   // _sideBar = [_navigationController.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
+    // _sideBar = [_navigationController.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
     self.viewController = [[RESideMenu alloc]initWithContentViewController:_navigationController leftMenuViewController:_sideBar rightMenuViewController:nil];
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
-   // [self.navigationController.navigationBar setTitleTextAttributes:
-     //[NSDictionary dictionaryWithObjectsAndKeys:
-     // [UIFont fontWithName:@"Optima" size:9],
-      //NSFontAttributeName, nil]];
-
+    // [self.navigationController.navigationBar setTitleTextAttributes:
+    //[NSDictionary dictionaryWithObjectsAndKeys:
+    // [UIFont fontWithName:@"Optima" size:9],
+    //NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], UITextAttributeTextColor,
                                                            [UIColor clearColor],UITextAttributeTextShadowColor,
@@ -47,22 +48,22 @@
                                                            UITextAttributeTextShadowOffset,
                                                            [UIFont fontWithName:@"BrandonGrotesque-Bold" size:16.0], UITextAttributeFont, nil]];
     
-   // [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                //  forBarMetrics:UIBarMetricsDefault];
+    // [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+    //  forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     //self.navigationController.view.backgroundColor = [UIColor clearColor];
-  //  self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithFlatVersionOf:FlatWatermelon]];
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithFlatVersionOf:FlatWatermelonDark]];
-
+    //  self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+   // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithFlatVersionOf:FlatWatermelon]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithFlatVersionOf:FlatMintDark]];
+    
     self.navigationController. edgesForExtendedLayout = UIRectEdgeAll;
     self.navigationController. automaticallyAdjustsScrollViewInsets = YES;
     self.navigationController. extendedLayoutIncludesOpaqueBars = NO;
-     self.navigationController.navigationBar.translucent = YES;
-   // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHue:0.1 saturation:0.3 brightness:1.4 alpha:0.7]];
- //   UIImage *navBackgroundImage = [UIImage imageNamed:@"navgationBar.png"];
-   // [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.translucent = YES;
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.5159 green:0.8254 blue:0.3810 alpha:0.8631]];
+    //   UIImage *navBackgroundImage = [UIImage imageNamed:@"navgationBar.png"];
+    // [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     //self.viewController = [[RESideMenu alloc]initWithContentViewController:_navigationController leftMenuViewController:_sideBar rightMenuViewController:nil];
     [Parse setApplicationId:@"2Fqeb69D9uPkqmEfbW99r3LWjUefv0pIyQL4QdgR"
                   clientKey:@"Qpafs6h3B4jEkPVk2DNTHo4GUICHkfUgTByH8lng"];

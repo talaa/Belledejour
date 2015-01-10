@@ -11,12 +11,13 @@
 #import <Parse/Parse.h>
 #import "SVProgressHUD.h"
 #import "Constants.h"
-
+#import <AssetsLibrary/AssetsLibrary.h>
 @interface SignUpViewController ()
 {
     User *user;
     UIAlertController *alertController ;
     PFUser * parseUser;
+    NSString * profileImgUrl;
 }
 
 @end
@@ -27,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     ShowInternetIndicator;
+    self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
+    self.profileImg.clipsToBounds = YES;
     user = [[User alloc]init];
     parseUser = [PFUser user];
     alertController = [UIAlertController
@@ -41,10 +44,10 @@
                                     NSLog(@"OK action");
                                 }];
     [alertController addAction:okAction];
-    if(IS_IPHONE_5)
-    {
-        self.createAccountBtn.frame=CGRectMake(_createAccountBtn.frame.origin.x,[[UIScreen mainScreen] bounds].size.height-_createAccountBtn.frame.size.height-63, _createAccountBtn.frame.size.width, _createAccountBtn.frame.size.height);
-    }
+//    if(IS_IPHONE_5)
+//    {
+//        self.createAccountBtn.frame=CGRectMake(_createAccountBtn.frame.origin.x,[[UIScreen mainScreen] bounds].size.height-_createAccountBtn.frame.size.height-63, _createAccountBtn.frame.size.width, _createAccountBtn.frame.size.height);
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +96,14 @@
         parseUser.email = user.emailAddress;
         parseUser[@"Name"] = user.name;
         parseUser[@"Mobile_Number"]=[NSNumber numberWithInteger:user.mobileNumber];
-
+        parseUser[@"ProfilePicture"]=profileImgUrl;
+            
+            NSData* data = UIImageJPEGRepresentation(_profileImg.image, 0.5f);
+            PFFile *imageFile = [PFFile fileWithName:profileImgUrl data:data];
+             [parseUser setObject:imageFile forKey:@"ProfilePicture"];
+            // Save the image to Parse
+            
+            
        // [NSString stringWithFormat:@"%li", (long)user.mobileNumber] ;
         
         [parseUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -130,6 +140,7 @@
         //            }
         //
         //        }];
+            
         }
         else
         {
@@ -143,6 +154,13 @@
         [self presentViewController:alertController animated:YES completion:nil];
         
     }
+}
+- (IBAction)changeProfilePicture:(id)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]
+                                                 init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
 }
 - (BOOL) validEmail:(NSString*) emailString {
     
@@ -169,4 +187,37 @@
     
     
 }
+#pragma mark UIImagePickerControllerDelegate
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo
+{
+  
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    
+    NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *representation = [myasset defaultRepresentation];
+        NSString *fileName = [representation filename];
+        NSLog(@"fileName : %@",fileName);
+       // picker.delegate=self;
+       // self.profileImg.image=[UIImage imageNamed:[NSString string]]
+       UIImage *selectedImg = info[UIImagePickerControllerOriginalImage];
+        self.profileImg.image=selectedImg;
+        profileImgUrl=fileName;
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+    [assetslibrary assetForURL:imageURL
+                   resultBlock:resultblock
+                  failureBlock:nil];
+    
+}
+             
+
+
 @end

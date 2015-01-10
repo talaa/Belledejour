@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface User : NSObject
 @property(nonatomic,strong)NSString * name;
@@ -15,4 +16,5 @@
 @property(nonatomic,assign)NSInteger  mobileNumber;
 @property(nonatomic,strong)NSString * password;
 @property(nonatomic,assign)NSInteger loyaltyPoints;
+@property(nonatomic,assign)PFFile* profileImage;
 @end

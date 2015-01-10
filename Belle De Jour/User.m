@@ -15,4 +15,5 @@
 @synthesize emailAddress;
 @synthesize mobileNumber;
 @synthesize loyaltyPoints;
+@synthesize profileImage;
 @end

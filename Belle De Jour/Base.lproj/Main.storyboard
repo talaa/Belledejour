@@ -69,15 +69,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ncc-SE-EUW">
-                                <rect key="frame" x="140" y="300" width="61" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="IKe-Me-Cgn">
-                                <rect key="frame" x="54" y="207" width="233" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="IKe-Me-Cgn">
+                                <rect key="frame" x="50" y="161" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
@@ -86,8 +79,8 @@
                                     <outlet property="delegate" destination="P0T-bV-fkk" id="mK8-rr-FRT"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="VGh-Dl-v7N">
-                                <rect key="frame" x="75" y="180" width="191" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="VGh-Dl-v7N">
+                                <rect key="frame" x="71" y="134" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
@@ -96,27 +89,37 @@
                                     <outlet property="delegate" destination="P0T-bV-fkk" id="h97-un-1uF"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" clearButtonMode="whileEditing" id="gSX-5V-HYZ">
+                                <rect key="frame" x="45" y="466" width="114" height="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P0T-bV-fkk" id="Fe2-0k-K9H"/>
+                                </connections>
+                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asterik.gif" id="2WY-47-P14">
-                                <rect key="frame" x="193" y="534" width="17" height="17"/>
+                                <rect key="frame" x="193" y="542" width="17" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Point = 1 Dhs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XjU-g8-aW3">
-                                <rect key="frame" x="207" y="530" width="113" height="30"/>
+                                <rect key="frame" x="207" y="538" width="113" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KEu-Sb-4GP">
-                                <rect key="frame" x="104" y="264" width="113" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WnY-Dd-56W">
+                                <rect key="frame" x="45" y="441" width="114" height="34"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_phone_3-512.png" id="yQY-Tm-dZL">
+                                <rect key="frame" x="16" y="456" width="25" height="25"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01/01/2015" minimumFontSize="17" clearButtonMode="whileEditing" id="fck-Lf-8Wb">
-                                <rect key="frame" x="213" y="432" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="222" y="466" width="105" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -125,34 +128,39 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Expiry " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jrj-GQ-F3i">
-                                <rect key="frame" x="213" y="407" width="96" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="222" y="441" width="96" height="34"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Statment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAn-Tb-Lif">
+                                <rect key="frame" x="45" y="496" width="114" height="34"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_topic.png" id="xnM-XG-HA2">
+                                <rect key="frame" x="16" y="500" width="25" height="25"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qz-We-2qU">
-                                <rect key="frame" x="213" y="462" width="107" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="222" y="496" width="107" height="34"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32355.png" id="bFH-Tx-671">
-                                <rect key="frame" x="182" y="466" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="191" y="500" width="25" height="25"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-calendar-icon.png" id="Dh9-pm-ale">
-                                <rect key="frame" x="182" y="422" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="191" y="456" width="25" height="25"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qB1-7h-fqv">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w7L-N9-riA">
-                                <rect key="frame" x="121" y="75" width="80" height="73"/>
+                                <rect key="frame" x="121" y="53" width="80" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="profile-rabbit-toy.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -161,38 +169,41 @@
                                     <action selector="profileImg:" destination="P0T-bV-fkk" eventType="touchUpInside" id="zq3-Bn-Tii"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" clearButtonMode="whileEditing" id="gSX-5V-HYZ">
-                                <rect key="frame" x="36" y="432" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle.png" id="eYe-kD-UqS">
+                                <rect key="frame" x="62" y="199" width="198" height="167"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bCU-0n-YJh">
+                                <rect key="frame" x="110" y="258.5" width="123" height="1.5"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.38" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sse-Bs-Ka5">
+                                <rect key="frame" x="111" y="309.5" width="123" height="1.5"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.38" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KEu-Sb-4GP">
+                                <rect key="frame" x="119" y="227" width="97" height="28"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="P0T-bV-fkk" id="Fe2-0k-K9H"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WnY-Dd-56W">
-                                <rect key="frame" x="36" y="407" width="114" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ah-GX-8xH">
+                                <rect key="frame" x="132" y="314" width="75" height="19"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_phone_3-512.png" id="yQY-Tm-dZL">
-                                <rect key="frame" x="7" y="422" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Statment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAn-Tb-Lif">
-                                <rect key="frame" x="36" y="462" width="114" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ncc-SE-EUW">
+                                <rect key="frame" x="119" y="273.5" width="97" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_topic.png" id="xnM-XG-HA2">
-                                <rect key="frame" x="7" y="466" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -428,7 +439,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FtC-IW-n29">
                                             <rect key="frame" x="145" y="110" width="87" height="46"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="12"/>
                                             <state key="normal" title="BOOK NOW">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -561,7 +572,7 @@
                                 <color key="backgroundColor" red="0.84073247354497349" green="0.84073247354497349" blue="0.84073247354497349" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
                                 <state key="normal" title="Select Reservation Date">
-                                    <color key="titleColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -601,7 +612,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SbK-0p-Mhy">
                                 <rect key="frame" x="0.0" y="422" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
                                 <state key="normal" title="CONFIRM BOOKING">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -641,21 +652,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTA-rA-Ihi">
-                                <rect key="frame" x="0.0" y="506" width="320" height="62"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="F6y-QS-g1d">
-                                <rect key="frame" x="0.0" y="-61" width="320" height="656.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" id="7XR-f6-3vc">
-                                        <rect key="frame" x="26" y="210" width="269" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="26" y="104" width="269" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
@@ -663,9 +666,9 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rVM-dA-n8p">
-                                        <rect key="frame" x="26" y="339" width="269" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.82577633750000001" green="0.93156725169999999" blue="0.84368138820000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="26" y="268" width="269" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.38" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -676,8 +679,8 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" id="a82-FD-l7N">
-                                        <rect key="frame" x="26" y="264" width="269" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="26" y="168" width="269" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
@@ -685,8 +688,8 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5oP-nB-RMn">
-                                        <rect key="frame" x="26" y="423" width="269" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="26" y="338" width="269" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.32316015889999999" green="0.39751506489999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <state key="normal" title="   Sign in with facebook" image="facebook">
@@ -698,12 +701,22 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="belledejouricon-1.png" id="5W9-8v-iTS">
-                                        <rect key="frame" x="109" y="131" width="103" height="71"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="109" y="25" width="103" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6BB-bX-f6a">
+                                        <rect key="frame" x="270" y="62" width="42" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="close_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissPressed:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="ZNL-j1-fBS"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Usf-1S-FXv">
-                                        <rect key="frame" x="163" y="479" width="135" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="163" y="399" width="135" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                         <state key="normal" title="New here? Sign Up">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -715,8 +728,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GVY-or-BqM">
-                                        <rect key="frame" x="22" y="479" width="126" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="22" y="399" width="126" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                         <state key="normal" title="Forgot password ?">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -725,16 +738,6 @@
                                         <connections>
                                             <action selector="forgotPassword:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="lA3-72-Q2y"/>
                                             <segue destination="Xos-8a-vql" kind="modal" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="o4X-Zv-RWz"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6BB-bX-f6a">
-                                        <rect key="frame" x="270" y="82" width="42" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="close_button.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="dismissPressed:" destination="Me7-Ge-IWk" eventType="touchUpInside" id="ZNL-j1-fBS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -774,12 +777,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="N4o-Rh-8GT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="577"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name " minimumFontSize="17" id="HUS-Y7-sT4">
-                                        <rect key="frame" x="16" y="14" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="16" y="8" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -787,16 +790,9 @@
                                             <outlet property="delegate" destination="hc0-Nh-U3V" id="cAX-XH-nm1"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your real name here ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tXp-67-Ruk">
-                                        <rect key="frame" x="16" y="60" width="288" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" id="FLF-Z1-0tI">
-                                        <rect key="frame" x="16" y="86" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="16" y="81" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -805,15 +801,15 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Belle De Jour Username ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uwV-nL-Q9t">
-                                        <rect key="frame" x="16" y="132" width="288" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="16" y="127" width="288" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" id="0Fw-qH-CwM">
-                                        <rect key="frame" x="16" y="164" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="16" y="153" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -822,8 +818,8 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Number " minimumFontSize="17" id="fpk-kA-2Ps">
-                                        <rect key="frame" x="16" y="231" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="16" y="210" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -831,27 +827,10 @@
                                             <outlet property="delegate" destination="hc0-Nh-U3V" id="NOg-py-wYd"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" id="2Qx-Qe-Zn6">
-                                        <rect key="frame" x="16" y="290" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="hc0-Nh-U3V" id="5Cr-P5-hqp"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum 6 characters ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9K-xR-Gnd">
-                                        <rect key="frame" x="16" y="336" width="288" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u5o-kB-JNZ">
-                                        <rect key="frame" x="0.0" y="372" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="434" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Create Account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -860,6 +839,43 @@
                                             <action selector="createAccount:" destination="hc0-Nh-U3V" eventType="touchUpInside" id="P7i-MH-NwM"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" id="2Qx-Qe-Zn6">
+                                        <rect key="frame" x="16" y="270" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hc0-Nh-U3V" id="5Cr-P5-hqp"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum 6 characters ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9K-xR-Gnd">
+                                        <rect key="frame" x="16" y="316" width="288" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="belledejouricon-1.png" id="Qfp-cY-au0">
+                                        <rect key="frame" x="16" y="352" width="55" height="50"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fqB-5w-TyA">
+                                        <rect key="frame" x="96" y="362" width="143" height="30"/>
+                                        <state key="normal" title="Select Profile Picture">
+                                            <color key="titleColor" red="0.1911550909280777" green="0.6378670334815979" blue="0.26147949695587158" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeProfilePicture:" destination="hc0-Nh-U3V" eventType="touchUpInside" id="Kip-9C-3FC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your real name here ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tXp-67-Ruk">
+                                        <rect key="frame" x="16" y="55" width="288" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="hc0-Nh-U3V" id="Eoy-Id-4lw"/>
@@ -876,6 +892,7 @@
                         <outlet property="mobileNumberTxt" destination="fpk-kA-2Ps" id="3ZR-3Z-mMS"/>
                         <outlet property="nameTxt" destination="HUS-Y7-sT4" id="LVn-NP-yJA"/>
                         <outlet property="passwordTxt" destination="2Qx-Qe-Zn6" id="zzE-6p-E9X"/>
+                        <outlet property="profileImg" destination="Qfp-cY-au0" id="ILb-z8-5mj"/>
                         <outlet property="scrollView" destination="N4o-Rh-8GT" id="ps2-nn-PQB"/>
                         <outlet property="userNameTxt" destination="FLF-Z1-0tI" id="Fc5-hy-6nr"/>
                     </connections>
@@ -905,7 +922,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JOb-vL-zMC">
                                 <rect key="frame" x="16" y="132" width="288" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                                 <state key="normal" title="Send ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1160,7 +1177,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEJ-oL-IAd">
                                 <rect key="frame" x="0.0" y="433" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1182,12 +1199,12 @@
                                 <rect key="frame" x="0.0" y="202.5" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
-                                <color key="textColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nOR-I5-3Xy">
                                 <rect key="frame" x="0.0" y="251.5" width="257" height="49"/>
-                                <color key="backgroundColor" red="0.8366928522" green="0.097945066159999997" blue="0.46180832659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
                                 <state key="normal" title="BOOK NOW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1224,6 +1241,7 @@
     </scenes>
     <resources>
         <image name="32355.png" width="128" height="128"/>
+        <image name="Circle.png" width="266" height="245"/>
         <image name="Facebook_icon-resized-image-100x100.png" width="50" height="50"/>
         <image name="asterik.gif" width="17" height="17"/>
         <image name="belledejouricon-1.png" width="120" height="120"/>
@@ -1247,7 +1265,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bE5-hv-3a6"/>
+        <segue reference="ZQF-wt-stc"/>
         <segue reference="scU-Aw-tWN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -107,9 +107,14 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 5:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
-                                                         animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
+        {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In First"
+                                                                message:@"Please Login First !!"
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"Dismiss", nil];
+                [alert show];
+        }
             break;
         case 6:
             [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ContactUsViewController"]]
