@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServicesListViewController : UIViewController<UICollectionViewDataSource>
+@interface ServicesListViewController : UIViewController<UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)NSArray * services;
 @property (strong, nonatomic) IBOutlet UITableView *servicesTableView;
 @property(nonatomic,strong)NSString * selectedCategory;

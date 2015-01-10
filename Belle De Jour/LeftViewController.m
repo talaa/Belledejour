@@ -29,8 +29,8 @@
     if([[SharedManager sharedManager]userProfile].name==nil)
     {
     self.tableView = ({
-        titles = @[@"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log In"];
-        images = @[@"IconHome", @"IconCalendar",@"IconEmpty",@"facebook", @"IconProfile", @"IconSettings", @"IconEmpty"];
+        titles = @[@"Home", @"Services",@"Offers", @"About",@"Stuff", @"Settings",@"Contact Us", @"Log In"];
+        images = @[@"IconHome", @"IconCalendar",@"IconEmpty",@"IconEmpty", @"IconProfile", @"IconSettings", @"IconEmpty",@"IconEmpty"];
     
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * [titles count]) / 2.0f, self.view.frame.size.width, 54 * [titles count]) style:UITableViewStylePlain];
          //UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 8) / 2.0f, self.view.frame.size.width, 54 * 8) style:UITableViewStylePlain];
@@ -50,8 +50,8 @@
     else
     {
         self.tableView = ({
-            titles = @[[[SharedManager sharedManager]userProfile].name, @"Home", @"Services",@"Offers", @"News",@"Stuff", @"Settings", @"Log out"];
-            images = @[@"IconHome",@"IconHome", @"IconCalendar",@"IconEmpty",@"facebook", @"IconProfile", @"IconSettings", @"IconEmpty"];
+            titles = @[[[SharedManager sharedManager]userProfile].name, @"Home", @"Services",@"Offers", @"About",@"Stuff", @"Settings",@"Contact Us", @"Log out"];
+            images = @[@"IconHome",@"IconHome", @"IconCalendar",@"IconEmpty",@"IconEmpty", @"IconProfile", @"IconSettings", @"IconEmpty",@"IconEmpty"];
             
             UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * [titles count]) / 2.0f, self.view.frame.size.width, 54 * [titles count]) style:UITableViewStylePlain];
             //UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 8) / 2.0f, self.view.frame.size.width, 54 * 8) style:UITableViewStylePlain];
@@ -112,6 +112,11 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 6:
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ContactUsViewController"]]
+                                                         animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 7:
             [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"]]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];

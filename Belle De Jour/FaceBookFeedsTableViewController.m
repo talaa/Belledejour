@@ -24,9 +24,9 @@
     [super viewDidLoad];
     ShowInternetIndicator;
     data=[[NSArray alloc]init];
-    [FacebookFeeds parseFacebookFeeds];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getFacebookFeeds:) name:@"FeedsRecieved" object:nil];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(feedsTimedOut:) name:@"FeedsTimeOut" object:nil];
+    //[FacebookFeeds parseFacebookFeeds];
+   // [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getFacebookFeeds:) name:@"FeedsRecieved" object:nil];
+     //   [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(feedsTimedOut:) name:@"FeedsTimeOut" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

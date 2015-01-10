@@ -10,5 +10,6 @@
 
 @interface ServicesTableViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *servicesTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *servicesCollectionView;
 
 @end

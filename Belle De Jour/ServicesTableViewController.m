@@ -14,6 +14,7 @@
 #import "SVProgressHUD.h"
 #import "Constants.h"
 #import "ServicesListViewController.h"
+#import "ServiceCollectionCell.h"
 
 @interface ServicesTableViewController ()
 {
@@ -89,7 +90,7 @@
 //            }
 //            
 //        }
-        [_servicesTableView reloadData];
+        [_servicesCollectionView reloadData];
         [self setScreenState:YES];
         
     }];
@@ -106,44 +107,84 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     return uniqueArray.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ServiceCell";
-    
-    UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
-    }
+    ServiceCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ServiceCollectionCell" forIndexPath:indexPath];
     if(uniqueArray.count>0)
     {
-        cell.textLabel.text=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
-        //  cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
-        // cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
-        //cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
-        //        __block UIImage *MyPicture = [[UIImage alloc]init];
-        //        PFFile *imageFile = [[servicesArray objectAtIndex:indexPath.row]serviceImage];
-        //        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
-        //            if (!error) {
-        //                MyPicture = [UIImage imageWithData:data];
-        //                cell.serviceImg.image = MyPicture;
-        //            }
-        //        }];;
-        //    }
+        cell.serviceName.text=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
+        if([[[uniqueArray objectAtIndex:indexPath.row]serviceType] isEqualToString:@"Laser"])
+           {
+               cell.serviceImg.image=[UIImage imageNamed:@"lasericon.png"];
+           }
+        else if([[[uniqueArray objectAtIndex:indexPath.row]serviceType] isEqualToString:@"Derma"])
+        {
+            cell.serviceImg.image=[UIImage imageNamed:@"dermatology.png"];
+
+        }
+        else
+        {
+            cell.serviceImg.image=nil;
+        }
+ 
     }
+    
     return cell;
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    selectedCategory=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
+    [self performSegueWithIdentifier:@"Service" sender:self];
+}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    // Return the number of sections.
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    // Return the number of rows in the section.
+//    return uniqueArray.count;
+//}
+//
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *CellIdentifier = @"ServiceCell";
+//    
+//    UITableViewCell *cell = [tableView
+//                             dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+//    }
+//    if(uniqueArray.count>0)
+//    {
+//        cell.textLabel.text=[[uniqueArray objectAtIndex:indexPath.row]serviceType];
+//        //  cell.serviceIDLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]serviceID]];
+//        // cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i",[[servicesArray objectAtIndex:indexPath.row]servicePrice]];
+//        //cell.serviceDescriptionTxtView.text=[NSString stringWithFormat:@"%@",[[servicesArray objectAtIndex:indexPath.row]serviceDescription]];
+//        //        __block UIImage *MyPicture = [[UIImage alloc]init];
+//        //        PFFile *imageFile = [[servicesArray objectAtIndex:indexPath.row]serviceImage];
+//        //        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+//        //            if (!error) {
+//        //                MyPicture = [UIImage imageWithData:data];
+//        //                cell.serviceImg.image = MyPicture;
+//        //            }
+//        //        }];;
+//        //    }
+//    }
+//    return cell;
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

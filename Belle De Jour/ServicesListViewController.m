@@ -12,6 +12,7 @@
 #import "ServiceListCustomCell.h"
 #import "ServiceDetails.h"
 #import "ServiceCollectionViewCell.h"
+#import "ServiceTableViewCell.h"
 
 @implementation ServicesListViewController
 {
@@ -32,44 +33,60 @@
 
         servicedetail.service=(Service*)[_services objectAtIndex:cellIndex.row];
         servicedetail.navigationTitle=[[_services objectAtIndex:cellIndex.row]serviceName];
-        [self.servicesCollectionView deselectItemAtIndexPath:cellIndex animated:NO];
+       // servicedetail.serviceImage=(UIImageView*)[(Service *)[_services objectAtIndex:cellIndex.row]serviceImage];
+        //[self.servicesCollectionView deselectItemAtIndexPath:cellIndex animated:NO];
 
         
     }
 }
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     cellIndex=indexPath;
     [self performSegueWithIdentifier:@"serviceDetails" sender:self];
 }
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _services.count;
 }
 
 
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ServiceCollectionCell" forIndexPath:indexPath];
+   // ServiceTableViewCell *cell = [tableView dequeueReusableCellWithReuseIdentifier:@"ServiceTableViewCell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ServiceTableViewCell";
+    
+    ServiceTableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[ServiceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
+
     if(_services.count>0)
     {
-        cell.serviceName.text=[(Service *)[_services objectAtIndex:indexPath.row]serviceName];
-        cell.serviceCollectionPrice.text=[NSString stringWithFormat:@"%i Dirham",[(Service *)[_services objectAtIndex:indexPath.row]servicePrice]];
+        cell.serviceIDLbl.text=[(Service *)[_services objectAtIndex:indexPath.row]serviceName];
+        cell.servicePriceLbl.text=[NSString stringWithFormat:@"%i Dirham",[(Service *)[_services objectAtIndex:indexPath.row]servicePrice]];
         __block UIImage *MyPicture = [[UIImage alloc]init];
         PFFile *imageFile = [(Service *)[_services objectAtIndex:indexPath.row]serviceImage];
+
+        if(imageFile!=nil)
+        {
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
             if (!error) {
                 MyPicture = [UIImage imageWithData:data];
-                cell.serviceImage.image=MyPicture;
+                cell.serviceImg.image=MyPicture;
             }
         }];;
+        }
+        else
+            cell.serviceImg.image=nil;
     }
     
     return cell;
