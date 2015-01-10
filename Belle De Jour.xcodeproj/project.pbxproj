@@ -28,6 +28,16 @@
 		693A26E91A3C75F300BC09B3 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */; };
 		693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
+		695968731A618BB500C00C2C /* cell_phone_3-512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968721A618BB500C00C2C /* cell_phone_3-512@2x.png */; };
+		695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968741A618CD400C00C2C /* events-calendar-icon@2x.png */; };
+		695968771A618D6600C00C2C /* 32355@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968761A618D6600C00C2C /* 32355@2x.png */; };
+		695968791A618E1000C00C2C /* my_topic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968781A618E1000C00C2C /* my_topic@2x.png */; };
+		696F6A131A61316100E6401C /* asterik@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 696F6A121A61316100E6401C /* asterik@2x.gif */; };
+		696F6A211A61459100E6401C /* ChameleonStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A181A61459100E6401C /* ChameleonStatusBar.m */; };
+		696F6A221A61459100E6401C /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A1A1A61459100E6401C /* NSArray+Chameleon.m */; };
+		696F6A231A61459100E6401C /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A1C1A61459100E6401C /* UIColor+Chameleon.m */; };
+		696F6A241A61459100E6401C /* UIColor+CIELAB.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A1E1A61459100E6401C /* UIColor+CIELAB.m */; };
+		696F6A251A61459100E6401C /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F6A201A61459100E6401C /* UIViewController+Chameleon.m */; };
 		6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6981C2751A3307DC00699924 /* belledejouricon-1.png */; };
 		6981C2791A33301C00699924 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C2781A33301C00699924 /* SignUpViewController.m */; };
 		6981C27C1A3332CF00699924 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6981C27B1A3332CF00699924 /* User.m */; };
@@ -146,6 +156,23 @@
 		693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
+		695968721A618BB500C00C2C /* cell_phone_3-512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_phone_3-512@2x.png"; sourceTree = "<group>"; };
+		695968741A618CD400C00C2C /* events-calendar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "events-calendar-icon@2x.png"; sourceTree = "<group>"; };
+		695968761A618D6600C00C2C /* 32355@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "32355@2x.png"; sourceTree = "<group>"; };
+		695968781A618E1000C00C2C /* my_topic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_topic@2x.png"; sourceTree = "<group>"; };
+		696F6A121A61316100E6401C /* asterik@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "asterik@2x.gif"; sourceTree = "<group>"; };
+		696F6A151A61459100E6401C /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		696F6A161A61459100E6401C /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
+		696F6A171A61459100E6401C /* ChameleonStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonStatusBar.h; sourceTree = "<group>"; };
+		696F6A181A61459100E6401C /* ChameleonStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonStatusBar.m; sourceTree = "<group>"; };
+		696F6A191A61459100E6401C /* NSArray+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		696F6A1A1A61459100E6401C /* NSArray+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		696F6A1B1A61459100E6401C /* UIColor+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		696F6A1C1A61459100E6401C /* UIColor+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		696F6A1D1A61459100E6401C /* UIColor+CIELAB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CIELAB.h"; sourceTree = "<group>"; };
+		696F6A1E1A61459100E6401C /* UIColor+CIELAB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CIELAB.m"; sourceTree = "<group>"; };
+		696F6A1F1A61459100E6401C /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		696F6A201A61459100E6401C /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 		6981C2751A3307DC00699924 /* belledejouricon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "belledejouricon-1.png"; path = "Images.xcassets/AppIcon-2.appiconset/belledejouricon-1.png"; sourceTree = "<group>"; };
 		6981C2771A33301C00699924 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		6981C2781A33301C00699924 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
@@ -333,6 +360,25 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		696F6A141A61459100E6401C /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				696F6A151A61459100E6401C /* Chameleon.h */,
+				696F6A161A61459100E6401C /* ChameleonMacros.h */,
+				696F6A171A61459100E6401C /* ChameleonStatusBar.h */,
+				696F6A181A61459100E6401C /* ChameleonStatusBar.m */,
+				696F6A191A61459100E6401C /* NSArray+Chameleon.h */,
+				696F6A1A1A61459100E6401C /* NSArray+Chameleon.m */,
+				696F6A1B1A61459100E6401C /* UIColor+Chameleon.h */,
+				696F6A1C1A61459100E6401C /* UIColor+Chameleon.m */,
+				696F6A1D1A61459100E6401C /* UIColor+CIELAB.h */,
+				696F6A1E1A61459100E6401C /* UIColor+CIELAB.m */,
+				696F6A1F1A61459100E6401C /* UIViewController+Chameleon.h */,
+				696F6A201A61459100E6401C /* UIViewController+Chameleon.m */,
+			);
+			path = Chameleon;
+			sourceTree = "<group>";
+		};
 		698413F51A1BD36D0084F0B2 /* TestFlightSDK3-2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +395,12 @@
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				695968781A618E1000C00C2C /* my_topic@2x.png */,
+				695968761A618D6600C00C2C /* 32355@2x.png */,
+				695968741A618CD400C00C2C /* events-calendar-icon@2x.png */,
+				695968721A618BB500C00C2C /* cell_phone_3-512@2x.png */,
+				696F6A141A61459100E6401C /* Chameleon */,
+				696F6A121A61316100E6401C /* asterik@2x.gif */,
 				69E230CF1A5D8FE900F4B9D2 /* ContactUsViewController.h */,
 				69E230D01A5D8FE900F4B9D2 /* ContactUsViewController.m */,
 				69E230CD1A5D8C0800F4B9D2 /* call-button-48x48.png */,
@@ -661,13 +713,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696F6A131A61316100E6401C /* asterik@2x.gif in Resources */,
 				6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */,
 				69E230CC1A5D887900F4B9D2 /* instagram-100x100@2x.png in Resources */,
 				69E230CE1A5D8C0800F4B9D2 /* call-button-48x48.png in Resources */,
 				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
+				695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */,
 				6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */,
 				69E230B11A5C5A1400F4B9D2 /* dermatology@2x.png in Resources */,
 				69E230C81A5D87A500F4B9D2 /* googleplus@2x.png in Resources */,
+				695968731A618BB500C00C2C /* cell_phone_3-512@2x.png in Resources */,
 				6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */,
 				69F69B661A4616D30041A3B6 /* profile-bg.png in Resources */,
 				69833EF61A3F20D8003063A7 /* close_button.png in Resources */,
@@ -677,7 +732,9 @@
 				69F69B641A46147F0041A3B6 /* user1.png in Resources */,
 				69993B1F1A1A5CC900A78ED6 /* Images.xcassets in Resources */,
 				69F69B6C1A461CC40041A3B6 /* camera.jpg in Resources */,
+				695968771A618D6600C00C2C /* 32355@2x.png in Resources */,
 				69F69B6A1A461B390041A3B6 /* line_seperate@2x.png in Resources */,
+				695968791A618E1000C00C2C /* my_topic@2x.png in Resources */,
 				69F69B681A46188F0041A3B6 /* profile-rabbit-toy.png in Resources */,
 				69E230C71A5D87A500F4B9D2 /* Facebook_icon-resized-image-100x100@2x.png in Resources */,
 				69833EF41A3F2018003063A7 /* closing_symbol.png in Resources */,
@@ -714,20 +771,24 @@
 				698414061A1BDB870084F0B2 /* SettingsViewController.m in Sources */,
 				69DAE5141A4068900077213A /* NSData+ImageContentType.m in Sources */,
 				698414091A1BDF460084F0B2 /* StuffTableViewController.m in Sources */,
+				696F6A251A61459100E6401C /* UIViewController+Chameleon.m in Sources */,
 				69D6D39C1A3B227C0021FF34 /* SharedManager.m in Sources */,
 				69993B141A1A5CC900A78ED6 /* main.m in Sources */,
 				69E230BC1A5D452D00F4B9D2 /* ServiceCollectionCell.m in Sources */,
 				69DAE5221A4068900077213A /* UIView+WebCacheOperation.m in Sources */,
+				696F6A231A61459100E6401C /* UIColor+Chameleon.m in Sources */,
 				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
 				698413FD1A1BD36D0084F0B2 /* README.md in Sources */,
 				69DAE4B61A405B140077213A /* DataParser.m in Sources */,
 				698ADB7A1A39212000F48A85 /* OffersCustomCell.m in Sources */,
 				69D5ABCF1A3E252B00FFDBB9 /* ServiceCollectionViewCell.m in Sources */,
 				69DAE5161A4068900077213A /* SDWebImageCompat.m in Sources */,
+				696F6A221A61459100E6401C /* NSArray+Chameleon.m in Sources */,
 				69DAE51E1A4068900077213A /* UIImage+MultiFormat.m in Sources */,
 				69D6D39F1A3C428E0021FF34 /* StuffCustomCell.m in Sources */,
 				69993B4E1A1A681D00A78ED6 /* ServicesTableViewController.m in Sources */,
 				69DAE51F1A4068900077213A /* UIImage+WebP.m in Sources */,
+				696F6A241A61459100E6401C /* UIColor+CIELAB.m in Sources */,
 				69DAE51A1A4068900077213A /* SDWebImageManager.m in Sources */,
 				69DAE5151A4068900077213A /* SDImageCache.m in Sources */,
 				6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */,
@@ -752,6 +813,7 @@
 				69DAE4B01A4056B70077213A /* FeedsCustomCell.m in Sources */,
 				69993B401A1A5D7C00A78ED6 /* UIViewController+RESideMenu.m in Sources */,
 				6913EB771A30F5D4009D65CD /* SVProgressHUD.m in Sources */,
+				696F6A211A61459100E6401C /* ChameleonStatusBar.m in Sources */,
 				69993B541A1A689E00A78ED6 /* FaceBookFeedsTableViewController.m in Sources */,
 				6981C2791A33301C00699924 /* SignUpViewController.m in Sources */,
 				6913EB561A30F3DA009D65CD /* Service.m in Sources */,

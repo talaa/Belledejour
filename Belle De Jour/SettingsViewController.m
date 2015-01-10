@@ -12,6 +12,7 @@
 #import "SharedManager.h"
 #import "SVProgressHUD.h"
 #import "Constants.h"
+#import "Chameleon.h"
 
 @interface SettingsViewController ()
 {
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  //  self.view.backgroundColor=[UIColor colorWithGradientStyle:UIGradientStyleRadial withFrame:self.view.frame andColors:[NSArray arrayWithObjects:[UIColor colorWithFlatVersionOf:FlatWhite], [UIColor colorWithFlatVersionOf:FlatWatermelon],nil]];
     // Do any additional setup after loading the view.
     //[self loadData];
     if([[SharedManager sharedManager]isFacebook])

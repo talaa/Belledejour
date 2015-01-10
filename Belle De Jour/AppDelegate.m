@@ -14,7 +14,7 @@
 #import "HomeViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-
+#import "Chameleon.h"
 @interface AppDelegate ()
 
 @end
@@ -35,21 +35,34 @@
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
+   // [self.navigationController.navigationBar setTitleTextAttributes:
+     //[NSDictionary dictionaryWithObjectsAndKeys:
+     // [UIFont fontWithName:@"Optima" size:9],
+      //NSFontAttributeName, nil]];
+
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], UITextAttributeTextColor,
+                                                           [UIColor clearColor],UITextAttributeTextShadowColor,
+                                                           [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+                                                           UITextAttributeTextShadowOffset,
+                                                           [UIFont fontWithName:@"BrandonGrotesque-Bold" size:16.0], UITextAttributeFont, nil]];
+    
+   // [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                //  forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     //self.navigationController.view.backgroundColor = [UIColor clearColor];
   //  self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-//    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:0.8366928522 green:0.097945066159999997 blue:0.46180832659999999 alpha:1] ];
-//
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithFlatVersionOf:FlatWatermelon]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithFlatVersionOf:FlatWatermelonDark]];
+
     self.navigationController. edgesForExtendedLayout = UIRectEdgeAll;
     self.navigationController. automaticallyAdjustsScrollViewInsets = YES;
     self.navigationController. extendedLayoutIncludesOpaqueBars = NO;
      self.navigationController.navigationBar.translucent = YES;
    // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHue:0.1 saturation:0.3 brightness:1.4 alpha:0.7]];
-    UIImage *navBackgroundImage = [UIImage imageNamed:@"navgationBar.png"];
-    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+ //   UIImage *navBackgroundImage = [UIImage imageNamed:@"navgationBar.png"];
+   // [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     //self.viewController = [[RESideMenu alloc]initWithContentViewController:_navigationController leftMenuViewController:_sideBar rightMenuViewController:nil];
     [Parse setApplicationId:@"2Fqeb69D9uPkqmEfbW99r3LWjUefv0pIyQL4QdgR"
                   clientKey:@"Qpafs6h3B4jEkPVk2DNTHo4GUICHkfUgTByH8lng"];

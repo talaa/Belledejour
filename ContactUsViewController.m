@@ -8,7 +8,7 @@
 
 #import "ContactUsViewController.h"
 #import <MapKit/MapKit.h>
-
+#import "Constants.h"
 @interface ContactUsViewController ()
 
 @end
@@ -103,5 +103,16 @@
 //       }
    }
     
+}
+- (IBAction)callPressed:(id)sender {
+    NSString *phNo = @"+97143475336";
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+    } else
+    {
+    SHOW_ALERT(@"Alert", @"Call facility is not available!!!");
+    }
 }
 @end

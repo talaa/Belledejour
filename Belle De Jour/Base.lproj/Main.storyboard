@@ -22,12 +22,15 @@
         <scene sceneID="4zR-MY-EPx">
             <objects>
                 <navigationController storyboardIdentifier="contentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UFj-8F-DfY" sceneMemberID="viewController">
+                    <keyCommands/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TvZ-mF-C7l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="9"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -66,45 +69,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-bg.png" id="rUn-uo-tlK">
-                                <rect key="frame" x="0.0" y="12" width="320" height="200"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_seperate.png" id="bKy-MM-Cid">
-                                <rect key="frame" x="0.0" y="291" width="320" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_seperate.png" id="XIs-Xy-jOJ">
-                                <rect key="frame" x="153" y="207" width="1" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ncc-SE-EUW">
-                                <rect key="frame" x="11" y="226" width="61" height="51"/>
+                                <rect key="frame" x="140" y="300" width="61" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KEu-Sb-4GP">
-                                <rect key="frame" x="60" y="232" width="85" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UJb-rd-11Q">
-                                <rect key="frame" x="0.0" y="184.5" width="46" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="camera.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeBackgroundImage:" destination="P0T-bV-fkk" eventType="touchUpInside" id="h4E-Hy-JX8"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nadagamal_ng@yahoo.com" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="IKe-Me-Cgn">
-                                <rect key="frame" x="54" y="174" width="233" height="30"/>
+                                <rect key="frame" x="54" y="207" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
@@ -114,7 +87,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nada Gamal" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="VGh-Dl-v7N">
-                                <rect key="frame" x="75" y="147" width="191" height="30"/>
+                                <rect key="frame" x="75" y="180" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
@@ -123,18 +96,63 @@
                                     <outlet property="delegate" destination="P0T-bV-fkk" id="h97-un-1uF"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" clearButtonMode="whileEditing" id="gSX-5V-HYZ">
-                                <rect key="frame" x="162" y="237" width="137" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asterik.gif" id="2WY-47-P14">
+                                <rect key="frame" x="193" y="534" width="17" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Point = 1 Dhs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XjU-g8-aW3">
+                                <rect key="frame" x="207" y="530" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KEu-Sb-4GP">
+                                <rect key="frame" x="104" y="264" width="113" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01/01/2015" minimumFontSize="17" clearButtonMode="whileEditing" id="fck-Lf-8Wb">
+                                <rect key="frame" x="213" y="432" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="P0T-bV-fkk" id="Fe2-0k-K9H"/>
+                                    <outlet property="delegate" destination="P0T-bV-fkk" id="gUS-0E-vDz"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Expiry " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jrj-GQ-F3i">
+                                <rect key="frame" x="213" y="407" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qz-We-2qU">
+                                <rect key="frame" x="213" y="462" width="107" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32355.png" id="bFH-Tx-671">
+                                <rect key="frame" x="182" y="466" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-calendar-icon.png" id="Dh9-pm-ale">
+                                <rect key="frame" x="182" y="422" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qB1-7h-fqv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w7L-N9-riA">
-                                <rect key="frame" x="130" y="75" width="80" height="73"/>
+                                <rect key="frame" x="121" y="75" width="80" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="profile-rabbit-toy.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,10 +161,42 @@
                                     <action selector="profileImg:" destination="P0T-bV-fkk" eventType="touchUpInside" id="zq3-Bn-Tii"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+99698909844" minimumFontSize="17" clearButtonMode="whileEditing" id="gSX-5V-HYZ">
+                                <rect key="frame" x="36" y="432" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P0T-bV-fkk" id="Fe2-0k-K9H"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WnY-Dd-56W">
+                                <rect key="frame" x="36" y="407" width="114" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_phone_3-512.png" id="yQY-Tm-dZL">
+                                <rect key="frame" x="7" y="422" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Statment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAn-Tb-Lif">
+                                <rect key="frame" x="36" y="462" width="114" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_topic.png" id="xnM-XG-HA2">
+                                <rect key="frame" x="7" y="466" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Xuu-Az-0zs">
+                    <navigationItem key="navigationItem" title="BELLE DE JOUR PROFILE" id="Xuu-Az-0zs">
                         <barButtonItem key="leftBarButtonItem" image="icon_text_align_justify" id="deq-DC-lYi">
                             <connections>
                                 <action selector="presentLeftMenuViewController:" destination="P0T-bV-fkk" id="nC7-xW-Sei"/>
@@ -165,7 +215,6 @@
                         <outlet property="nameTxt" destination="VGh-Dl-v7N" id="bjQ-DL-LIH"/>
                         <outlet property="pointsLbl" destination="ncc-SE-EUW" id="vGn-uL-pen"/>
                         <outlet property="profileImg" destination="w7L-N9-riA" id="KNd-ej-XQy"/>
-                        <outlet property="userProfileImage" destination="rUn-uo-tlK" id="X2d-EJ-5Kp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLQ-cy-O6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,21 +278,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="belledejouricon-1.png" id="CDg-pf-1fI">
-                                <rect key="frame" x="80" y="0.0" width="162" height="89"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow Us On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c1s-b5-qUe">
-                                <rect key="frame" x="67" y="84" width="177" height="21"/>
+                                <rect key="frame" x="69" y="122" width="177" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_seperate.png" id="xdH-95-PIK">
-                                <rect key="frame" x="0.0" y="189" width="320" height="1"/>
+                                <rect key="frame" x="2" y="227" width="320" height="1"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jG-Rv-k8e">
-                                <rect key="frame" x="48" y="119" width="50" height="50"/>
+                                <rect key="frame" x="50" y="157" width="50" height="50"/>
                                 <state key="normal" backgroundImage="Facebook_icon-resized-image-100x100.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -252,7 +297,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ubC-wl-4Cs">
-                                <rect key="frame" x="158" y="119" width="50" height="50"/>
+                                <rect key="frame" x="160" y="157" width="50" height="50"/>
                                 <state key="normal" backgroundImage="twitter-icon-100x100.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -261,7 +306,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FJT-lM-2iC">
-                                <rect key="frame" x="104" y="119" width="50" height="50"/>
+                                <rect key="frame" x="106" y="157" width="50" height="50"/>
                                 <state key="normal" backgroundImage="googleplus.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -270,7 +315,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CqP-GN-qdi">
-                                <rect key="frame" x="213" y="119" width="50" height="50"/>
+                                <rect key="frame" x="215" y="157" width="50" height="50"/>
                                 <state key="normal" backgroundImage="instagram-100x100.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -279,35 +324,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eb0-zR-BKg">
-                                <rect key="frame" x="42" y="198" width="236" height="33"/>
+                                <rect key="frame" x="44" y="236" width="236" height="33"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+971 4 347 5336" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LdW-GA-F3o">
-                                <rect key="frame" x="146" y="242.5" width="119" height="29.5"/>
+                                <rect key="frame" x="148" y="280.5" width="119" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZIn-Oe-XzK">
-                                <rect key="frame" x="8" y="239" width="130" height="33"/>
+                                <rect key="frame" x="10" y="277" width="130" height="33"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vss-dc-nbU">
-                                <rect key="frame" x="8" y="273" width="95" height="33"/>
+                                <rect key="frame" x="10" y="311" width="95" height="33"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sheikh Zayed Road - Dubai United Arab Emirates‎." id="lVj-CW-8JF">
-                                <rect key="frame" x="92" y="273" width="219" height="52"/>
+                                <rect key="frame" x="94" y="311" width="219" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="esj-Z4-V7L">
                                 <rect key="frame" x="2" y="347" width="318" height="221"/>
@@ -317,11 +363,18 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Koq-2l-3i5">
-                                <rect key="frame" x="273" y="243" width="31" height="30"/>
+                                <rect key="frame" x="275" y="281" width="31" height="30"/>
                                 <state key="normal" backgroundImage="call-button-48x48.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="callPressed:" destination="eOb-YD-cAn" eventType="touchUpInside" id="ceD-TH-zf3"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="belledejouricon-1.png" id="CDg-pf-1fI">
+                                <rect key="frame" x="96" y="68" width="122" height="58"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1153,6 +1206,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vjO-mz-tMm"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bookBtn" destination="nOR-I5-3Xy" id="WaZ-Hy-d9u"/>
@@ -1169,17 +1223,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="32355.png" width="128" height="128"/>
         <image name="Facebook_icon-resized-image-100x100.png" width="50" height="50"/>
+        <image name="asterik.gif" width="17" height="17"/>
         <image name="belledejouricon-1.png" width="120" height="120"/>
         <image name="call-button-48x48.png" width="48" height="48"/>
-        <image name="camera.jpg" width="450" height="470"/>
+        <image name="cell_phone_3-512.png" width="256" height="256"/>
         <image name="close_button.png" width="48" height="43"/>
+        <image name="events-calendar-icon.png" width="180" height="180"/>
         <image name="facebook" width="40" height="40"/>
         <image name="googleplus.png" width="50" height="50"/>
         <image name="icon_text_align_justify" width="30" height="30"/>
         <image name="instagram-100x100.png" width="50" height="50"/>
         <image name="line_seperate.png" width="288" height="1"/>
-        <image name="profile-bg.png" width="640" height="434"/>
+        <image name="my_topic.png" width="256" height="256"/>
         <image name="profile-rabbit-toy.png" width="300" height="300"/>
         <image name="shoppingCart" width="256" height="256"/>
         <image name="twitter-icon-100x100.png" width="50" height="50"/>
