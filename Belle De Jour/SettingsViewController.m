@@ -41,10 +41,10 @@
     self.profileImg.clipsToBounds = YES;
     if([[SharedManager sharedManager]userProfile].name !=nil)
     {
-        self.mobileNumberTxt.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].mobileNumber];
+        self.mobileNumberTxt.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].mobileNumber];
         self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
         self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
-        self.pointsLbl.text=[NSString stringWithFormat:@"%i",[[SharedManager sharedManager]userProfile].loyaltyPoints];
+        self.pointsLbl.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].loyaltyPoints];
         __block UIImage *MyPicture = [[UIImage alloc]init];
         PFFile *imageFile = [[SharedManager sharedManager]userProfile].profileImage;
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
@@ -53,6 +53,8 @@
                 [self.profileImg setBackgroundImage:MyPicture forState:UIControlStateNormal] ;
             }
         }];;
+        
+      //  [self.otherEditBtn setTitle:@"Edit Profile" forState:UIControlStateNormal];
       
     }
     else
@@ -123,18 +125,18 @@
 - (IBAction)editPressed:(id)sender {
     if([self.editBarBtn.title isEqualToString:@"Edit"])
     {
-        [self.nameTxt setEnabled:YES];
+       // [self.nameTxt setEnabled:YES];
         [self.mobileNumberTxt setEnabled:YES];
-        [self.emailTxt setEnabled:YES];
-        [self.nameTxt becomeFirstResponder];
+       // [self.emailTxt setEnabled:YES];
+        [self.mobileNumberTxt becomeFirstResponder];
         [self.editBarBtn setTitle:@"Done"];
     }
     else
     {
         //done
-        [self.nameTxt setEnabled:NO];
+        //[self.nameTxt setEnabled:NO];
         [self.mobileNumberTxt setEnabled:NO];
-        [self.emailTxt setEnabled:NO];
+        //[self.emailTxt setEnabled:NO];
         [self.view endEditing:YES];
         [self.editBarBtn setTitle:@"Edit"];
         // save data to parse
@@ -142,9 +144,28 @@
         
     }
     
-    
-    
-    
+}
+- (IBAction)otherEditBtnPressed:(id)sender {
+    if([self.otherEditBtn.titleLabel.text isEqualToString:@"Edit Profile"])
+    {
+        //[self.nameTxt setEnabled:YES];
+        [self.mobileNumberTxt setEnabled:YES];
+        //[self.emailTxt setEnabled:YES];
+        [self.mobileNumberTxt becomeFirstResponder];
+        [self.otherEditBtn setTitle:@"Done" forState:UIControlStateNormal];
+    }
+    else
+    {
+        //done
+        //[self.nameTxt setEnabled:NO];
+        [self.mobileNumberTxt setEnabled:NO];
+        //[self.emailTxt setEnabled:NO];
+        [self.view endEditing:YES];
+        [self.otherEditBtn setTitle:@"Edit Profile" forState:UIControlStateNormal];
+        // save data to parse
+        [self updateUserData];
+        
+    }
 }
 
 -(void)updateUserData
@@ -153,7 +174,7 @@
     NSString *userID = currentUser.objectId;
     NSLog(@"Parse User ObjectID: %@",userID);
     currentUser[@"Name"]=_nameTxt.text;
-    currentUser[@"Mobile_Number"]=[NSNumber numberWithInt:[_mobileNumberTxt.text integerValue] ];
+    currentUser[@"Mobile_Number"]=[NSNumber numberWithDouble:[_mobileNumberTxt.text doubleValue]];
     currentUser.email=_emailTxt.text;
     [currentUser saveInBackground ];
 
@@ -163,7 +184,7 @@
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             spaUser.emailAddress=currentUser.email;
-            spaUser.mobileNumber=[_mobileNumberTxt.text integerValue];
+            spaUser.mobileNumber=[_mobileNumberTxt.text doubleValue];
             spaUser.name=_nameTxt.text;
             spaUser.loyaltyPoints=[[SharedManager sharedManager]userProfile].loyaltyPoints;
             spaUser.userName=[[SharedManager sharedManager]userProfile].userName;
@@ -270,7 +291,7 @@
                             NSLog(@"Saved");
                             spaUser.profileImage=imageFile;
                             spaUser.emailAddress=currentUser.email;
-                            spaUser.mobileNumber=[_mobileNumberTxt.text integerValue];
+                            spaUser.mobileNumber=[_mobileNumberTxt.text doubleValue];
                             spaUser.name=_nameTxt.text;
                             spaUser.loyaltyPoints=[[SharedManager sharedManager]userProfile].loyaltyPoints;
                             spaUser.userName=[[SharedManager sharedManager]userProfile].userName;

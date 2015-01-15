@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTxt;
 @property (weak, nonatomic) IBOutlet UILabel *pointsLbl;
 @property (weak, nonatomic) IBOutlet UITextField *mobileNumberTxt;
+@property (weak, nonatomic) IBOutlet UIButton *otherEditBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editBarBtn;
 
 @end

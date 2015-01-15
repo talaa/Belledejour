@@ -12,9 +12,10 @@
 @implementation ServiceDetails
 -(void)viewDidLoad
 {
+    self.serviceImage.contentMode = UIViewContentModeScaleAspectFit;
 
     [self setBorder:_bookBtn];
-    [self setBorder:_serviceImage];
+    //[self setBorder:_serviceImage];
     if(_service!=nil)
     {
     [self.navigationItem setTitle:_navigationTitle];

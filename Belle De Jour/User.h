@@ -13,7 +13,7 @@
 @property(nonatomic,strong)NSString * name;
 @property(nonatomic,strong)NSString * userName;
 @property(nonatomic,strong)NSString * emailAddress;
-@property(nonatomic,assign)NSInteger  mobileNumber;
+@property(nonatomic,assign)double  mobileNumber;
 @property(nonatomic,strong)NSString * password;
 @property(nonatomic,assign)NSInteger loyaltyPoints;
 @property(nonatomic,assign)PFFile* profileImage;

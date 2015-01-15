@@ -134,6 +134,21 @@
             cell.serviceImg.image=[UIImage imageNamed:@"dermatology.png"];
 
         }
+        else if([[[uniqueArray objectAtIndex:indexPath.row]serviceType] isEqualToString:@"Slimming"])
+        {
+            cell.serviceImg.image=[UIImage imageNamed:@"Slimming.jpg"];
+            
+        }
+        else if([[[uniqueArray objectAtIndex:indexPath.row]serviceType] isEqualToString:@"Dental"])
+        {
+            cell.serviceImg.image=[UIImage imageNamed:@"Dental.jpg"];
+            
+        }
+        else if([[[uniqueArray objectAtIndex:indexPath.row]serviceType] isEqualToString:@"Reflexology"])
+        {
+            cell.serviceImg.image=[UIImage imageNamed:@"Reflexology.png"];
+            
+        }
         else
         {
             cell.serviceImg.image=nil;

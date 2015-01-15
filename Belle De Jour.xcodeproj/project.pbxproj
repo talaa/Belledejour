@@ -27,6 +27,9 @@
 		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		693A26E91A3C75F300BC09B3 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */; };
 		693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */; };
+		6942A2731A683BB2007C57E9 /* Slimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6942A2701A683BB2007C57E9 /* Slimming.jpg */; };
+		6942A2741A683BB2007C57E9 /* Dental.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6942A2711A683BB2007C57E9 /* Dental.jpg */; };
+		6942A2751A683BB2007C57E9 /* Reflexology@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6942A2721A683BB2007C57E9 /* Reflexology@2x.png */; };
 		69566C431A1CF8BA0074F1A4 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69566C421A1CF8BA0074F1A4 /* BookingViewController.m */; };
 		695968731A618BB500C00C2C /* cell_phone_3-512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968721A618BB500C00C2C /* cell_phone_3-512@2x.png */; };
 		695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695968741A618CD400C00C2C /* events-calendar-icon@2x.png */; };
@@ -156,6 +159,9 @@
 		693A26E71A3C75F200BC09B3 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6942A2701A683BB2007C57E9 /* Slimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Slimming.jpg; sourceTree = "<group>"; };
+		6942A2711A683BB2007C57E9 /* Dental.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dental.jpg; sourceTree = "<group>"; };
+		6942A2721A683BB2007C57E9 /* Reflexology@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reflexology@2x.png"; sourceTree = "<group>"; };
 		69566C411A1CF8BA0074F1A4 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookingViewController.h; path = ../BookingViewController.h; sourceTree = "<group>"; };
 		69566C421A1CF8BA0074F1A4 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookingViewController.m; path = ../BookingViewController.m; sourceTree = "<group>"; };
 		695968721A618BB500C00C2C /* cell_phone_3-512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_phone_3-512@2x.png"; sourceTree = "<group>"; };
@@ -400,6 +406,9 @@
 		69993B051A1A5CC900A78ED6 = {
 			isa = PBXGroup;
 			children = (
+				6942A2701A683BB2007C57E9 /* Slimming.jpg */,
+				6942A2711A683BB2007C57E9 /* Dental.jpg */,
+				6942A2721A683BB2007C57E9 /* Reflexology@2x.png */,
 				6959687E1A61E53300C00C2C /* Circle@2x.png */,
 				6959687C1A61BF7E00C00C2C /* AssetsLibrary.framework */,
 				695968781A618E1000C00C2C /* my_topic@2x.png */,
@@ -720,6 +729,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6942A2731A683BB2007C57E9 /* Slimming.jpg in Resources */,
 				696F6A131A61316100E6401C /* asterik@2x.gif in Resources */,
 				6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */,
 				69E230CC1A5D887900F4B9D2 /* instagram-100x100@2x.png in Resources */,
@@ -727,6 +737,7 @@
 				6959687F1A61E53300C00C2C /* Circle@2x.png in Resources */,
 				69993B1D1A1A5CC900A78ED6 /* Main.storyboard in Resources */,
 				695968751A618CD400C00C2C /* events-calendar-icon@2x.png in Resources */,
+				6942A2741A683BB2007C57E9 /* Dental.jpg in Resources */,
 				6981C2761A3307DC00699924 /* belledejouricon-1.png in Resources */,
 				69E230B11A5C5A1400F4B9D2 /* dermatology@2x.png in Resources */,
 				69E230C81A5D87A500F4B9D2 /* googleplus@2x.png in Resources */,
@@ -734,6 +745,7 @@
 				6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */,
 				69F69B661A4616D30041A3B6 /* profile-bg.png in Resources */,
 				69833EF61A3F20D8003063A7 /* close_button.png in Resources */,
+				6942A2751A683BB2007C57E9 /* Reflexology@2x.png in Resources */,
 				69E230B91A5D3F3D00F4B9D2 /* navgationBar@2x.png in Resources */,
 				69E230CA1A5D87E000F4B9D2 /* twitter-icon-100x100@2x.png in Resources */,
 				69993B221A1A5CC900A78ED6 /* LaunchScreen.xib in Resources */,

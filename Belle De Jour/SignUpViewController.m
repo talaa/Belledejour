@@ -90,12 +90,12 @@
         user.userName=_userNameTxt.text;
         user.password=_passwordTxt.text;
         user.emailAddress=_emailTxt.text;
-        user.mobileNumber=[_mobileNumberTxt.text integerValue];
+        user.mobileNumber=[_mobileNumberTxt.text doubleValue];
         parseUser.username = user.userName;
         parseUser.password =user.password;
         parseUser.email = user.emailAddress;
         parseUser[@"Name"] = user.name;
-        parseUser[@"Mobile_Number"]=[NSNumber numberWithInteger:user.mobileNumber];
+        parseUser[@"Mobile_Number"]=[NSNumber numberWithDouble:user.mobileNumber];
         parseUser[@"ProfilePicture"]=profileImgUrl;
             
             NSData* data = UIImageJPEGRepresentation(_profileImg.image, 0.5f);

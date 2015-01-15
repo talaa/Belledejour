@@ -165,6 +165,11 @@
                 [self.sideMenuViewController hideMenuViewController];
                 break;
             case 7:
+                [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ContactUsViewController"]]
+                                                             animated:YES];
+                [self.sideMenuViewController hideMenuViewController];
+                break;
+            case 8:
                 [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"]]
                                                              animated:YES];
                 [self.sideMenuViewController hideMenuViewController];
