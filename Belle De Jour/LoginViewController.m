@@ -52,6 +52,7 @@
     {
         self.dismissBtn.hidden=YES;
     }
+ 
 }
 
 - (void)didReceiveMemoryWarning {

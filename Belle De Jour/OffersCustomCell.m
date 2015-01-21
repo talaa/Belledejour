@@ -22,6 +22,9 @@
 {
     [self setBorder:_bookBtn];
     [self setBorder:_offerImage];
+    [self setBorder:self.basketImg];
+    self.basketImg.contentMode = UIViewContentModeScaleAspectFit;
+
     
 }
 -(void)setBorder:(UIView*)view

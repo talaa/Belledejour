@@ -15,7 +15,9 @@
     self.serviceImage.contentMode = UIViewContentModeScaleAspectFit;
 
     [self setBorder:_bookBtn];
-    //[self setBorder:_serviceImage];
+    [self setBorder:_serviceImage];
+    [self setBorder:self.basketImg];
+    self.basketImg.contentMode = UIViewContentModeScaleAspectFit;
     if(_service!=nil)
     {
     [self.navigationItem setTitle:_navigationTitle];

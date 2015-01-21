@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *OfferNameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *offerPriceLbl;
 @property (weak, nonatomic) IBOutlet UIButton *bookBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *basketImg;
 
 @end

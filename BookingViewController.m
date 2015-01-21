@@ -31,7 +31,23 @@
     self.servicePriceLbl.text=[NSString stringWithFormat:@"%i Dirham",self.servicePrice];
     [self.serviceImgView setImage: self.serviceImage];
     
+    [self setBorder:_serviceImgView];
+
+}
+-(void)setBorder:(UIView*)view
+{
+    // border radius
+    [view.layer setCornerRadius:10.0f];
     
+    // border
+    [view.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [view.layer setBorderWidth:1.5f];
+    
+    // drop shadow
+    [view.layer setShadowColor:[UIColor blackColor].CGColor];
+    [view.layer setShadowOpacity:0.8];
+    [view.layer setShadowRadius:3.0];
+    [view.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *serviceImage;
 @property (weak, nonatomic) IBOutlet UILabel *servicePrice;
 @property (weak, nonatomic) IBOutlet UITextView *serviceDescriptionTxt;
+@property (weak, nonatomic) IBOutlet UIImageView *basketImg;
 @property (nonatomic,strong) NSString * navigationTitle;
 @property (nonatomic,strong) Service * service;
 @property (nonatomic,strong) Offer * offer;
