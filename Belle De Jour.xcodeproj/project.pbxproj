@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A225191D6B262900F726D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39A225181D6B262900F726D3 /* GoogleService-Info.plist */; };
+		4D886E37A562D9165FF978C5 /* libPods-Belle De Jour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */; };
 		6913EB561A30F3DA009D65CD /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB551A30F3DA009D65CD /* Service.m */; };
 		6913EB591A30F400009D65CD /* ServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB581A30F400009D65CD /* ServiceTableViewCell.m */; };
 		6913EB5B1A30F4F7009D65CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5A1A30F4F7009D65CD /* Parse.framework */; };
@@ -23,7 +25,6 @@
 		6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6913EB711A30F5D4009D65CD /* SVProgressHUD LICENSE.txt */; };
 		6913EB761A30F5D4009D65CD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6913EB721A30F5D4009D65CD /* SVProgressHUD.bundle */; };
 		6913EB771A30F5D4009D65CD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB741A30F5D4009D65CD /* SVProgressHUD.m */; };
-		6913EB791A30F63C009D65CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB781A30F63C009D65CD /* Bolts.framework */; };
 		6913EB811A310E4E009D65CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB801A310E4E009D65CD /* LoginViewController.m */; };
 		693A26E91A3C75F300BC09B3 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693A26E81A3C75F300BC09B3 /* ForgetPasswordViewController.m */; };
 		693A26EB1A3D8ED500BC09B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A26EA1A3D8ED400BC09B3 /* MessageUI.framework */; };
@@ -121,6 +122,7 @@
 		69F69B681A46188F0041A3B6 /* profile-rabbit-toy.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B671A46188F0041A3B6 /* profile-rabbit-toy.png */; };
 		69F69B6A1A461B390041A3B6 /* line_seperate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B691A461B390041A3B6 /* line_seperate@2x.png */; };
 		69F69B6C1A461CC40041A3B6 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69F69B6B1A461CC40041A3B6 /* camera.jpg */; };
+		77CFA23AA923A506A056760D /* libPods-Belle De JourTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992738DCA6E289AD122B947B /* libPods-Belle De JourTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23840F8948A34DB8788F6C37 /* Pods-Belle De Jour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De Jour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De Jour/Pods-Belle De Jour.debug.xcconfig"; sourceTree = "<group>"; };
+		39A225181D6B262900F726D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De JourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6913EB541A30F3DA009D65CD /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		6913EB551A30F3DA009D65CD /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		6913EB571A30F400009D65CD /* ServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceTableViewCell.h; path = ../ServiceTableViewCell.h; sourceTree = "<group>"; };
@@ -318,6 +323,10 @@
 		69F69B671A46188F0041A3B6 /* profile-rabbit-toy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-rabbit-toy.png"; sourceTree = "<group>"; };
 		69F69B691A461B390041A3B6 /* line_seperate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_seperate@2x.png"; sourceTree = "<group>"; };
 		69F69B6B1A461CC40041A3B6 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = camera.jpg; path = ../camera.jpg; sourceTree = "<group>"; };
+		83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Belle De Jour.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992738DCA6E289AD122B947B /* libPods-Belle De JourTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Belle De JourTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF835C48B22A932AB0A079B /* Pods-Belle De JourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De JourTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests.release.xcconfig"; sourceTree = "<group>"; };
+		E111271CB681B781608AC276 /* Pods-Belle De Jour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De Jour.release.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De Jour/Pods-Belle De Jour.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,11 +351,11 @@
 				6913EB5D1A30F50A009D65CD /* CFNetwork.framework in Frameworks */,
 				698414001A1BD5020084F0B2 /* libz.dylib in Frameworks */,
 				69993B4B1A1A64E400A78ED6 /* UIKit.framework in Frameworks */,
-				6913EB791A30F63C009D65CD /* Bolts.framework in Frameworks */,
 				69993B491A1A64D900A78ED6 /* Foundation.framework in Frameworks */,
 				69993B451A1A63D500A78ED6 /* CoreGraphics.framework in Frameworks */,
 				6913EB5B1A30F4F7009D65CD /* Parse.framework in Frameworks */,
 				698413FC1A1BD36D0084F0B2 /* libTestFlight.a in Frameworks */,
+				4D886E37A562D9165FF978C5 /* libPods-Belle De Jour.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,12 +363,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CFA23AA923A506A056760D /* libPods-Belle De JourTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1066D84F42A69DCDF971F450 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23840F8948A34DB8788F6C37 /* Pods-Belle De Jour.debug.xcconfig */,
+				E111271CB681B781608AC276 /* Pods-Belle De Jour.release.xcconfig */,
+				5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */,
+				9FF835C48B22A932AB0A079B /* Pods-Belle De JourTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6913EB701A30F5D4009D65CD /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +455,8 @@
 				69993B101A1A5CC900A78ED6 /* Belle De Jour */,
 				69993B2A1A1A5CC900A78ED6 /* Belle De JourTests */,
 				69993B0F1A1A5CC900A78ED6 /* Products */,
+				1066D84F42A69DCDF971F450 /* Pods */,
+				C40ED1EF32CD4A3008A6E555 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -532,6 +555,7 @@
 				69833EF31A3F2018003063A7 /* closing_symbol.png */,
 				6981C2751A3307DC00699924 /* belledejouricon-1.png */,
 				69993B121A1A5CC900A78ED6 /* Info.plist */,
+				39A225181D6B262900F726D3 /* GoogleService-Info.plist */,
 				69993B131A1A5CC900A78ED6 /* main.m */,
 				69993B461A1A642B00A78ED6 /* Belledejour.pch */,
 			);
@@ -648,6 +672,15 @@
 			path = "Belle De Jour/SDWebImage";
 			sourceTree = "<group>";
 		};
+		C40ED1EF32CD4A3008A6E555 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */,
+				992738DCA6E289AD122B947B /* libPods-Belle De JourTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -655,9 +688,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69993B311A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De Jour" */;
 			buildPhases = (
+				A99A52E60468490076F0E192 /* [CP] Check Pods Manifest.lock */,
 				69993B0A1A1A5CC900A78ED6 /* Sources */,
 				69993B0B1A1A5CC900A78ED6 /* Frameworks */,
 				69993B0C1A1A5CC900A78ED6 /* Resources */,
+				F285CE3FC01EED733B54EF50 /* [CP] Embed Pods Frameworks */,
+				0680644A02B71FF6A68D19B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -672,9 +708,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69993B341A1A5CC900A78ED6 /* Build configuration list for PBXNativeTarget "Belle De JourTests" */;
 			buildPhases = (
+				30C78BDDEF1D6F3BCE925CC8 /* [CP] Check Pods Manifest.lock */,
 				69993B231A1A5CC900A78ED6 /* Sources */,
 				69993B241A1A5CC900A78ED6 /* Frameworks */,
 				69993B251A1A5CC900A78ED6 /* Resources */,
+				2FDFB5C1B64E9BF334487617 /* [CP] Embed Pods Frameworks */,
+				F70D1840CE07631BE4B0BB80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -744,6 +783,7 @@
 				695968731A618BB500C00C2C /* cell_phone_3-512@2x.png in Resources */,
 				6913EB751A30F5D4009D65CD /* SVProgressHUD LICENSE.txt in Resources */,
 				69F69B661A4616D30041A3B6 /* profile-bg.png in Resources */,
+				39A225191D6B262900F726D3 /* GoogleService-Info.plist in Resources */,
 				69833EF61A3F20D8003063A7 /* close_button.png in Resources */,
 				6942A2751A683BB2007C57E9 /* Reflexology@2x.png in Resources */,
 				69E230B91A5D3F3D00F4B9D2 /* navgationBar@2x.png in Resources */,
@@ -770,6 +810,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0680644A02B71FF6A68D19B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Belle De Jour/Pods-Belle De Jour-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FDFB5C1B64E9BF334487617 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C78BDDEF1D6F3BCE925CC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A99A52E60468490076F0E192 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F285CE3FC01EED733B54EF50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Belle De Jour/Pods-Belle De Jour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70D1840CE07631BE4B0BB80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69993B0A1A1A5CC900A78ED6 /* Sources */ = {
@@ -962,10 +1095,12 @@
 		};
 		69993B321A1A5CC900A78ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23840F8948A34DB8788F6C37 /* Pods-Belle De Jour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -977,7 +1112,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFlightSDK3-2",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.springmoon.Belle-De-Jour-SPA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -986,10 +1121,12 @@
 		};
 		69993B331A1A5CC900A78ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E111271CB681B781608AC276 /* Pods-Belle De Jour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1001,7 +1138,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFlightSDK3-2",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.springmoon.Belle-De-Jour-SPA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1010,8 +1147,10 @@
 		};
 		69993B351A1A5CC900A78ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1022,6 +1161,7 @@
 				);
 				INFOPLIST_FILE = "Belle De JourTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belle De Jour.app/Belle De Jour";
 			};
@@ -1029,14 +1169,17 @@
 		};
 		69993B361A1A5CC900A78ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF835C48B22A932AB0A079B /* Pods-Belle De JourTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Belle De JourTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belle De Jour.app/Belle De Jour";
 			};

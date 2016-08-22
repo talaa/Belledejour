@@ -15,6 +15,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "Chameleon.h"
+@import Firebase;
+
 @interface AppDelegate ()
 
 @end
@@ -70,6 +72,10 @@
     [PFFacebookUtils initializeFacebook];
     
     [TestFlight takeOff:@"a00986c3-fffa-4d60-94a3-09d8ce957115"];
+    
+    // Use Firebase library to configure APIs
+    [FIRApp configure];
+    
     return YES;
 }
 - (BOOL)application:(UIApplication *)application
