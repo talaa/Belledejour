@@ -10,7 +10,7 @@
 #import "Constants.h"
 #import "FacebookFeeds.h"
 #import "FeedsCustomCell.h"
-#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 @interface FaceBookFeedsTableViewController ()
 {
     NSArray * data;
