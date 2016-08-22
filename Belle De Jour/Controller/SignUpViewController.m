@@ -12,6 +12,9 @@
 #import "SVProgressHUD.h"
 #import "Constants.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "NetworkRequester.h"
+#import "DataParsing.h"
+
 @interface SignUpViewController ()
 {
     User *user;
@@ -44,10 +47,10 @@
                                     NSLog(@"OK action");
                                 }];
     [alertController addAction:okAction];
-//    if(IS_IPHONE_5)
-//    {
-//        self.createAccountBtn.frame=CGRectMake(_createAccountBtn.frame.origin.x,[[UIScreen mainScreen] bounds].size.height-_createAccountBtn.frame.size.height-63, _createAccountBtn.frame.size.width, _createAccountBtn.frame.size.height);
-//    }
+    //    if(IS_IPHONE_5)
+    //    {
+    //        self.createAccountBtn.frame=CGRectMake(_createAccountBtn.frame.origin.x,[[UIScreen mainScreen] bounds].size.height-_createAccountBtn.frame.size.height-63, _createAccountBtn.frame.size.width, _createAccountBtn.frame.size.height);
+    //    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,73 +89,58 @@
     {
         if([self validEmail:_emailTxt.text ])
         {
-        user.name=_nameTxt.text;
-        user.userName=_userNameTxt.text;
-        user.password=_passwordTxt.text;
-        user.emailAddress=_emailTxt.text;
-        user.mobileNumber=[_mobileNumberTxt.text doubleValue];
-        parseUser.username = user.userName;
-        parseUser.password =user.password;
-        parseUser.email = user.emailAddress;
-        parseUser[@"Name"] = user.name;
-        parseUser[@"Mobile_Number"]=[NSNumber numberWithDouble:user.mobileNumber];
-        parseUser[@"ProfilePicture"]=profileImgUrl;
+            //correct data -> save new user to firebase
+            [NetworkRequester createFireBaseUserAccount:_emailTxt.text Password:_passwordTxt.text  completionBlock:^(NSError *error, FIRUser *user) {
+                if (!error){
+                    //new user account has been saved
+                    //1- upload user profile
+                    //[NetworkRequester uploadfilePathName:[NSString stringWithFormat:@"ProfilePic/%@.png",user.uid] Data:imageData Completion:^(FIRStorageMetadata *metadata, NSError *error) {}];`
+                    //2- save user data on users table
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internal Error" message:[error userInfo][@"error"] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+
+                }
+            }];
+            
+            
+            user.name=_nameTxt.text;
+            user.userName=_userNameTxt.text;
+            user.password=_passwordTxt.text;
+            user.emailAddress=_emailTxt.text;
+            user.mobileNumber=[_mobileNumberTxt.text doubleValue];
+            parseUser.username = user.userName;
+            parseUser.password =user.password;
+            parseUser.email = user.emailAddress;
+            parseUser[@"Name"] = user.name;
+            parseUser[@"Mobile_Number"]=[NSNumber numberWithDouble:user.mobileNumber];
+            parseUser[@"ProfilePicture"]=profileImgUrl;
             
             NSData* data = UIImageJPEGRepresentation(_profileImg.image, 0.5f);
             PFFile *imageFile = [PFFile fileWithName:profileImgUrl data:data];
-             [parseUser setObject:imageFile forKey:@"ProfilePicture"];
+            [parseUser setObject:imageFile forKey:@"ProfilePicture"];
             // Save the image to Parse
             
             
-       // [NSString stringWithFormat:@"%li", (long)user.mobileNumber] ;
-        
-        [parseUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully Created" message:@"Please check your mail inbox to verify your account!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                [alert show];
-            } else {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internal Error" message:[error userInfo][@"error"] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                [alert show];
-                
-            }
-        }];
-        //        PFObject *newUser = [PFObject objectWithClassName:@"User"];
-        //        [newUser setObject:user.name forKey:@"Name"];
-        //        [newUser setObject:[NSString stringWithFormat:@"%li", (long)user.mobileNumber]  forKey:@"Mobile_Number"];
-        //        [newUser setObject:user.userName forKey:@"username"];
-        //        [newUser setObject:user.password forKey:@"password"];
-        //        [newUser setObject:user.emailAddress forKey:@"email"];
-        //        [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        //
-        //            if (!error) {
-        //                // Show success message
-        //                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully Created" message:@"Please check your mail inbox to verify your account!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        //                [alert show];
-        //                _nameTxt.text=nil;
-        //                _passwordTxt.text=nil;
-        //                _userNameTxt.text=nil;
-        //                _mobileNumberTxt.text=nil;
-        //                _emailTxt.text=nil;
-        //            } else {
-        //                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internal Error" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        //                [alert show];
-        //
-        //            }
-        //
-        //        }];
+            // [NSString stringWithFormat:@"%li", (long)user.mobileNumber] ;
             
-        }
-        else
-        {
+            [parseUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully Created" message:@"Please check your mail inbox to verify your account!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                } else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internal Error" message:[error userInfo][@"error"] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                    
+                }
+            }];
+            
+        }else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@" Please enter valid E-mail address . "delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         }
-        
-    }
-    else
-    {
+    }else{
         [self presentViewController:alertController animated:YES completion:nil];
-        
     }
 }
 - (IBAction)changeProfilePicture:(id)sender {
@@ -193,7 +181,7 @@
          didFinishPickingImage:(UIImage *)image
                    editingInfo:(NSDictionary *)editingInfo
 {
-  
+    
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
@@ -204,9 +192,9 @@
         ALAssetRepresentation *representation = [myasset defaultRepresentation];
         NSString *fileName = [representation filename];
         NSLog(@"fileName : %@",fileName);
-       // picker.delegate=self;
-       // self.profileImg.image=[UIImage imageNamed:[NSString string]]
-       UIImage *selectedImg = info[UIImagePickerControllerOriginalImage];
+        // picker.delegate=self;
+        // self.profileImg.image=[UIImage imageNamed:[NSString string]]
+        UIImage *selectedImg = info[UIImagePickerControllerOriginalImage];
         self.profileImg.image=selectedImg;
         profileImgUrl=fileName;
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -217,7 +205,7 @@
                   failureBlock:nil];
     
 }
-             
+
 
 
 @end

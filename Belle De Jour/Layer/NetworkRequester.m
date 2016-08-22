@@ -7,6 +7,9 @@
 //
 
 #import "NetworkRequester.h"
+#import "DataParsing.h"
+#import "SVProgressHUD.h"
+#import "AppConstants.h"
 
 @implementation NetworkRequester
 
@@ -61,6 +64,30 @@
             // Password reset email sent.
             completion(nil);
         }
+    }];
+}
+
+//Upload from NSData on memory -> Storage
++ (void)uploadfilePathName:(NSString *)name Data:(NSData *)data Completion:(void (^) (FIRStorageMetadata *metadata,NSError *error))completion {
+    
+    // Create a reference to the file you want to upload
+    FIRStorageReference *riversRef = [[DataParsing getInstance].referenceFirebaseStorage child:name];
+    
+    // Upload the file to the path for example-> "images/rivers.jpg"
+    FIRStorageUploadTask *uploadTask = [riversRef putData:data metadata:nil completion:^(FIRStorageMetadata *metadata, NSError *error) {
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+            completion(nil, error);
+        } else {
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            completion(metadata, nil);
+        }
+    }];
+    
+    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot) {
+        // Upload reported progress
+        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / (snapshot.progress.totalUnitCount);
+        [SVProgressHUD showProgress:percentComplete/100 status:[NSString stringWithFormat:@"%.0f%%",percentComplete]];
     }];
 }
 

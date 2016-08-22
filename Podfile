@@ -20,6 +20,12 @@ target 'Belle De Jour' do
   
   # firebase Storage
   pod 'Firebase/Storage'
+  
+  # SVProgressHUD
+  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  
+  # Web Image
+  pod 'SDWebImage/WebP'
 
   target 'Belle De JourTests' do
     inherit! :search_paths

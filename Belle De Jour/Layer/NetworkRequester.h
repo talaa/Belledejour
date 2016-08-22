@@ -15,9 +15,6 @@
 //Create An User auth row then Add a User Data row on Users table
 + (void)createFireBaseUserAccount:(NSString*)email Password:(NSString*)password completionBlock:(void (^) (NSError *error, FIRUser *user))completion;
 
-//Add UserData on Users table
-+ (void)addUserDataFireBaseDBb:(NSDictionary *)parm User:(FIRUser*)user;
-
 //sign In
 + (void)signInFirebaseByMail:(NSString*)mail Password:(NSString*)password Completion:(void (^)(NSError *error, FIRUser *user))compeletion;
 
@@ -26,5 +23,8 @@
 
 //Send a password reset email
 + (void)sendPasswordResetEmail:(NSString*)email Completion:(void (^) (NSError *error))completion;
+
+//Upload from NSData on memory -> Storage
++ (void)uploadfilePathName:(NSString *)name Data:(NSData *)data Completion:(void (^) (FIRStorageMetadata *metadata,NSError *error))completion;
 
 @end
