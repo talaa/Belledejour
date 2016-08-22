@@ -89,6 +89,7 @@
 		39A226021D6B35E800F726D3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225FC1D6B35E800F726D3 /* User.m */; };
 		39A2260B1D6B363300F726D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39A226091D6B363300F726D3 /* LaunchScreen.xib */; };
 		39A2260C1D6B363300F726D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A2260A1D6B363300F726D3 /* Main.storyboard */; };
+		39BA07C71D6B4A560029DED3 /* NetworkRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA07C61D6B4A560029DED3 /* NetworkRequester.m */; };
 		4D886E37A562D9165FF978C5 /* libPods-Belle De Jour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */; };
 		6913EB5B1A30F4F7009D65CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5A1A30F4F7009D65CD /* Parse.framework */; };
 		6913EB5D1A30F50A009D65CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5C1A30F50A009D65CD /* CFNetwork.framework */; };
@@ -275,6 +276,8 @@
 		39A225FC1D6B35E800F726D3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		39A226091D6B363300F726D3 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		39A2260A1D6B363300F726D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		39BA07C51D6B4A560029DED3 /* NetworkRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequester.h; sourceTree = "<group>"; };
+		39BA07C61D6B4A560029DED3 /* NetworkRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkRequester.m; sourceTree = "<group>"; };
 		5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De JourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6913EB5A1A30F4F7009D65CD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6913EB5C1A30F50A009D65CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -592,6 +595,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		39BA07C41D6B4A070029DED3 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				39BA07C51D6B4A560029DED3 /* NetworkRequester.h */,
+				39BA07C61D6B4A560029DED3 /* NetworkRequester.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
 		698413F51A1BD36D0084F0B2 /* TestFlightSDK3-2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +641,7 @@
 		69993B101A1A5CC900A78ED6 /* Belle De Jour */ = {
 			isa = PBXGroup;
 			children = (
+				39BA07C41D6B4A070029DED3 /* Layer */,
 				39A226081D6B363300F726D3 /* View */,
 				39A225EF1D6B35E800F726D3 /* Model */,
 				39A2255D1D6B2F6000F726D3 /* Resources */,
@@ -988,6 +1001,7 @@
 				39A225A11D6B2F6100F726D3 /* UIViewController+RESideMenu.m in Sources */,
 				39A225A51D6B2F6100F726D3 /* SDWebImageCompat.m in Sources */,
 				39A225571D6B2E5900F726D3 /* ServiceTableViewCell.m in Sources */,
+				39BA07C71D6B4A560029DED3 /* NetworkRequester.m in Sources */,
 				39A225521D6B2E5900F726D3 /* ServiceCollectionViewCell.m in Sources */,
 				39A225AC1D6B2F6100F726D3 /* UIImage+GIF.m in Sources */,
 				39A225591D6B2E5900F726D3 /* SignUpViewController.m in Sources */,

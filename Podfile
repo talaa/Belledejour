@@ -6,8 +6,20 @@ target 'Belle De Jour' do
   # use_frameworks!
 
   # Pods for Belle De Jour
+  # firebase
   pod 'Firebase'
+  
+  # firebase Password-Based Accounts
   pod 'Firebase/Auth'
+  
+  # firebase database
+  pod 'Firebase/Database'
+  
+  # firebase Core
+  pod 'Firebase/Core'
+  
+  # firebase Storage
+  pod 'Firebase/Storage'
 
   target 'Belle De JourTests' do
     inherit! :search_paths
