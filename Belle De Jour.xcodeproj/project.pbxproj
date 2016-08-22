@@ -29,7 +29,6 @@
 		39A225591D6B2E5900F726D3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225401D6B2E5900F726D3 /* SignUpViewController.m */; };
 		39A2255A1D6B2E5900F726D3 /* StuffCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225421D6B2E5900F726D3 /* StuffCustomCell.m */; };
 		39A2255B1D6B2E5900F726D3 /* StuffTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225441D6B2E5900F726D3 /* StuffTableViewController.m */; };
-		39A2255C1D6B2E5900F726D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225461D6B2E5900F726D3 /* ViewController.m */; };
 		39A2259A1D6B2F6100F726D3 /* ChameleonStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225631D6B2F6000F726D3 /* ChameleonStatusBar.m */; };
 		39A2259B1D6B2F6100F726D3 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225651D6B2F6000F726D3 /* NSArray+Chameleon.m */; };
 		39A2259C1D6B2F6100F726D3 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225671D6B2F6000F726D3 /* UIColor+Chameleon.m */; };
@@ -80,7 +79,7 @@
 		39A225E41D6B309E00F726D3 /* Slimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39A225CD1D6B309E00F726D3 /* Slimming.jpg */; };
 		39A225E51D6B309E00F726D3 /* twitter-icon-100x100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A225CE1D6B309E00F726D3 /* twitter-icon-100x100@2x.png */; };
 		39A225E61D6B309E00F726D3 /* user1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A225CF1D6B309E00F726D3 /* user1.png */; };
-		39A225E91D6B327F00F726D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225E81D6B327F00F726D3 /* ViewController.m */; };
+		39A225EC1D6B348100F726D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A225EB1D6B348100F726D3 /* ViewController.m */; };
 		4D886E37A562D9165FF978C5 /* libPods-Belle De Jour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */; };
 		6913EB561A30F3DA009D65CD /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 6913EB551A30F3DA009D65CD /* Service.m */; };
 		6913EB5B1A30F4F7009D65CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5A1A30F4F7009D65CD /* Parse.framework */; };
@@ -180,8 +179,6 @@
 		39A225421D6B2E5900F726D3 /* StuffCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffCustomCell.m; sourceTree = "<group>"; };
 		39A225431D6B2E5900F726D3 /* StuffTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuffTableViewController.h; sourceTree = "<group>"; };
 		39A225441D6B2E5900F726D3 /* StuffTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuffTableViewController.m; sourceTree = "<group>"; };
-		39A225451D6B2E5900F726D3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39A225461D6B2E5900F726D3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39A225601D6B2F6000F726D3 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
 		39A225611D6B2F6000F726D3 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
 		39A225621D6B2F6000F726D3 /* ChameleonStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonStatusBar.h; sourceTree = "<group>"; };
@@ -260,8 +257,8 @@
 		39A225CD1D6B309E00F726D3 /* Slimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Slimming.jpg; sourceTree = "<group>"; };
 		39A225CE1D6B309E00F726D3 /* twitter-icon-100x100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-icon-100x100@2x.png"; sourceTree = "<group>"; };
 		39A225CF1D6B309E00F726D3 /* user1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user1.png; sourceTree = "<group>"; };
-		39A225E71D6B327F00F726D3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39A225E81D6B327F00F726D3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		39A225EA1D6B348100F726D3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		39A225EB1D6B348100F726D3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De JourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6913EB541A30F3DA009D65CD /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		6913EB551A30F3DA009D65CD /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
@@ -384,8 +381,8 @@
 		39A2251A1D6B2E5900F726D3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39A225E71D6B327F00F726D3 /* ViewController.h */,
-				39A225E81D6B327F00F726D3 /* ViewController.m */,
+				39A225EA1D6B348100F726D3 /* ViewController.h */,
+				39A225EB1D6B348100F726D3 /* ViewController.m */,
 				39A2251B1D6B2E5900F726D3 /* BookingViewController.h */,
 				39A2251C1D6B2E5900F726D3 /* BookingViewController.m */,
 				39A2251D1D6B2E5900F726D3 /* FaceBookFeedsTableViewController.h */,
@@ -428,8 +425,6 @@
 				39A225421D6B2E5900F726D3 /* StuffCustomCell.m */,
 				39A225431D6B2E5900F726D3 /* StuffTableViewController.h */,
 				39A225441D6B2E5900F726D3 /* StuffTableViewController.m */,
-				39A225451D6B2E5900F726D3 /* ViewController.h */,
-				39A225461D6B2E5900F726D3 /* ViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -962,7 +957,6 @@
 				39A225AF1D6B2F6100F726D3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				39A225A31D6B2F6100F726D3 /* NSData+ImageContentType.m in Sources */,
 				698413FE1A1BD36D0084F0B2 /* release_notes.md in Sources */,
-				39A225E91D6B327F00F726D3 /* ViewController.m in Sources */,
 				39A2254F1D6B2E5900F726D3 /* OffersTableViewController.m in Sources */,
 				39A225501D6B2E5900F726D3 /* PageContentViewController.m in Sources */,
 				39A2259E1D6B2F6100F726D3 /* UIViewController+Chameleon.m in Sources */,
@@ -973,7 +967,6 @@
 				69DAE4B61A405B140077213A /* DataParser.m in Sources */,
 				39A225AA1D6B2F6100F726D3 /* SDWebImagePrefetcher.m in Sources */,
 				39A225A11D6B2F6100F726D3 /* UIViewController+RESideMenu.m in Sources */,
-				39A2255C1D6B2E5900F726D3 /* ViewController.m in Sources */,
 				39A225A51D6B2F6100F726D3 /* SDWebImageCompat.m in Sources */,
 				39A225571D6B2E5900F726D3 /* ServiceTableViewCell.m in Sources */,
 				39A225521D6B2E5900F726D3 /* ServiceCollectionViewCell.m in Sources */,
@@ -996,6 +989,7 @@
 				39A225B11D6B2F6100F726D3 /* UIView+WebCacheOperation.m in Sources */,
 				39A225551D6B2E5900F726D3 /* ServicesListViewController.m in Sources */,
 				39A2254A1D6B2E5900F726D3 /* ForgetPasswordViewController.m in Sources */,
+				39A225EC1D6B348100F726D3 /* ViewController.m in Sources */,
 				39A2254E1D6B2E5900F726D3 /* OffersCustomCell.m in Sources */,
 				39A2254D1D6B2E5900F726D3 /* LoginViewController.m in Sources */,
 				39A225531D6B2E5900F726D3 /* ServiceDetails.m in Sources */,
