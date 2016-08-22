@@ -23,12 +23,6 @@
     }];
 }
 
-//Add UserData on Users table
-+ (void)addUserDataFireBaseDBb:(NSDictionary *)parm User:(FIRUser*)user{
-    [[[[DataParsing getInstance].referenceFirebaseDatabase child:FirebaseTableUsers] child:user.uid]
-     setValue:parm];
-}
-
 //sign In
 + (void)signInFirebaseByMail:(NSString*)mail Password:(NSString*)password Completion:(void (^)(NSError *error, FIRUser *user))compeletion{
     [[FIRAuth auth] signInWithEmail:mail

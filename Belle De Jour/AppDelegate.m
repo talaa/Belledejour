@@ -15,6 +15,9 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "Chameleon.h"
+#import "NetworkRequester.h"
+#import "DataParsing.h"
+#import "AppConstants.h"
 @import Firebase;
 
 @interface AppDelegate ()
