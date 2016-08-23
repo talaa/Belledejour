@@ -434,7 +434,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="176" id="rIA-px-6S7" customClass="OffersCustomCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="176"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIA-px-6S7" id="RKS-Jp-ye6">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="175"/>
@@ -813,25 +813,8 @@
                                             <outlet property="delegate" destination="hc0-Nh-U3V" id="cAX-XH-nm1"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" id="FLF-Z1-0tI">
-                                        <rect key="frame" x="16" y="81" width="288" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="hc0-Nh-U3V" id="TkV-Xu-6Md"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Belle De Jour Username ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uwV-nL-Q9t">
-                                        <rect key="frame" x="16" y="127" width="288" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" id="0Fw-qH-CwM">
-                                        <rect key="frame" x="16" y="153" width="288" height="44"/>
+                                        <rect key="frame" x="16" y="87" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
@@ -841,7 +824,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Number " minimumFontSize="17" id="fpk-kA-2Ps">
-                                        <rect key="frame" x="16" y="210" width="288" height="44"/>
+                                        <rect key="frame" x="16" y="139" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
@@ -863,7 +846,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" id="2Qx-Qe-Zn6">
-                                        <rect key="frame" x="16" y="270" width="288" height="44"/>
+                                        <rect key="frame" x="16" y="191" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
@@ -872,8 +855,8 @@
                                             <outlet property="delegate" destination="hc0-Nh-U3V" id="5Cr-P5-hqp"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum 6 characters ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9K-xR-Gnd">
-                                        <rect key="frame" x="16" y="316" width="288" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum 8 characters ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9K-xR-Gnd">
+                                        <rect key="frame" x="16" y="243" width="288" height="28"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -917,7 +900,6 @@
                         <outlet property="passwordTxt" destination="2Qx-Qe-Zn6" id="zzE-6p-E9X"/>
                         <outlet property="profileImg" destination="Qfp-cY-au0" id="ILb-z8-5mj"/>
                         <outlet property="scrollView" destination="N4o-Rh-8GT" id="ps2-nn-PQB"/>
-                        <outlet property="userNameTxt" destination="FLF-Z1-0tI" id="Fc5-hy-6nr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5T-Jo-K9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -79,6 +79,16 @@
     // Use Firebase library to configure APIs
     [FIRApp configure];
     
+    //save ReferenceFirebaseDatabase
+    [DataParsing getInstance].referenceFirebaseDatabase = [[FIRDatabase database] reference];
+    
+    //save FirebaseStorage
+    [DataParsing getInstance].firebaseStorage = [FIRStorage storage];
+    
+    //save ReferenceFirebaseStroage
+    [DataParsing getInstance].referenceFirebaseStorage = [[DataParsing getInstance].firebaseStorage referenceForURL:FireBaseStorageURL];
+
+    
     return YES;
 }
 - (BOOL)application:(UIApplication *)application

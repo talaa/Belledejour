@@ -91,4 +91,11 @@
     }];
 }
 
+//Add UserData on Users table
++ (void)addUserDataFireBaseDBb:(NSDictionary *)parm User:(FIRUser*)user{
+    [[[[DataParsing getInstance].referenceFirebaseDatabase child:FirebaseTableUsers] child:user.uid]
+     setValue:parm];
+}
+
+
 @end

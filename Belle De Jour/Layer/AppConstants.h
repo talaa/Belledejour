@@ -21,10 +21,8 @@ extern NSString *const NSUserUID;
 
 //firebase database users record properties
 extern NSString *const UsersId;
-extern NSString *const UsersFirstN;
-extern NSString *const UsersLastN;
+extern NSString *const UsersName;
 extern NSString *const UsersPhone;
-extern NSString *const UsersType;
 extern NSString *const UsersPhotoURL;
 extern NSString *const UsersEmail;
 

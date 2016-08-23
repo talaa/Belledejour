@@ -27,4 +27,7 @@
 //Upload from NSData on memory -> Storage
 + (void)uploadfilePathName:(NSString *)name Data:(NSData *)data Completion:(void (^) (FIRStorageMetadata *metadata,NSError *error))completion;
 
+//Add UserData on Users table
++ (void)addUserDataFireBaseDBb:(NSDictionary *)parm User:(FIRUser*)user;
+
 @end

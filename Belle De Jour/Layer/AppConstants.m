@@ -20,10 +20,8 @@ NSString *const NSUserUID               = @"uid";
 
 //firebase user table'record properties
 NSString *const UsersId                 = @"id";
-NSString *const UsersFirstN             = @"firstN";
-NSString *const UsersLastN              = @"lastN";
+NSString *const UsersName               = @"name";
 NSString *const UsersPhone              = @"phone";
-NSString *const UsersType               = @"type";
 NSString *const UsersPhotoURL           = @"photoURL";
 NSString *const UsersEmail              = @"email";
 
@@ -95,7 +93,7 @@ NSString *const FirebaseTableNews               = @"news";
 NSString *const FirebaseTableInAppPurchase      = @"inAppPurchase";
 
 //firebase Database & Storage
-NSString *const FireBaseStorageURL      = @"gs://educatia-e00c1.appspot.com";
+NSString *const FireBaseStorageURL      = @"gs://service-project-1-bdj.appspot.com";
 
 //firebase Storage Buckets
 NSString *const FireBaseStorageSubjectsFolder = @"Subjects";
