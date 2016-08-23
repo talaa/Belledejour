@@ -8,7 +8,6 @@
 
 #import "SignUpViewController.h"
 #import "User.h"
-#import <Parse/Parse.h>
 #import "SVProgressHUD.h"
 #import "Constants.h"
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -19,9 +18,7 @@
 @interface SignUpViewController ()
 {
     NSURL *downloadURL;
-    //User *user;
     UIAlertController *alertController ;
-    PFUser * parseUser;
     NSString * profileImgUrl;
 }
 
@@ -35,8 +32,6 @@
     ShowInternetIndicator;
     self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
     self.profileImg.clipsToBounds = YES;
-//    user = [[User alloc]init];
-//    parseUser = [PFUser user];
     alertController = [UIAlertController
                        alertControllerWithTitle:@"Alert"
                        message:[NSString stringWithFormat:@"%@ %@",@"Please enter all fields ! ",@""]
