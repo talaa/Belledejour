@@ -73,6 +73,7 @@
 		39BA07C71D6B4A560029DED3 /* NetworkRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA07C61D6B4A560029DED3 /* NetworkRequester.m */; };
 		39BA07CA1D6B4B770029DED3 /* DataParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA07C91D6B4B770029DED3 /* DataParsing.m */; };
 		39BA07CD1D6B4D400029DED3 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA07CC1D6B4D400029DED3 /* AppConstants.m */; };
+		39D1C5D11D6DDD6100A629F3 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D1C5D01D6DDD6100A629F3 /* ContactUsViewController.m */; };
 		4D886E37A562D9165FF978C5 /* libPods-Belle De Jour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA8219417D5643F5E79DBB /* libPods-Belle De Jour.a */; };
 		6913EB5B1A30F4F7009D65CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5A1A30F4F7009D65CD /* Parse.framework */; };
 		6913EB5D1A30F50A009D65CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6913EB5C1A30F50A009D65CD /* CFNetwork.framework */; };
@@ -228,6 +229,8 @@
 		39BA07C91D6B4B770029DED3 /* DataParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataParsing.m; sourceTree = "<group>"; };
 		39BA07CB1D6B4D400029DED3 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		39BA07CC1D6B4D400029DED3 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		39D1C5CF1D6DDD6000A629F3 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		39D1C5D01D6DDD6100A629F3 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		5F1C53AAA1A1F7B1905723E1 /* Pods-Belle De JourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle De JourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Belle De JourTests/Pods-Belle De JourTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6913EB5A1A30F4F7009D65CD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6913EB5C1A30F50A009D65CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -334,6 +337,8 @@
 		39A2251A1D6B2E5900F726D3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39D1C5CF1D6DDD6000A629F3 /* ContactUsViewController.h */,
+				39D1C5D01D6DDD6100A629F3 /* ContactUsViewController.m */,
 				39A225EA1D6B348100F726D3 /* ViewController.h */,
 				39A225EB1D6B348100F726D3 /* ViewController.m */,
 				39A2251B1D6B2E5900F726D3 /* BookingViewController.h */,
@@ -873,6 +878,7 @@
 				39A2259A1D6B2F6100F726D3 /* ChameleonStatusBar.m in Sources */,
 				39BA07CA1D6B4B770029DED3 /* DataParsing.m in Sources */,
 				39A2259D1D6B2F6100F726D3 /* UIColor+CIELAB.m in Sources */,
+				39D1C5D11D6DDD6100A629F3 /* ContactUsViewController.m in Sources */,
 				39A226011D6B35E800F726D3 /* Stuff.m in Sources */,
 				39A225FF1D6B35E800F726D3 /* Service.m in Sources */,
 				39A225511D6B2E5900F726D3 /* ServiceCollectionCell.m in Sources */,
