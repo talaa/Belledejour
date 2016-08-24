@@ -17,6 +17,7 @@ extern NSString *const NSUserPhone;
 extern NSString *const NSUserType;
 extern NSString *const NSUserPhotoURL;
 extern NSString *const NSUserImageData;
+extern NSString *const NSUserPoints;
 
 //firebase database users record properties
 extern NSString *const UsersId;
@@ -24,6 +25,7 @@ extern NSString *const UsersName;
 extern NSString *const UsersPhone;
 extern NSString *const UsersPhotoURL;
 extern NSString *const UsersEmail;
+extern NSString *const UsersPoints;
 
 
 //firebase tables

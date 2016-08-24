@@ -14,6 +14,7 @@
 #import "Constants.h"
 #import "Chameleon.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "DataParsing.h"
 
 @interface SettingsViewController ()
 {
@@ -39,24 +40,34 @@
     
     self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
     self.profileImg.clipsToBounds = YES;
-    if([[SharedManager sharedManager]userProfile].name !=nil)
-    {
+    
+    if ([DataParsing getUserName] != nil){
         self.mobileNumberTxt.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].mobileNumber];
-        self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
-        self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
-        self.pointsLbl.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].loyaltyPoints];
-        __block UIImage *MyPicture = [[UIImage alloc]init];
-        PFFile *imageFile = [[SharedManager sharedManager]userProfile].profileImage;
-        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
-            if (!error) {
-                MyPicture = [UIImage imageWithData:data];
-                [self.profileImg setBackgroundImage:MyPicture forState:UIControlStateNormal] ;
-            }
-        }];;
-        
-      //  [self.otherEditBtn setTitle:@"Edit Profile" forState:UIControlStateNormal];
-      
+        self.nameTxt.text=[DataParsing getUserName];
+        self.emailTxt.text=[DataParsing getUseremail];
+        self.pointsLbl.text=[NSString stringWithFormat:@"%@",[DataParsing getUserPoints]];
+        __block UIImage *MyPicture = [[UIImage alloc]initWithData:[DataParsing getImageData]];
+        [self.profileImg setBackgroundImage:MyPicture forState:UIControlStateNormal] ;
     }
+    
+//    if([[SharedManager sharedManager]userProfile].name !=nil)
+//    {
+//        self.mobileNumberTxt.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].mobileNumber];
+//        self.nameTxt.text=[[SharedManager sharedManager]userProfile].name;
+//        self.emailTxt.text=[[SharedManager sharedManager]userProfile].emailAddress;
+//        self.pointsLbl.text=[NSString stringWithFormat:@"%li",(long)[[SharedManager sharedManager]userProfile].loyaltyPoints];
+//        __block UIImage *MyPicture = [[UIImage alloc]init];
+//        PFFile *imageFile = [[SharedManager sharedManager]userProfile].profileImage;
+//        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+//            if (!error) {
+//                MyPicture = [UIImage imageWithData:data];
+//                [self.profileImg setBackgroundImage:MyPicture forState:UIControlStateNormal] ;
+//            }
+//        }];;
+//        
+//      //  [self.otherEditBtn setTitle:@"Edit Profile" forState:UIControlStateNormal];
+//      
+//    }
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In First"

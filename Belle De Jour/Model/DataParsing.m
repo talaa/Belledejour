@@ -39,6 +39,11 @@ static DataParsing *instance = nil;
     
     //imageData
     [[NSUserDefaults standardUserDefaults] setObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:userData.value[UsersPhotoURL]]] forKey:NSUserImageData];
+    
+    //points
+    if (userData.value[UsersPoints] != nil){
+        [[NSUserDefaults standardUserDefaults] setObject:userData.value[UsersPoints] forKey:NSUserPoints];
+    }
 }
 
 //get name
@@ -64,6 +69,11 @@ static DataParsing *instance = nil;
 //get ProfileURL
 +(NSString*)getUserProfileURL {
     return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserPhotoURL];
+}
+
+//get points
++(NSNumber*)getUserPoints {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserPoints];
 }
 
 @end

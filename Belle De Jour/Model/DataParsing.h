@@ -20,7 +20,7 @@
 //user's Password
 @property(nonatomic,strong)NSString * password;
 //user's LoyaltyPoints
-@property(nonatomic,assign)NSInteger loyaltyPoints;
+@property(nonatomic,strong)NSNumber* loyaltyPoints;
 //user's profile imageData
 @property(nonatomic,strong)NSData *imageData;
 //user's ProfilePhotoURL
@@ -46,4 +46,6 @@
 +(NSData*)getImageData;
 //get ProfileURL
 +(NSString*)getUserProfileURL;
+//get points
++(NSNumber*)getUserPoints;
 @end

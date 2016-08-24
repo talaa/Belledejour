@@ -16,6 +16,7 @@ NSString *const NSUserPhone             = @"phone";
 NSString *const NSUserType              = @"type";
 NSString *const NSUserPhotoURL          = @"photoURL";
 NSString *const NSUserImageData         = @"imageData";
+NSString *const NSUserPoints            = @"points";
 
 //firebase user table'record properties
 NSString *const UsersId                 = @"id";
@@ -23,6 +24,7 @@ NSString *const UsersName               = @"name";
 NSString *const UsersPhone              = @"phone";
 NSString *const UsersPhotoURL           = @"photoURL";
 NSString *const UsersEmail              = @"email";
+NSString *const UsersPoints             = @"points";
 
 //firebase tables name
 NSString *const FirebaseTableUsers              = @"users";
