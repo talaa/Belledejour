@@ -434,7 +434,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="176" id="rIA-px-6S7" customClass="OffersCustomCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="176"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIA-px-6S7" id="RKS-Jp-ye6">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="175"/>
