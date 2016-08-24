@@ -7,7 +7,7 @@
 //
 
 #import "DataParsing.h"
-
+#import "AppConstants.h"
 @implementation DataParsing
 
 static DataParsing *instance = nil;
@@ -23,4 +23,47 @@ static DataParsing *instance = nil;
     }
     return instance;
 }
+
++ (void)setDataParsingCurrentUserObject:(FIRDataSnapshot *)userData ImageData:(NSData *)data {
+    //name
+    [[NSUserDefaults standardUserDefaults] setObject:userData.value[UsersName] forKey:NSUsername];
+    
+    //email
+    [[NSUserDefaults standardUserDefaults] setObject:userData.value[UsersEmail] forKey:NSUserEmail];
+    
+    //phone
+    [[NSUserDefaults standardUserDefaults] setObject:userData.value[UsersPhone] forKey:NSUserPhone];
+    
+    //profilePic URL
+    [[NSUserDefaults standardUserDefaults] setObject:userData.value[UsersPhotoURL] forKey:NSUserPhotoURL];
+    
+    //imageData
+    [[NSUserDefaults standardUserDefaults] setObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:userData.value[UsersPhotoURL]]] forKey:NSUserImageData];
+}
+
+//get name
++(NSString*)getUserName {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUsername];
+}
+
+//get phone
++(NSString*)getUserPhone {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserPhone];
+}
+
+//get email
++(NSString*)getUseremail {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserEmail];
+}
+
+//get imageData
++(NSData*)getImageData {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserImageData];
+}
+
+//get ProfileURL
++(NSString*)getUserProfileURL {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:NSUserPhotoURL];
+}
+
 @end

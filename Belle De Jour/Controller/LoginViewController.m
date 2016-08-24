@@ -21,6 +21,9 @@
 #import "SharedManager.h"
 #import "RESideMenu.h"
 #import "SharedManager.h"
+#import "NetworkRequester.h"
+#import "DataParsing.h"
+
 @interface LoginViewController ()
 {
     UIAlertController * alertController;
@@ -46,13 +49,13 @@
     if([[SharedManager sharedManager]isbooked])
     {
         self.dismissBtn.hidden=NO;
-
+        
     }
     else
     {
         self.dismissBtn.hidden=YES;
     }
- 
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,9 +75,9 @@
 -(void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
 {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-
+    
     [((LeftViewController *)(delegate.viewController.leftMenuViewController)).tableView reloadData];
-
+    
 }
 #pragma mark - UITextField delegate
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -96,6 +99,73 @@
     [self.view endEditing:YES];
 }
 - (IBAction)signIn:(id)sender {
+    if (_usernameTxt.text.length >0 && _passwordTxt.text.length >0){
+        //display Loading
+        [SVProgressHUD show];
+        
+        //sing in by Firebase Auth
+        [NetworkRequester signInFirebaseByMail:_usernameTxt.text Password:_passwordTxt.text Completion:^(NSError *error, FIRUser *user) {
+            if(!error && user){
+                //successfully
+                
+                //dismiss Loading
+                [SVProgressHUD dismiss];
+                
+                //dismiss
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
+                //notify user
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat: @"Welcome %@",[DataParsing getUserName]]
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"OK", nil];
+                [alert show];
+            
+                //////////////get suer data//////////////////////////
+                //download PrifilePic
+                [NetworkRequester downloadFileByFolderName:@"ProfilePic" FileName:user.uid Completion:^(NSData *data, NSError *error) {
+                    //
+                    if (error != nil){
+                        //error on downloading process
+                        //save user data without image Data-> nil
+                        [self saveLocalUserObjectDataAlongProfilePicData:nil ByUserUID:user.uid];
+                        
+                    }else{
+                        //save user data locally along image
+                        [self saveLocalUserObjectDataAlongProfilePicData:data ByUserUID:user.uid];
+                    }
+                }];
+
+            }else{
+                //dismiss Loading
+                [SVProgressHUD dismiss];
+                
+                //error on login process -> inseart incorrect credential
+                alertController = [UIAlertController
+                                   alertControllerWithTitle:@"Alert"
+                                   message:[NSString stringWithFormat:@"%@ ",@"Please enter valid Credentials,"]
+                                   preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:oKAction];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+        }];
+    }else{
+        //notify user that there is something is missing
+        alertController = [UIAlertController
+                           alertControllerWithTitle:@"Alert"
+                           message:@"Please enter fields!!"
+                           preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:oKAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    
+    
+    
+    
+    
+    
+    /*
     
     [self setScreenState:NO];
     if(_usernameTxt.text.length>0 && _passwordTxt.text.length>0)
@@ -141,9 +211,22 @@
         [self presentViewController:alertController animated:YES completion:nil];
         
     }
-    [self setScreenState:YES];
-    
+     */
 }
+
+//save firebase User record in Local User Object
+- (void)saveLocalUserObjectDataAlongProfilePicData:(NSData *)data ByUserUID:(NSString *)userUID {
+    [NetworkRequester getCurrentUserData:userUID Completion:^(FIRDataSnapshot *snapshot) {
+        if (snapshot.value){
+            NSLog(@"%@", snapshot.value);
+            [DataParsing setDataParsingCurrentUserObject:snapshot ImageData:data];
+            
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                         animated:YES];
+        }
+    }];
+}
+
 - (void)setScreenState:(BOOL)state{
     (!state)?[SVProgressHUD show]:[SVProgressHUD dismiss];
     [self.view setUserInteractionEnabled:state];
@@ -152,13 +235,13 @@
 }
 - (IBAction)signInWithFB:(id)sender {
     // Set permissions required from the facebook user account
-   [self setScreenState:NO];
+    [self setScreenState:NO];
     NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
     
     // Login PFUser using Facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         [self setScreenState:YES];
-
+        
         if (!user) {
             NSString *errorMessage = nil;
             if (!error) {
@@ -180,8 +263,8 @@
             } else {
                 NSLog(@"User with facebook logged in!");
                 [self loadData];
-               
-
+                
+                
                 
             }
         }
@@ -194,7 +277,7 @@
     [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"]]
                                                  animated:YES];
     [self setScreenState:YES];
-
+    
 }
 - (void)loadData {
     // ...
@@ -217,52 +300,52 @@
             spaUser.userName=_usernameTxt.text;
             //  spaUser.mobileNumber= [user[@"Mobile_Number"]integerValue];
             PFUser *currentUser = [PFUser currentUser];
-
+            
             if([currentUser[@"Mobile_Number"]integerValue]==0)
             {
-            UIAlertController *alertControllerr = [UIAlertController
-                                                   alertControllerWithTitle:[NSString stringWithFormat:@"Hi %@",name]
-                                                  message:[NSString stringWithFormat:@"%@ , Please Enter your Mobile Number !!",name]
-                                                  preferredStyle:UIAlertControllerStyleAlert];
-            
-            [alertControllerr addTextFieldWithConfigurationHandler:^(UITextField *textField)
-             {
-                 textField.placeholder = NSLocalizedString(@"MobileNumber", @"Enter your MobileNumber");
-             }];
-            UIAlertAction *okActionn = [UIAlertAction
-                                       actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                                       style:UIAlertActionStyleDefault
-                                       handler:^(UIAlertAction *action)
-                                       {
-                                           UITextField *mobileNumberTextField = alertControllerr.textFields.firstObject;
-                                           [[SharedManager sharedManager]userProfile].mobileNumber=mobileNumberTextField.text.integerValue;
-                                           spaUser.mobileNumber=mobileNumberTextField.text.integerValue;
-                                           NSLog(@"%i",mobileNumberTextField.text.integerValue);
-                                           // save mobile number in parse
-                                           spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
-                                           [[SharedManager sharedManager]setUserProfile:spaUser];
-                                           NSString *userID = currentUser.objectId;
-                                           NSLog(@"Parse User ObjectID: %@",userID);
-                                           currentUser[@"Mobile_Number"]=[NSNumber numberWithInt:[mobileNumberTextField.text integerValue] ];
-
-                                           [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                               if (!error) {
-                                                   
-                                                   SHOW_ALERT(@"Successfully", @"Profile Updated ");
-                                                   [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
-                                                                                                animated:YES];
-                                               } else {
-                                                   SHOW_ALERT(@"Error", @"Internal Error");
-                                               }
-                                           }];
-
-                                       }];
-            [alertControllerr addAction:okActionn];
-            [self presentViewController:alertControllerr animated:YES completion:nil];
+                UIAlertController *alertControllerr = [UIAlertController
+                                                       alertControllerWithTitle:[NSString stringWithFormat:@"Hi %@",name]
+                                                       message:[NSString stringWithFormat:@"%@ , Please Enter your Mobile Number !!",name]
+                                                       preferredStyle:UIAlertControllerStyleAlert];
+                
+                [alertControllerr addTextFieldWithConfigurationHandler:^(UITextField *textField)
+                 {
+                     textField.placeholder = NSLocalizedString(@"MobileNumber", @"Enter your MobileNumber");
+                 }];
+                UIAlertAction *okActionn = [UIAlertAction
+                                            actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action)
+                                            {
+                                                UITextField *mobileNumberTextField = alertControllerr.textFields.firstObject;
+                                                [[SharedManager sharedManager]userProfile].mobileNumber=mobileNumberTextField.text.integerValue;
+                                                spaUser.mobileNumber=mobileNumberTextField.text.integerValue;
+                                                NSLog(@"%i",mobileNumberTextField.text.integerValue);
+                                                // save mobile number in parse
+                                                spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
+                                                [[SharedManager sharedManager]setUserProfile:spaUser];
+                                                NSString *userID = currentUser.objectId;
+                                                NSLog(@"Parse User ObjectID: %@",userID);
+                                                currentUser[@"Mobile_Number"]=[NSNumber numberWithInt:[mobileNumberTextField.text integerValue] ];
+                                                
+                                                [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                                    if (!error) {
+                                                        
+                                                        SHOW_ALERT(@"Successfully", @"Profile Updated ");
+                                                        [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController1"]]
+                                                                                                     animated:YES];
+                                                    } else {
+                                                        SHOW_ALERT(@"Error", @"Internal Error");
+                                                    }
+                                                }];
+                                                
+                                            }];
+                [alertControllerr addAction:okActionn];
+                [self presentViewController:alertControllerr animated:YES completion:nil];
             }
             else
             {
-             //   [self dismissViewControllerAnimated:YES completion:nil];
+                //   [self dismissViewControllerAnimated:YES completion:nil];
                 SHOW_ALERT(@"Welcome",name);
                 spaUser.loyaltyPoints=[currentUser[@"LoyaltyPoints"]integerValue];
                 spaUser.mobileNumber= [currentUser[@"Mobile_Number"]integerValue];
@@ -272,7 +355,7 @@
             }
         }
     }];
-
+    
 }
 
 - (IBAction)forgotPassword:(id)sender {

@@ -97,5 +97,35 @@
      setValue:parm];
 }
 
+//dowload file from firebase storage in memory
++ (void)downloadFileByFolderName:(NSString *)folderName FileName:(NSString *)fileName Completion:(void (^) (NSData *data, NSError *error))completion {
+    // Create a reference to the file you want to download
+    FIRStorageReference *islandRef = [[DataParsing getInstance].referenceFirebaseStorage child:[NSString stringWithFormat:@"%@/%@",folderName,fileName]];
+    // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+    [islandRef dataWithMaxSize:1 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+            completion(nil, error);
+        } else {
+            // Data for "images/island.jpg" is returned
+            // ... UIImage *islandImage = [UIImage imageWithData:data];
+            completion(data,nil);
+        }
+    }];
+}
+
+//get User's Data by his UID
++ (void)getCurrentUserData:(NSString *)userUID Completion:(void (^) (FIRDataSnapshot * snapshot))completion {
+    [[[DataParsing getInstance].referenceFirebaseDatabase child:[NSString stringWithFormat:@"%@/%@",FirebaseTableUsers,userUID]] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        completion(snapshot);
+        // Get user value
+        NSLog(@"%@",snapshot.value);
+        // ...
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+        completion(nil);
+    }];
+}
+
 
 @end

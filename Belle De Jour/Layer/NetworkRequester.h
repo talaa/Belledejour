@@ -30,4 +30,9 @@
 //Add UserData on Users table
 + (void)addUserDataFireBaseDBb:(NSDictionary *)parm User:(FIRUser*)user;
 
+//dowload file from firebase storage in memory
++ (void)downloadFileByFolderName:(NSString *)folderName FileName:(NSString *)fileName Completion:(void (^) (NSData *data, NSError *error))completion;
+
+//get User's Data by his UID
++ (void)getCurrentUserData:(NSString *)userUID Completion:(void (^) (FIRDataSnapshot * snapshot))completion;
 @end
